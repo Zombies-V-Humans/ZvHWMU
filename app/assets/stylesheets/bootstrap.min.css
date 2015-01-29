@@ -118,12 +118,32 @@ button {
 }
 
 button,select {
+	
     text-transform: none;
 }
 
 button,html input[type=button],input[type=reset],input[type=submit] {
     -webkit-appearance: button;
     cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffae34), to(#FF9900))!important;
+    background-image: -webkit-linear-gradient(#ffae34 0%, #FF9900 100%)!important;
+    background-image: -moz-linear-gradient(#ffae34 0%, #FF9900 100%)!important;
+    background-image: -o-linear-gradient(#ffae34 0%, #FF9900 100%)!important;
+    background-image: linear-gradient(#ffae34 0%, #FF9900 100%)!important;
+    color: #000 !important!
+    text-shadow: #000 0px 1px 5px;
+    border: 1px solid #000;
+    opacity: 0.8;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+    border-top: 1px solid rgba(255,255,255,0.8)!important;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+    
+
 }
 
 button[disabled],html input[disabled] {
@@ -3607,6 +3627,7 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 
 input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-block {
     width: 100%;
+
 }
 
 .fade {
