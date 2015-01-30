@@ -1,6 +1,11 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
     @user = User.find_for_facebook_oauth(env["omniauth.auth"], current_user)
+    #Uncomment the line below and choose sign in the facebook option 
+    #to see the file that FACEBOOK returns,
+    #it contains all the users info from name to email to gener to profile pic
+    
+    #render :text => "<pre>" + env["omniauth.auth"].to_yaml and return
 
     if @user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"

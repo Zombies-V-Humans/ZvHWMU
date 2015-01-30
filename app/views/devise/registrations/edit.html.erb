@@ -4,30 +4,19 @@
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal", :role => "form" }) do |f| %>
   <%= devise_error_messages! %>
-
+  <div class="form-group">
+    <%= f.label :name, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <%= f.text_field :name, :type => :text, :class => "form-control", :placeholder => "Enter your email" %>
+    </div>
+  </div>
   <div class="form-group">
     <%= f.label :email, :class => "col-sm-2 control-label" %>
     <div class="col-sm-4">
       <%= f.email_field :email, :type => :email, :class => "form-control", :placeholder => "Enter your email" %>
     </div>
   </div>
-
-  <div class="form-group">
-    <%= f.label :password, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-4">
-      <%= f.password_field :password, :class => "form-control", :placeholder => "Password" %>
-      <span class="help-block">Leave blank if you don't want to change it.</span>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password_confirmation, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-4">
-      <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Confirm password" %>
-    </div>
-  </div>
-
-  <div class="form-group">
+ <div class="form-group">
     <%= f.label :current_password, :class => "col-sm-2 control-label" %>
     <div class="col-sm-4">
       <%= f.password_field :current_password, :class => "form-control", :placeholder => "Current password" %>
@@ -36,12 +25,47 @@
   </div>
 
   <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-4">
-      <button type="submit" class="btn btn-default">Save settings</button>
+    <%= f.label :new_password, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <%= f.password_field :password, :class => "form-control", :placeholder => "Password" %>
     </div>
   </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Confirm password" %>
+      <span class="help-block">Leave these blank if you don't want to change it.</span>
+    </div>
+  </div>
+   <div class="form-group">
+    <%= f.label :avatar, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+<section class = "editAvatar">
+     <%= image_tag(current_user.avatar)%>
+     </section>
+     <br></br>
+      <%= f.text_field :avatar, :type => :text, :class => "form-control", :placeholder => "Image URL" %>
+      <span class="help-block">Upload an Image somewhere and paste the link here, or search Google Images! </span>
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button type="submit" class="btn btn-default">Save settings</button>
+       <button type="button" class="btn btn-default" onClick="window.location.reload(), parent.window.scrollTo(0,0);">Cancel</button>  
+    </div>
+  </div>
+ 
 <% end %>
-
-<h3>Cancel account</h3>
-
-<p>Unhappy? <%= link_to "Cancel your account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+ <div class="form-group">
+   <div class="col-sm-offset-2 col-sm-4">
+    <section class = "cancelAccount">
+      <p>
+      <span>Unhappy?</span>
+        <%= link_to "Cancel your account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.
+      </p>
+    </section>
+   </div>
+  </div>

@@ -3,8 +3,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
 
       ## Database authenticatable
+      t.string :name :null => false, :default => ""
       t.string :email, :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
+      t.string :avatar, :default => "http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/76/37/7637c1a6a787832aad5022256fcf0086.png"
 
       ## Recoverable
       t.string   :reset_password_token
@@ -41,7 +43,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
-
     add_index :users, :email,                :unique => true
     add_index :users, :reset_password_token, :unique => true
     # add_index :users, :confirmation_token,   :unique => true

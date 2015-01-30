@@ -87,3 +87,26 @@ a {
 .navbar {
 background-color: #303030!important;
 }
+
+.editAvatar{
+
+   img{
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:10%!important;
+    }
+}
+.cancelAccount{
+    margin-left:-12px;
+    span{
+        color: rgba(255, 174, 52, 0.8)!important;
+
+    }
+        a{
+            color:#B0B0B0;
+        }
+    font-size: 18px;
+}
+span.help-block{
+    color:#B0B0B0;
+}

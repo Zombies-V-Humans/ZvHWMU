@@ -25,8 +25,11 @@ ActiveRecord::Schema.define(version: 20110415110329) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "name",                   default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "avatar",                 default: "http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/76/37/7637c1a6a787832aad5022256fcf0086.png"
+
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
