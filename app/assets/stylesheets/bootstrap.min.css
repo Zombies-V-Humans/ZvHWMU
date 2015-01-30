@@ -133,7 +133,7 @@ button,select {
     background-image: -moz-linear-gradient(#ffae34 0%, #FF9900 100%)!important;
     background-image: -o-linear-gradient(#ffae34 0%, #FF9900 100%)!important;
     background-image: linear-gradient(#ffae34 0%, #FF9900 100%)!important;
-    color: #000 important!
+    color: #000 !important;
     text-shadow: #000 0px 1px 5px;
     border: 1px solid #000;
     opacity: 0.8;
