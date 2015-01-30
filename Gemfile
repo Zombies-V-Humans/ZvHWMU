@@ -1,24 +1,22 @@
 source "https://rubygems.org"
 
 gem "rails", "4.1.1"
-
 # Compressor of JavaScript assets
 gem "uglifier", ">= 1.3.0"
-
 # Use CoffeeScript for .js.coffee assets and views
 gem "coffee-rails", "~> 4.0.0"
-
 # Use jQuery as the JavaScript library
 gem "jquery-rails"
-
 # User authentication
 gem "devise", "3.2.4"
-
 gem "omniauth-facebook"
 gem "kaminari"
 gem "ransack"
+
 gem "dynamic_form"
 gem 'sass-rails',              '5.0.0.beta1'
+#random name generator
+gem 'faker',                   '1.4.2'
 
 group :test, :development do
   gem "rspec-rails"
