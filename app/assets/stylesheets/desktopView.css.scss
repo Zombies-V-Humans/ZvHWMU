@@ -1,6 +1,6 @@
 
 /*DESKTOP CSS*/
-@media only screen and (min-width:764px) {
+@media only screen and (min-width:800px) {
     
 .jumbotron {
     h2{
@@ -14,13 +14,19 @@
     margin-top:9vmin !important;
     margin-bottom:5vmin !important;
 }
+.panel{
+    margin-right: !important;
+
+}
 
 .mainbtn,#mainbtn {
       
     width:50% !important;
 
 }
-
+*{
+        background-color: #202020 !important;
+}
 ul.nav.navbar-nav  {
     text-decoration: none !important;
     float:right !important;}
@@ -40,10 +46,12 @@ border-left: none !important;
 border-right: none !important;
 }
 
-.col-sm-4{
-        width:35% !important;
+.col-sm-4,.page-header{
+        width:30% !important;
 
 }
+
+
 
  }
   

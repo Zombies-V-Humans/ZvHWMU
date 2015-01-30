@@ -7,13 +7,14 @@
 }
 
 body {
-    background-color: #202020!important;
+    background-color: #303030!important;
 }
 
 .navbar {
     margin-bottom: 0 !important;
     border: none !important;
     border-bottom: 1px solid #ffae34  !important;
+        background-color: #202020 !important;
 }
 
 input {
@@ -23,7 +24,7 @@ input {
 }
 
 .navbar-header {
-    background-color: #303030;
+    background-color: #202020 !important;
     margin-bottom: 0 !important;
 }
 
@@ -36,7 +37,7 @@ input {
     font-size: 38px !important;
     color: #f0f0f0!important;
     letter-spacing: -2.5px;
-    background-color: #303030;
+     background-color: #202020 !important;
     text-decoration: none;
 }
 
@@ -45,7 +46,7 @@ h1,h2,h3,h4, label, ul {
 }
 #hideme{
     z-index:-10;
-    color:#202020 !important;
+    color:#303030 !important;
 }
 .navbar-nav > li > a {
     text-align: center !important;
@@ -82,6 +83,17 @@ a {
     width:87% !important;
     margin-top:10vmin !important;
     margin-bottom:10vmin !important;
+}
+
+.panel {
+    
+
+    background-color: #303030 !important;
+    
+    padding:20px 10px 10px 10px;
+    width: 87% !important;
+  
+  
 }
 
 .navbar {
