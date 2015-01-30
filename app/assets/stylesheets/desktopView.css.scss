@@ -1,0 +1,53 @@
+
+/*DESKTOP CSS*/
+@media only screen and (min-width:764px) {
+    
+.jumbotron {
+    h2{
+    color: #303030 !important;
+    font-size: 33px !important;
+    line-height: 55px !important;
+}
+
+    padding:7px 13px 7px 13px !important;
+    width:50% !important;
+    margin-top:9vmin !important;
+    margin-bottom:5vmin !important;
+}
+
+.mainbtn,#mainbtn {
+      
+    width:50% !important;
+
+}
+
+ul.nav.navbar-nav  {
+    text-decoration: none !important;
+    float:right !important;}
+
+.navbar-nav > li    {
+    border-left: 1px solid #ffae34  !important;
+    border-right: 1px solid #ffae34  !important;
+ }
+
+
+.navbar-nav > li:first-child {
+border-left: none !important;
+
+}
+
+.navbar-nav > li:last-child, {
+border-right: none !important;
+}
+
+.col-sm-4{
+        width:35% !important;
+
+}
+
+ }
+  
+
+/*DESKTOP CSS*/
+
+
