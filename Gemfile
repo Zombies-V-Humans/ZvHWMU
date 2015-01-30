@@ -43,7 +43,7 @@ end
 group :production, :development do
   gem 'rails_12factor'
   # Use PostgreSQL as the database for Active Record
-  gem "pg", :require => "pg"
+  gem "pg"
 
   gem "thin"
 end
