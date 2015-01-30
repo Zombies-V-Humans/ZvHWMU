@@ -1,6 +1,6 @@
 
 /*DESKTOP CSS*/
-@media only screen and (min-width:800px) {
+@media only screen and (min-width:768px) {
     
 .jumbotron {
     h2{
@@ -15,7 +15,6 @@
     margin-bottom:5vmin !important;
 }
 .panel{
-    margin-right: !important;
 
 }
 
@@ -24,9 +23,21 @@
     width:50% !important;
 
 }
-*{
+body{
         background-color: #202020 !important;
 }
+.navbar-brand {
+
+     background-color: #303030 !important;
+    
+}
+.navbar-nav > li > a {
+    text-align: center !important;
+    font-size: 24px !important;
+    color: #C0C0C0!important;
+    text-decoration: none !important;
+}
+
 ul.nav.navbar-nav  {
     text-decoration: none !important;
     float:right !important;}
@@ -44,6 +55,8 @@ border-left: none !important;
 
 .navbar-nav > li:last-child, {
 border-right: none !important;
+
+
 }
 
 .col-sm-4,.page-header{
@@ -54,7 +67,10 @@ border-right: none !important;
 
 
  }
-  
+  #hideme{
+    z-index:-10;
+    color:#202020 !important;
+}
 
 /*DESKTOP CSS*/
 

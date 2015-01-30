@@ -1,0 +1,366 @@
+body{
+    width:82%;
+    margin-left:auto;
+    margin-right:auto;
+}
+h6{
+    font-family: "League-Gothic",Courier;
+    font-size:48px;
+    color:#060606;
+
+}
+#rules.yellow.clearfix {
+    margin-top: 13px;
+    width:100%;
+}
+
+.contents {
+    height: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5% 0 15% 0;
+}
+
+.yellow {
+    background: #FEEC85;
+}
+
+#rules {
+    width: 100%;
+    border-radius: 16px;
+
+}
+
+#rules p {
+    font-size: 17px;
+}
+
+#rules a {
+    color: #000;
+}
+
+#rules .equipment-row {
+    display: block;
+}
+
+#rules .equipment-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#rules .equipment-row .equipment-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+}
+
+#rules .equipment-row .equipment-item:last-child {
+    margin-right: 0;
+}
+
+#rules .equipment-row .equipment-item .eq-big-img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+#rules .equipment-row .equipment-item .eq-label {
+    font-size: 16pt;
+    color: #2E2E2E;
+}
+
+#rules .equipment-row .equipment-item .check {
+    position: relative;
+    top: 15px;
+    max-width: 20%;
+}
+
+.check {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px #EC760C solid;
+}
+
+#rules .no-play-row {
+    min-height: 280px;
+    display: block;
+}
+
+#rules .no-play-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#rules .no-play-row .no-play-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    vertical-align: top;
+}
+
+#rules .no-play-row .no-play-item:last-child {
+    margin-right: 0;
+}
+
+#rules .no-play-row .no-play-item:first-child {
+    margin-left: 8.5298%;
+}
+
+@media screen and (min-width:13.75em) and (max-width:60em) {
+    #rules .no-play-row .no-play-item:first-child {
+        margin-left: 0;
+    }
+
+    #rules .no-play-row .no-play-item {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 100%;
+    }
+
+    #rules .no-play-row .no-play-item:last-child {
+        margin-right: 0;
+    };
+}
+
+#rules .no-play-row .no-play-item .no-play-img {
+    width: 75%;
+    height: 79%;
+    border-radius: 18px;
+    margin-top: 15px;
+}
+
+#rules .no-play-row .no-play-item .no-play-label {
+    font-size: 18pt;
+    color: #2E2E2E;
+
+}
+
+#rules .safety-row {
+    display: block;
+}
+
+#rules .safety-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#rules .safety-row .safety-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+}
+
+#rules .safety-row .safety-item:last-child {
+    margin-right: 0;
+}
+
+@media screen and (min-width:13.75em) and (max-width:60em) {
+    #rules .safety-row .safety-item {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 100%;
+    }
+
+    #rules .safety-row .safety-item:last-child {
+        margin-right: 0;
+    };
+}
+
+#rules .safety-row .safety-item .safety-img {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+    vertical-align: top;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#rules .safety-row .safety-item .safety-img:last-child {
+    margin-right: 0;
+}
+
+@media screen and (min-width:13.75em) and (max-width:60em) {
+    #rules .safety-row .safety-item .safety-img {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #rules .safety-row .safety-item .safety-img:last-child {
+        margin-right: 0;
+    };
+}
+
+#rules .safety-row .safety-item .safety-text {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 65.05695%;
+    vertical-align: top;
+}
+
+#rules .safety-row .safety-item .safety-text:last-child {
+    margin-right: 0;
+}
+
+@media screen and (min-width:13.75em) and (max-width:60em) {
+    #rules .safety-row .safety-item .safety-text {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 100%;
+    }
+
+    #rules .safety-row .safety-item .safety-text:last-child {
+        margin-right: 0;
+    };
+}
+
+#rules .safety-row .safety-item .safety-text ol {
+    list-style-position: inside;
+    margin-left: 0;
+    padding-left: 5px;
+}
+
+#rules .safety-row .safety-item .safety-text ol li {
+    font-size: 25pt;
+}
+
+#rules .safety-disclaimer {
+    display: block;
+    margin-top: 20px;
+}
+
+#rules .safety-disclaimer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#rules .safety-disclaimer small {
+    font-size: 9pt;
+}
+
+#rules .team-rules-row {
+    display: block;
+}
+
+#rules .team-rules-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#rules .team-rules-row .team-column {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+}
+
+#rules .team-rules-row .team-column:last-child {
+    margin-right: 0;
+}
+
+@media screen and (min-width:13.75em) and (max-width:60em) {
+    #rules .team-rules-row .team-column {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 100%;
+    }
+
+    #rules .team-rules-row .team-column:last-child {
+        margin-right: 0;
+    };
+}
+
+#rules .dbag-row {
+    display: block;
+}
+
+#rules .dbag-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#title {
+    font-size: 70px;
+    padding-bottom: 50px;
+}
+
+h2 {
+    color: #030303 !important;
+    font-family: "League-Gothic", Courier;
+    font-size: 34px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -15px -15px 20px #ffae34;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+p {
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #292929;
+    line-height: 30px;
+}
+
+li {
+    color: #2E2E2E;
+}
+
+small {
+    font-size: 14px;
+    color: red;
+}
+
+.safety-disclaimer {
+    border: 3px dashed #FEEC85;
+    background-color: #FEFCC9;
+    border-radius: 10px;
+    padding: 2% 1% 2% 1%;
+}
+
+section.body-section {
+    overflow-y: hidden;
+    margin-top: 55px;
+}
+
+
+@media all and (min-width: 959px) {
+
+  #rules p{
+    font-size: 25px;
+    line-height: 40px;
+    padding:5% 5% 5% 5%;
+}
+#rules{
+  margin-left:auto;
+  margin-right:auto;
+  width:60%;
+}
+ #debug.center.jumbotronDebug{
+  margin-left:auto;
+  margin-right:auto;
+  width:58%;
+}
+}

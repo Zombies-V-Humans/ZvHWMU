@@ -9,14 +9,20 @@ gem "coffee-rails", "~> 4.0.0"
 gem "jquery-rails"
 # User authentication
 gem "devise", "3.2.4"
+#Facebook Auth
 gem "omniauth-facebook"
+#Pagination! Makes lists soopar eazy
 gem "kaminari"
-gem "ransack"
-
+#gives us a nice way to search through ruby lists 
+gem "ransack", ">= 1.2.3"
+#quick forms with built in JS 
 gem "dynamic_form"
+#sass compiler, Sassy CSS faster and lighter then regular css
 gem 'sass-rails',              '5.0.0.beta1'
-#random name generator
+#random name generator, only needed for seed user names
 gem 'faker',                   '1.4.2'
+
+gem 'activeadmin', github: 'activeadmin'
 
 group :test, :development do
   gem "rspec-rails"
@@ -40,20 +46,12 @@ group :test do
   gem "email_spec"
 end
 
-group :production, :development do
+group :production do
   gem 'rails_12factor'
   # Use PostgreSQL as the database for Active Record
   gem "pg"
-
   gem "thin"
 end
 
-
-group :development, :test do
-
-  gem 'byebug',      '3.4.0'
-  gem 'web-console', '2.0.0.beta3'
-  gem 'spring',      '1.1.3'
-end
 
 
