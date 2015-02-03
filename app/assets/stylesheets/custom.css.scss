@@ -165,23 +165,22 @@ table{
 	}
 
 }
-.social {
-  background: image-url('logos.png') no-repeat transparent;
-  display: inline-block;
-  &.twitter {
-    width: 50px;
-    height: 42px;
-    background-position: 0 -52px;
-  }
+.well{
+    margin-top:10px  !important;
+    background-color: #303030;
 
-  &.facebook, &.facebook:active {
-    width: 50px;
-    height: 50px;
-    background-position: 0 0;
-  }
+    .btn{
+    width:100%  !important;
+    }
 }
-
-#comments {
-  max-height: 500px;
-  overflow: auto;
+#comments{
+    width:100% !important;
+}
+#acomment {
+  max-height: 500px  !important;
+  overflow: auto  !important;
+  img{
+    max-height:90px !important;
+    width: 65px !important;
+  }
 }
