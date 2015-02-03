@@ -15,7 +15,7 @@
     margin-bottom:-10px;
     border: 1px solid transparent;
     border-radius: 4px;
-        color: #fa6d3b;
+    color: #fa6d3b;
     background-color: #fcf8e3;
     border-color: #faebcc;
     font-weight: bold;
@@ -28,8 +28,8 @@ body {
 .navbar {
     margin-bottom: 0 !important;
     border: none !important;
-    border-bottom: 1px solid #ffae34  !important;
-        background-color: #202020 !important;
+    border-bottom: 1px solid #ffae34 !important;
+    background-color: #202020 !important;
 }
 
 input {
@@ -87,13 +87,15 @@ a {
 }
 
 .mainbtn,#mainbtn {
-    width: 87% !important;
     display: inline-block !important;
     font-weight: bold !important;
     font-size: 18px !important;
+    background: rgba(255, 174, 52, 0.9)!important;
+
 }
 
-.jumbotron {
+
+.jumbotron {    color: #fff !important;
     h2{
 
     line-height: 30px !important;
@@ -149,4 +151,17 @@ p{
 }
 span.help-block{
         color: rgba(255, 174, 52, 0.8)!important;
+}
+table{
+
+	tr.user:nth-child(odd){
+		color:black;
+		a{color:black}
+	
+	}
+	tr.user:nth-child(even){
+	color:white;
+	
+	}
+
 }

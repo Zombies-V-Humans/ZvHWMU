@@ -1,12 +1,54 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
+ruby '2.0.0'
 
-gem "rails", "4.1.1"
-# Compressor of JavaScript assets
+gem 'rails', '4.1.5'
+
+group :development do
+  gem 'sqlite3',     '1.3.9'
+  gem "chronic"
+  gem "admin_view"
+  gem 'annotate'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :test do
+  gem "factory_girl_rails"
+  gem "cucumber-rails", :require => false
+  gem "database_cleaner"
+  gem "selenium-webdriver"
+  gem "capybara"
+  gem "shoulda"
+  gem "email_spec"
+end
+
+group :test, :development do
+  gem "rspec-rails"
+  gem "debugger"
+  gem "awesome_print"
+end
+
+gem 'turbolinks'
+# Use jQuery as the JavaScript library
+gem "jquery-rails"
+
+gem 'jquery-turbolinks'
+
+gem 'thin'
+#Chat Server Gem
+gem 'faye-rails', '~> 2.0'
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
 gem "uglifier", ">= 1.3.0"
 # Use CoffeeScript for .js.coffee assets and views
 gem "coffee-rails", "~> 4.0.0"
-# Use jQuery as the JavaScript library
-gem "jquery-rails"
+
 # User authentication
 gem "devise", "3.2.4"
 #Facebook Auth
@@ -21,37 +63,3 @@ gem "dynamic_form"
 gem 'sass-rails',              '5.0.0.beta1'
 #random name generator, only needed for seed user names
 gem 'faker',                   '1.4.2'
-
-gem 'activeadmin', github: 'activeadmin'
-
-group :test, :development do
-  gem "rspec-rails"
-  gem "debugger"
-  gem "awesome_print"
-end
-
-group :development do
-  gem 'sqlite3',     '1.3.9'
-  gem "chronic"
-  gem "admin_view"
-end
-
-group :test do
-  gem "factory_girl_rails"
-  gem "cucumber-rails", :require => false
-  gem "database_cleaner"
-  gem "selenium-webdriver"
-  gem "capybara"
-  gem "shoulda"
-  gem "email_spec"
-end
-
-group :production do
-  gem 'rails_12factor'
-  # Use PostgreSQL as the database for Active Record
-  gem "pg"
-  gem "thin"
-end
-
-
-
