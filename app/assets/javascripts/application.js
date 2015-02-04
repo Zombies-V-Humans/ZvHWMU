@@ -12,3 +12,7 @@
 //= require comments
 //= require_tree 
 
+$(document).ready(function(){
+	setTimeout(function(){
+		$('#error_explanation' ).remove();
+		$('.alert' ).remove();  }, 3500); })
