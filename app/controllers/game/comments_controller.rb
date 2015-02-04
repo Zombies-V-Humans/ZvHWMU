@@ -1,12 +1,11 @@
-class CommentsController < ApplicationController
-  
+class Game::CommentsController < ApplicationController
  
   def new
     @comment = Comment.new
     @comments = Comment.order('created_at DESC')
   end
 
-  def create
+def create
     respond_to do |format|
       if current_user
         @comment = current_user.comments.build(comment_params)
@@ -22,6 +21,16 @@ class CommentsController < ApplicationController
         format.js {render nothing: true}
       end
     end
+  end
+def game
+end
+  def chat
+  end
+
+  def map
+  end
+
+  def info
   end
 
   private

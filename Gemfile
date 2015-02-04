@@ -5,8 +5,8 @@ gem 'rails', '4.1.5'
 
 group :development do
   gem 'sqlite3',     '1.3.9'
+  gem 'admin_view'
   gem "chronic"
-  gem "admin_view"
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'

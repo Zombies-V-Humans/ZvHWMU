@@ -1,4 +1,10 @@
 ZVH::Application.routes.draw do
+
+
+  get 'game/comments/new'
+  get 'game/new'
+  get 'game/profile/new'
+
   resources :comments, only: [:new, :create]
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
@@ -6,7 +12,7 @@ ZVH::Application.routes.draw do
       get '/sign-in' => "devise/sessions#new", :as => :login
   end
 
-  get "comments/new"
+
   get "pages/index" 
   get "pages/rules"
   get "/admin" => "admin/base#index", :as => "admin"
