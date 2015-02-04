@@ -34,16 +34,15 @@
     </div>
   <% end -%>
 
-  <div class="form-group">
-    <center>
     <%= f.label :signup, :class => "col-sm-2 control-label", :id => "hideme" %>
   <div class="form-group">
     <div class="col-sm-4">
-      <button type="submit" id="mainbtn" class="btn btn-default">Sign up</button>
+      <button type="submit" id="regsignup" class="btn btn-default">Sign in</button>
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) , id: "fbsignup", class: "btn btn-default" %>
     </div>
   </div>
 <% end %>
-</center>
+
 <div class="row top48">
   <div class="col-sm-offset-2 col-sm-4">
     <%= render "devise/shared/links" %>

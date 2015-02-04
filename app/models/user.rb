@@ -1,9 +1,7 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
   devise :omniauthable
   
   has_many :comments, dependent: :delete_all
@@ -33,24 +31,8 @@ class User < ActiveRecord::Base
     else # Create a user with a stub password.
       User.create!(:name => data["name"],
                    :email => data["email"], 
-                   :password => "welcome",
-                   :avatar => data["image"]+"?type=normal")
+                   :password => "Welcome",
+                   :avatar => data["image"]+"?type=square")
     end
   end
-
-
-  class << self
-    def from_omniauth(auth)
-      provider = auth.provider
-      uid = auth.uid
-      info = auth.info.symbolize_keys!
-      user = User.find_or_initialize_by(uid: uid, provider: provider)
-      user.name = info.name
-      user.avatar_url = info.image
-      user.profile_url = info.urls.send(provider.capitalize.to_sym)
-      user.save!
-      user
-    end
-  end  
-
 end

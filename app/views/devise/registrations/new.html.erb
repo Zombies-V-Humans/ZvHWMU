@@ -37,8 +37,9 @@
 
   <div class="form-group">
     <%= f.label :signup, :class => "col-sm-2 control-label", :id => "hideme" %>
-    <div class="col-sm-4">
-    <button  type="submit" id="mainbtn" class="btn btn-default">Sign up</button>
+    <div class=" col-sm-4">
+    <button  type="submit" id="regsignup" class="btn btn-default">Sign up</button>
+    <%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook) ,data: { confirm: "Since Facebook does not provide us with a password when you sign up, you will be given a temporary password of 'Welcome'. Feel free to change it!" }, id: "fbsignup", class: "btn btn-default" %>
 
     </div>
   </div>
