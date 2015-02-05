@@ -18,7 +18,7 @@
     visibility: hidden;
 }
 
-body{
+body,html{
     overflow:hidden;
 }
  .panel-body{
@@ -34,10 +34,19 @@ body{
 }
 #comments{
 	    margin-bottom:0px!important;
+      position:relative!important;
+
+    top:0!important; right:0!important;
+    bottom:0!important; left:0!important;
 }
 #chat{
+margin-top: auto;
+margin-bottom: auto;
     overflow:hidden;
 
+	      position:absolute!important;
+    top:60px!important; right:0!important;
+    bottom:0!important; left:0!important;
 
 }
 .well{
@@ -84,16 +93,3 @@ p{
 width:90%;
 }
       </style>
-<script type='text/javascript'>
-$(function(){
-
-    $(window).resize(function(){
-              document.getElementById('#comments').style.height = '100%';
-    });
-       $(' .media-list').css({'height':(($(window).height())-175)+'px'});
-
-    $(window).resize(function(){
-             document.getElementById('.media-list').style.height = '40px';
-    });
-});
-</script>
