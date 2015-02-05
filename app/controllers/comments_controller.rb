@@ -1,4 +1,4 @@
-class Game::PlayerController < ApplicationController
+class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new
@@ -14,7 +14,7 @@ class Game::PlayerController < ApplicationController
         else
           flash.now[:error] = 'Your comment cannot be saved.'
         end
-        format.html {redirect_to 'root_url'}
+        format.html {redirect_to root_url}
         format.js
       else
         format.html {redirect_to root_url}
