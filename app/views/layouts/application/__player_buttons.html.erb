@@ -39,8 +39,13 @@ body{
 .well{
 	margin-bottom:8px !important;
 }
+.new_comment{
+	margin-top:-15px !important;
+	margin-bottom:-10px !important;
+}
 #messagebtn{
 	padding-top:4px!important;
+	margin-top:-8px !important;
 	height:30px !important;
 }
 #messagebox{
@@ -64,6 +69,12 @@ h4.media-heading{
 	display:inline-block!important;
 
 }
+
+	#acomment p{
+		font-size:19px!important;
+	}
+	
+
 p{
 		display:inline-block!important;
 width:90%;
@@ -75,7 +86,7 @@ $(function(){
     $(window).resize(function(){
               document.getElementById('#comments').style.height = '100%';
     });
-       $(' .media-list').css({'height':(($(window).height())-250)+'px'});
+       $(' .media-list').css({'height':(($(window).height())-200)+'px'});
 
     $(window).resize(function(){
              document.getElementById('.media-list').style.height = '40px';
