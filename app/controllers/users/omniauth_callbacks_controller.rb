@@ -1,4 +1,5 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+
   def facebook
     @user = User.find_for_facebook_oauth(env["omniauth.auth"], current_user)
     #Uncomment the line below and choose sign in the facebook option 
@@ -14,5 +15,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session["devise.facebook_data"] = env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
+  end
+  def after_sign_in_path_for(resource)
+    '/game/player/new'
+  end
+  def after_sign_up_path_for(resource)
+    '/game/player/new'
   end
 end

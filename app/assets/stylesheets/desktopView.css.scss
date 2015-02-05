@@ -2,95 +2,32 @@
 /*DESKTOP CSS*/
 @media only screen and (min-width:768px) {
     
-.jumbotron {
-    h2{
-    color: #303030 !important;
-    font-size: 33px !important;
-    line-height: 55px !important;
-}
-
-    padding:7px 13px 7px 13px !important;
-    width:50% !important;
-    margin-top:9vmin !important;
-    margin-bottom:5vmin !important;
-}
-
-.mainbtn,#mainbtn {
-      
-    width:50% !important;
-
-}
 body{
+    width:77%;
+    margin-left:auto;
+    margin-right:auto;
         background-color: #202020 !important;
-}
-.navbar-brand {
 
-     background-color: #303030 !important;
-     margin-top:10px !important;
+}}
+
+@media only screen and (min-width:968px) {
     
-}
-.navbar-nav > li > a {
-    text-align: center !important;
-    font-size: 24px !important;
-    color: #C0C0C0!important;
-    font-size:16px !important;
-
-    text-decoration: none !important;
-}
-
-ul.nav.navbar-nav  {
-    text-decoration: none !important;
-    float:right !important;}
-
-.navbar-nav > li    {
-    border-left: 1px solid #ffae34  !important;
-    border-right: 1px solid #ffae34  !important;
- }
-
-
-.navbar-nav > li:first-child {
-border-left: none !important;
-
-}
-
-.navbar-nav > li:last-child, {
-border-right: none !important;
-
-
-}
-
-.col-sm-4,.page-header{
-        width:30% !important;
-
-}
-
-
-.well{
-    margin-top:35px   !important;
-    width:65%  !important;
+body{
+    width:68%;
     margin-left:auto;
     margin-right:auto;
-       
-}
-#comments{
+        background-color: #202020 !important;
+
+}}
+@media only screen and (min-width:1100px) {
+    
+body{
+    width:57%;
     margin-left:auto;
     margin-right:auto;
-    width:65% !important;
-}
-#acomment {
-  max-height: 500px;
-  overflow: auto;
-  img{
-    max-height:90px !important;
-    width: 65px !important;
-  }
-}
+        background-color: #202020 !important;
 
- }
-  #hideme{
-    z-index:-10;
-    color:#202020 !important;
-}
+}}
 
 /*DESKTOP CSS*/
 

@@ -23,7 +23,6 @@
 
 body {
     background-color: #303030!important;
-    margin-bottom:20px!important;
 }
 
 .navbar {
@@ -261,6 +260,22 @@ outline:none;
   
     text-decoration: none !important;
     text-shadow: 0 -1px 0 #082783 !important;
+}
+#togglechat, #togglemap, #toggleinfo{
+
+    height:48px !important;
+    width:49px !important; 
+    background-image:none !important;
+}
+#togglechat{
+background-color:blue !important;
+}
+
+#toggleinfo{
+background-color:red !important;
+}
+#togglemap{
+background-color:green !important;
 }
 #navbarbutton{
     padding: 13px 13px;

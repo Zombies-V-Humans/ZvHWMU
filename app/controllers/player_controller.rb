@@ -1,11 +1,11 @@
-class Game::CommentsController < ApplicationController
- 
+class Game::PlayerController < ApplicationController
+
   def new
     @comment = Comment.new
     @comments = Comment.order('created_at DESC')
   end
 
-def create
+  def create
     respond_to do |format|
       if current_user
         @comment = current_user.comments.build(comment_params)
@@ -14,23 +14,13 @@ def create
         else
           flash.now[:error] = 'Your comment cannot be saved.'
         end
-        format.html {redirect_to root_url}
+        format.html {redirect_to 'root_url'}
         format.js
       else
         format.html {redirect_to root_url}
         format.js {render nothing: true}
       end
     end
-  end
-def game
-end
-  def chat
-  end
-
-  def map
-  end
-
-  def info
   end
 
   private

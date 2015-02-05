@@ -9,7 +9,12 @@
         <span class="icon-bar"></span>
       </button>
       <% if user_signed_in? %>
-          <button type="button" id ="navbarpic" class="navbar-toggle"><%= image_tag(current_user.avatar)%></button>
+          <a href="/game/player/new"type="button" id ="navbarpic" class="navbar-toggle"><%= image_tag(current_user.avatar)%></a>
+              <% if current_page?('/game/player/new') %>
+          
+
+              <%= render "layouts/application/_player_buttons" %>
+              <% end %>
         <% else %>
           <%= link_to "Sign in", new_user_session_path, :id => "signInHome", :class => "navbar-toggle" %>
         <% end -%>
