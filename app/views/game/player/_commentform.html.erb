@@ -1,9 +1,8 @@
 <div class="well">
   <%= form_for @comment, remote: true do |f| %>
     <div class="form-group">
-      <%= f.text_area :body, rows: 3, class: 'form-control', required: true, maxlength: 600 %>
-      <small class="label label-warning">Cannot be blank or contain more than 600 symbols.</small>
+      <%= f.text_area :body, rows: 3, class: 'form-control', id: 'messagebox', required: true, maxlength: 600 %>
     </div>
-    <%= f.submit 'Post', class: 'btn btn-primary btn-lg' %>
+    <%= f.submit 'Post',id: 'messagebtn', class: 'btn btn-primary btn-lg' %>
   <% end %>
 </div>
