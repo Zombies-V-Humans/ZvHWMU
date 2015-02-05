@@ -10,7 +10,6 @@
     <button type="button" id="toggleinfo" data-toggle="collapse" data-target="#baseapp-navbar-collapse-1">
         <span class="sr-only">Toggle Info</span>
         <p>Info</p>
-
     </button>
 </div>
 <script>
@@ -18,7 +17,7 @@
         setTimeout(function() {
             $('#error_explanation').remove();
             $('.alert').remove();
-        }, 3500);
+        }, 2500);
     })
 </script>
 <style>
@@ -28,6 +27,7 @@
     body,
     html {
         overflow: hidden;
+        overflow-x:hidden !important;
     }
     .panel-body {
         padding-top: 0px !important;
