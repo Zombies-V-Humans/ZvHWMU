@@ -33,6 +33,8 @@ group :test, :development do
   gem "awesome_print"
 end
 
+gem 'gmaps4rails'
+
 gem 'turbolinks'
 # Use jQuery as the JavaScript library
 gem "jquery-rails"

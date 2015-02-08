@@ -1,0 +1,46 @@
+<div>
+<div id="map" >
+    <div id="multi_markers" ></div>
+</div>
+</div>
+<style>
+    #map{
+    	position:fixed !important;
+ display: inline !important;
+
+    	margin-right:auto;
+    	margin-left:auto;
+    	margin-top: 5px;
+    	width: 635px   !important;
+    	height:100%  !important;
+
+    }
+    #multi_markers{
+width: 100%; height: 100%;
+   	margin-left:auto  !important;
+
+    }
+        #map-canvas img {
+            max-width: none;
+
+    }
+    }
+</style>
+<script>
+
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
+  var markers = handler.addMarkers([
+    { lat: 43, lng: 3.5},
+    { lat: 45, lng: 4},
+    { lat: 47, lng: 3.5},
+    { lat: 49, lng: 4},
+    { lat: 51, lng: 3.5}
+  ]);
+  
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+
+});
+</script>
+    
