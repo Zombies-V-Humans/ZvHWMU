@@ -12,10 +12,13 @@ class ApplicationController < ActionController::Base
   end
 
  
+
   protected
   def render404
     render :file => File.join(Rails.root, 'public', '404.html'), :status => 404, :layout => false
     return true
   end
+
+
 
 end
