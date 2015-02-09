@@ -9,12 +9,10 @@ ZVH::Application.routes.draw do
   namespace "admin" do
     resources :users
   end
-
   
   get 'game/profile', :as => "profile"
-  get 'global/globalchat'
-  get "pages/index" 
-  get "pages/rules"
+  get "pages/index" , :as => "index"
+  get "pages/rules", :as => "rules"
   get "/admin" => "admin/base#index", :as => "admin"
-  root :to => "pages#index"
+  root :to => "pages#index" , :as => "root"
 end
