@@ -2,9 +2,9 @@
   <div class="well">
     <%= form_for @comment, remote: true do |f| %>
       <div class="form-group">
-          <%= f.text_area :body, rows: 3, class: 'form-control', required: true, maxlength: 600 %>
+          <%= f.text_area :body, rows: 3, class: 'form-control',id: 'textarea', required: true, maxlength: 600 %>
           </div>
-          <%= f.submit 'Post', class: 'btn btn-primary btn-lg' %>
+          <%= f.submit 'Post', class: 'btn btn-primary btn-lg', id:'postmessage' %>
     <% end %>
   </div>
             
