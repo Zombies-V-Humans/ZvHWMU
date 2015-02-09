@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
     @comments = Comment.order('created_at DESC')
   end
 
+ def profile
+    @comment = Comment.new
+    @comments = Comment.order('created_at DESC')
+  end
+  
   def create
     respond_to do |format|
       if current_user

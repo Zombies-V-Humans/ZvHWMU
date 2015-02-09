@@ -1,42 +1,37 @@
+    <nav class="navbar navbar-default" id="TheHeader">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target=
+                "#baseapp-navbar-collapse-1" data-toggle="collapse" id=
+                "navbarbutton" type="button"><span class="sr-only">Toggle
+                navigation</span> <span class="icon-bar"></span> <span class=
+                "icon-bar"></span> <span class="icon-bar"></span> <span class=
+                "icon-bar"></span></button> <% if user_signed_in? %> <a class=
+                "navbar-toggle" href="/game/profile" id="navbarpic" type=
+                "button"><%= image_tag(current_user.avatar)%></a>
+                <% if current_page?('/game/profile') %>
+                <%= render "layouts/application/_player_buttons" %> <% end %>
+                <% else %> <% if current_page?('/users/sign_in') %> <% else %>
+                <%= link_to "Sign in", new_user_session_path, :id => "signInHome", :class => "navbar-toggle" %>
+                <% end %> <% end -%>
+                <%= link_to "WMU ZVH", root_path, :class => "navbar-brand", :id => "brand" %>
+            </div>
 
+            <div class="collapse navbar-collapse" id=
+            "baseapp-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="navbutton">
+                    <%= link_to "The Rules", '/pages/rules'%></li><% if user_signed_in? %><% if current_user.admin? %>
 
-<nav id = "TheHeader" class="navbar navbar-default" role="navigation">
-   <div class="container-fluid">
-      <div class="navbar-header">
-         <button type="button" id ="navbarbutton"class="navbar-toggle" data-toggle="collapse" data-target="#baseapp-navbar-collapse-1">
-         <span class="sr-only">Toggle navigation</span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         </button>
-         <% if user_signed_in? %>
-         <a href="/game/player/new"type="button" id ="navbarpic" class="navbar-toggle"><%= image_tag(current_user.avatar)%></a>
-         <% if current_page?('/game/player/new') %>
-         <%= render "layouts/application/_player_buttons" %>
-         <% end %>
-         <% else %>
-         <%= link_to "Sign in", new_user_session_path, :id => "signInHome", :class => "navbar-toggle" %>
-         <% end -%>
-         <%= link_to "WMU ZVH", root_path, :class => "navbar-brand", :id => "brand" %>
-      </div>
-      <div class="collapse navbar-collapse" id="baseapp-navbar-collapse-1">
-         <ul class="nav navbar-nav">
-            <li><%= link_to "The Rules", '/pages/rules'%></li>
-            <% if user_signed_in? %>
-            <% if current_user.admin? %>
-            <li><%= link_to "Admin", admin_path %></li>
-            <% end %>
-            <li><%= link_to "Global Chat", '/comments/new'%></li>
-            <li><%= link_to "Account settings", edit_user_registration_path %></li>
-            <li><%= link_to "Sign out", destroy_user_session_path %></li>
-            <% else %>
-            <!--  <li><%= link_to "Sign up", new_user_registration_path %></li>
-               <li><%= link_to "Sign in", new_user_session_path %></li> -->
-            <% end -%>
-         </ul>
-         </center>
-      </div>
-   </div>
-</nav>
+                    <li class="navbutton">
+                    <%= link_to "Admin", admin_path %></li><% end %>
 
+                    <li class="navbutton">
+                    <%= link_to "Account settings", edit_user_registration_path %></li>
+
+                    <li class="navbutton">
+                    <%= link_to "Sign out", destroy_user_session_path %></li><% end -%>
+                </ul>
+            </div>
+        </div>
+    </nav>

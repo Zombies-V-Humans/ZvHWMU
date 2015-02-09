@@ -358,3 +358,66 @@ width:100%;
 
 }
 
+/*
+COOL NAV BUTTON STYLING
+*/
+
+.navbutton  {
+    background-color:#303030 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size:12px !important;
+    text-decoration:none !important;
+    color:#fff !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    position:relative !important;
+    padding:10px 20px !important;
+    padding-right:50px !important;
+    border-radius:5px;
+    border: 2px solid rgba(255, 174, 52, 0.7)!important;
+   
+}
+
+.navbutton:active {
+    top:3px;
+    background-image: linear-gradient(bottom, #303030 0%, rgba(255, 174, 52, 0.7) 100%);
+    background-image: -o-linear-gradient(bottom, #303030 0%, rgba(255, 174, 52, 0.7) 100%);
+    background-image: -moz-linear-gradient(bottom, #303030 0%, rgba(255, 174, 52, 0.7) 100%);
+    background-image: -webkit-linear-gradient(bottom, #303030 0%, rgba(255, 174, 52, 0.7) 100%);
+    background-image: -ms-linear-gradient(bottom, #303030 0%, rgb(44,160,202) 100%);
+    background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(62,184,229)),
+    color-stop(1, rgb(44,160,202))
+    );
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 174, 52, 0.3), 0px 2px 0px 0px #303030, 0px 5px 3px #999;
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 174, 52, 0.3), 0px 2px 0px 0px #303030, 0px 5px 3px #999;
+    -o-box-shadow: inset 0px 1px 0px rgba(255, 174, 52, 0.3), 0px 2px 0px 0px #303030, 0px 5px 3px #999;
+    box-shadow: inset 0px 1px 0px rgba(255, 174, 52, 0.3), 0px 2px 0px 0px #303030, 0px 5px 3px #999;
+}
+
+.navbutton::before {
+    background-color:#2591b4 !important;
+    background-image:url(right_arrow.png) !important;
+    background-repeat:no-repeat !important;
+    background-position:center center !important;
+    text-decoration:none !important !important;
+    content:"" !important;
+    width:20px !important;
+    height:20px !important;
+    position:absolute !important;
+    right:15px !important;
+    top:50% !important;
+    margin-top:-9px !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+    border-radius: 50% !important;
+    -webkit-box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
+    -moz-box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
+    -o-box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
+    box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
+}
+

@@ -12,7 +12,7 @@ jQuery ->
     $(this).find("input[type='submit']").val('Sending...').prop('disabled', true)
 
   try
-    client.unsubscribe '/comments'
+    client.unsubscribe '/player'
   catch
     console?.log "Can't unsubscribe."
 
