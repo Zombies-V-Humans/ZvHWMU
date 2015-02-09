@@ -13,30 +13,24 @@
     	right:0;
     	left:0;
     	padding-top:60px;
-
     	margin-right:auto;
     	margin-left:auto;
-    	margin-top: 5px;
-    	width: 635px   !important;
+    	margin-top: 10px !important;
+    	width: 100%   !important;
     	height:100%  !important;
 
     }
     #multi_overlays{
-width: 100%; height: 100%;
-   	margin-left:auto  !important;
-
+        width: 100%; 
+        height: 100%;
+   	    margin-left:auto  !important;
     }
         #map-canvas img {
-            max-width: none;
-
-    }
+        max-width: none;
     }
 </style>
 <script>
 
-    $('#map').collapse({
-        toggle: true
-    });
     var handler = Gmaps.build('Google');
 
 
@@ -73,10 +67,5 @@ width: 100%; height: 100%;
         handler.bounds.extendWith(circles);
         handler.fitMapToBounds();
     });
-markers_json = <%=raw @hash.to_json %>;
-markers = _.map(markers_json, function(marker_json){
-  marker = handler.addMarker(marker_json);
-  _.extend(marker, marker_json);
-  return marker;
-});
+
 </script>

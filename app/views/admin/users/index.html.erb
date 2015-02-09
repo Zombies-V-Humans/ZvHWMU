@@ -14,6 +14,7 @@
   <thead>
     <tr>
       <th><%= sortable "id", "ID" %></th>
+      <th><%= sortable "name", "Name" %></th>
       <th><%= sortable "email" %></th>
       <th><%= sortable "created_at", "Signed up" %></th>
       <th><%= sortable "sign_in_count", "Times signed in" %></th>
@@ -27,6 +28,7 @@
     <% @users.each do |user| %>
       <tr class="user">
         <td><%= link_to(user.id, admin_user_path(user)) %></td>
+        <td><%= link_to(user.name, admin_user_path(user)) %></td>
         <td><%= link_to(user.email, admin_user_path(user)) %></td>
         <td><%= l( user.created_at, :format => :short) %></td>
         <td><%= user.sign_in_count %></td>

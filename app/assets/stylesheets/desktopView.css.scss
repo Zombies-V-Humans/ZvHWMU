@@ -2,22 +2,22 @@
 /*DESKTOP CSS*/
 @media only screen and (min-width:768px) {
     
-body{
-    width:77%;
-    margin-left:auto;
-    margin-right:auto;
+body, #map{
+    width:77% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
         background-color: #202020 !important;
 
 
 }
 
 
-#comments, .panel-body{
+#comments, .panel-body,#map{
 
 margin:auto!important;
         position:relative!important;
 }
-#chat{
+#chat, #map{
 width:72% !important;
 margin:auto !important;
 
@@ -28,19 +28,19 @@ margin:auto !important;
 
 @media only screen and (min-width:968px) {
     
-body{
-    width:68%;
-    margin-left:auto;
-    margin-right:auto;
+body, #map{
+    width:68% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
         background-color: #202020 !important;
 
 }}
 @media only screen and (min-width:1100px) {
     
-body{
-    width:57%;
-    margin-left:auto;
-    margin-right:auto;
+body,#map{
+    width:57% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
         background-color: #202020 !important;
 
 }}

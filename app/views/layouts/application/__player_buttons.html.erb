@@ -1,3 +1,26 @@
+
+<style>
+  .navbar-brand {
+        visibility: hidden;
+    }
+
+ </style>
+<div class="playerheader">
+<form>
+    <button type="button" id="togglechat"  onclick="chat()">
+        <span class="sr-only">Toggle Chat</span>
+        <p>Chat</p>
+    </button>
+    <button type="button" id="togglemap" onclick="map()" >
+        <span class="sr-only">Toggle Map</span>
+        <p>Map</p>
+    </button>
+    <button type="button" id="toggleinfo" onclick="info()">
+        <span class="sr-only">Toggle Info</span>
+        <p>Info</p>
+    </button>
+
+</div>
 <script>
     $(document).ready(function() {
         setTimeout(function() {
@@ -5,24 +28,33 @@
             $('.alert').remove();
         }, 2500);
     })
-</script>
-<style>
-  .navbar-brand {
-        visibility: hidden;
-    }
- </style>
 
-<div class="playerheader">
-    <button type="button" id="togglechat" data-toggle="collapse" data-target="#chat">
-        <span class="sr-only">Toggle Chat</span>
-        <p>Chat</p>
-    </button>
-    <button type="button" id="togglemap" data-toggle="collapse"   data-target="#map">
-        <span class="sr-only">Toggle Map</span>
-        <p>Map</p>
-    </button>
-    <button type="button" id="toggleinfo" data-toggle="collapse" data-target="#baseapp-navbar-collapse-1">
-        <span class="sr-only">Toggle Info</span>
-        <p>Info</p>
-    </button>
-</div>
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() { document.getElementById("map").style.visibility="hidden";
+document.getElementById("info").style.visibility="hidden";
+document.getElementById("chat").style.visibility="visible"; });
+
+function chat()
+{
+document.getElementById("map").style.visibility="hidden";
+document.getElementById("info").style.visibility="hidden";
+document.getElementById("chat").style.visibility="visible";
+}
+function map()
+{
+document.getElementById("chat").style.visibility="hidden";
+document.getElementById("info").style.visibility="hidden";
+document.getElementById("map").style.visibility="visible";
+
+}
+function info()
+{
+document.getElementById("chat").style.visibility="hidden";
+document.getElementById("map").style.visibility="hidden";
+document.getElementById("info").style.visibility="visible";
+
+}
+</script>
