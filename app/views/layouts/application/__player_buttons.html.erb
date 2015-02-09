@@ -1,3 +1,14 @@
+<script>
+    $(document).ready(function() {
+        document.getElementById("info").style.visibility="hidden";
+        document.getElementById("map").style.visibility="hidden";
+        document.getElementById("chat").style.visibility="visible"; 
+        setTimeout(function() {
+            $('#error_explanation').remove();
+            $('.alert').remove();
+        }, 2500);
+    })
+</script>
 <div class="playerheader">
 <form>
     <button type="button" id="togglechat"  onclick="chat()">
@@ -20,14 +31,3 @@
     }
 
  </style>
-<script>
-    $(document).ready(function() {
-        document.getElementById("info").style.visibility="hidden";
-        document.getElementById("map").style.visibility="hidden";
-        document.getElementById("chat").style.visibility="visible"; 
-        setTimeout(function() {
-            $('#error_explanation').remove();
-            $('.alert').remove();
-        }, 2500);
-    })
-</script>
