@@ -89,7 +89,7 @@ h1,h2,h3,h4, label, ul {
     text-align: center !important;
     font-size: 24px !important;
     color: #F0F0F0!important;
-    text-decoration: underline !important;
+    text-decoration: none !important;
     outline:none !important;
 }
 
@@ -188,7 +188,7 @@ table{
     
     background-color: #303030;
     width:100% !important;
-    height:60px !important; 
+    height:55px !important; 
     .btn{
     width:100%  !important;
     }
@@ -207,7 +207,7 @@ table{
 #acomment {
     p{
         font-family: Impact, Charcoal, sans-serif;
-        font-size:22px !important;
+        font-size:18px !important;
        
         box-shadow: inset 2px 4px 8px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3)!important;
       
@@ -240,8 +240,8 @@ table{
       padding:20px 15px 15px 20px;
       }
       li:nth-child(odd){background-color:#444444;}
-       li:nth-child(even){margin-top:10px !important;
-        margin-bottom:10px !important;}
+       li:nth-child(even){margin-top:5px !important;
+        margin-bottom:5px !important;}
 
 }
 #regsignup{
