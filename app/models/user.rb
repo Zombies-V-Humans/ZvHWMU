@@ -7,12 +7,14 @@ class User < ActiveRecord::Base
   has_many :comments, dependent: :delete_all
   has_and_belongs_to_many :roles
 
-def latitude
- return 42.255133
-end
-def longitude
- return -85.641692
-end
+  def latitude
+  	return 42.255133
+  end
+
+  def longitude
+    return -85.641692
+  end
+
   def role?(role)
     return !!self.roles.find_by_name(role.to_s)
   end

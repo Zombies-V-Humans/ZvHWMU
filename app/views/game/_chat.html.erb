@@ -1,13 +1,14 @@
 <div id="chat"  class="collapse" >
   <div class="well">
     <%= form_for @comment, remote: true do |f| %>
-      <div class="form-group">
-          <%= f.text_area :body, rows: 3, class: 'form-control',id: 'textarea', required: true, maxlength: 600 %>
-          </div>
-          <%= f.submit 'Post', class: 'btn btn-primary btn-lg', id:'postmessage' %>
+      <div id = "textbox" class="form-group">
+          <%= f.text_area :body, rows: 3, class: 'form-control',id: 'textarea',  maxlength: 600 %>
+      </div>
+      <div id = "sub">  
+          <%= f.submit 'Post', class: 'btn btn-primary btn-lg', id:'postmessage' , onclick: 'doSomething();'%>
+      </div>
     <% end %>
   </div>
-            
      <div class="panel panel-default" id="comments">
        <div class="panel-body">
          <ul id = "acomment" class="media-list">
@@ -16,3 +17,42 @@
        </div>
      </div>
 </div>
+<style>
+#textarea{
+  height:55px !important;
+}
+#textbox{
+    margin:-3px 0 0 0 !important;
+    float:left !important;
+ 
+  padding:0 !important;
+  width:70% !important;
+}
+#postmessage{
+ margin: -2px 0 0 0  !important;
+   float:right !important;
+height:54px !important;
+  padding:0 !important;
+  width:20% !important;
+}
+</style>
+<script>var clicks = 0;
+
+function doSomething() {
+
+    var comment = $.trim($('#textarea').val());
+    if (comment.length == 0) {
+        alert('Message content is requried!');
+        return;
+    }
+
+    clicks += 1;
+    if (clicks > 1) {
+        alert('Please wait 30 seconds between messages!');
+        document.getElementById("postmessage").disabled = true;
+        setTimeout('document.getElementById("postmessage").disabled=false;', 30000);
+    } else {
+        alert('Your message was successfully posted!');
+    }
+}
+  </script>

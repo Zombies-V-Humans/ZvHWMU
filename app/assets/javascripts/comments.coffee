@@ -9,10 +9,10 @@ client.addExtension {
 
 jQuery ->
   $('#new_comment').submit ->
-    $(this).find("input[type='submit']").val('Sending...').prop('disabled', true)
+  $('#new_comment').val = '' 
 
   try
-    client.unsubscribe '/player'
+    client.unsubscribe '/profile'
   catch
     console?.log "Can't unsubscribe."
 

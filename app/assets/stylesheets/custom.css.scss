@@ -129,14 +129,11 @@ a {
 }
 
 .panel {
-    
 
     background-color: #303030 !important;
-    
     padding:20px 10px 10px 10px;
     width: 87% !important;
-  
-  
+    height:100% !important;
 }
 
 .navbar {
@@ -187,8 +184,11 @@ table{
 }
 .well{
     margin-top:10px  !important;
+    margin-bottom:5px  !important;
+    
     background-color: #303030;
-
+    width:100% !important;
+    height:60px !important; 
     .btn{
     width:100%  !important;
     }
@@ -196,15 +196,21 @@ table{
 #comments{
     width:100% !important;
     padding:10px 0px 10px 0px;
+    overflow-y:hidden !important;
 }
+.panel-body {
 
+  
+      height:1000px !important;  
+  
+}
 #acomment {
     p{
         font-family: Impact, Charcoal, sans-serif;
         font-size:22px !important;
-        border: 2px solid #D0D0D0 !important;
-        box-shadow: inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3)!important;
-        background: rgba(255, 174, 52, 0.46)!important;
+       
+        box-shadow: inset 2px 4px 8px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3)!important;
+      
         color: white!important;
         padding: 5px;
         margin-right:auto;
@@ -217,13 +223,14 @@ table{
     p:after{content: '\201D'!important;
               color: white!important;}
 
-      max-height: 500px  !important;
       overflow: auto  !important;
       img{
           border-radius:15%;
-          margin-bottom:10px;
+         margin-top:auto !important;
+         margin-bottom:auto !important;
           max-height:90px !important;
           width: 65px !important;
+          float:left !important;
       }
       li{
 
@@ -233,9 +240,9 @@ table{
       padding:20px 15px 15px 20px;
       }
       li:nth-child(odd){background-color:#444444;}
-       li:nth-child(even){ box-shadow: inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3)!important;}
+       li:nth-child(even){margin-top:10px !important;
+        margin-bottom:10px !important;}
 
-      
 }
 #regsignup{
     -moz-user-select: none !important;
@@ -255,7 +262,7 @@ font-weight:bold;
         height: 40px  !important;
             font-size: 17px !important;
             margin: 5px 0px 5px 0px;
-outline:none;
+    outline:none;
     -moz-user-select: none !important;
     background: #2A49A5 !important;
     border: 1px solid #082783 !important;
@@ -283,7 +290,7 @@ outline:none;
 }
 #navbarbutton{
     padding: 13px 13px;
-    background-color:rgba(240, 174, 52, 1) !important;
+    background-color:rgba(255, 174, 52, 1) !important;
     background-image:none !important;
 }
 #navbarpic{

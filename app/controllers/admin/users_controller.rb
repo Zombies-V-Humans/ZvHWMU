@@ -5,6 +5,7 @@ class Admin::UsersController < Admin::BaseController
   before_filter :find_user, :only => [:edit, :update, :show, :destroy]
 
   def index
+    
     @q = User.search(params[:q])
     search_relation = @q.result
     @users = search_relation.order(sort_column + " " + sort_direction).references(:user).page params[:page]
