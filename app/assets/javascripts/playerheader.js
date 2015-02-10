@@ -1,3 +1,4 @@
+
 function chat()
 {
 document.getElementById("map").style.visibility="hidden";
