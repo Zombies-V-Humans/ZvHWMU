@@ -1,58 +1,81 @@
+<script>
+  var clicks = 0;
+  function rateLimiter() {
+    var comment = $.trim($('#textarea').val());
+    if (comment.length == 0) { alert('Message content is requried!'); return; }
+    clicks += 1;
+    if (clicks > 2) { alert('Please wait 45 seconds between messages!');
+                      document.getElementById("postmessage").disabled = true;
+                      setTimeout('document.getElementById("postmessage").disabled=false;', 45000); 
+    } else { alert('Your message was successfully posted!'); }  }
+
+ function popOut() {var elem = document.getElementById("comments");
+   if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+      }
+
+</script>
+
 <div id="chat"  class="collapse" >
-  <div class="well">
-    <%= form_for @comment, remote: true do |f| %>
-      <div id = "textbox" class="form-group">
-          <%= f.text_area :body, rows: 3, class: 'form-control',id: 'textarea',  maxlength: 600 %>
-      </div>
-      <div id = "sub">  
-          <%= f.submit 'Post', class: 'btn btn-primary btn-lg', id:'postmessage' , onclick: 'doSomething();'%>
-      </div>
-    <% end %>
-  </div>
-     <div class="panel panel-default" id="comments">
-       <div class="panel-body">
-         <ul id = "acomment" class="media-list">
-           <%= render @comments %>
-           </ul>
-       </div>
+ <div class="well">
+  <%= form_for @comment, remote: true do |f| %>
+    <div id = "textbox" class="form-group">
+      <%= f.text_area :body, rows: 3, class: 'form-control',id: 'textarea',  maxlength: 600 %>
+    </div>
+    <div id = "sub">
+      <%= f.submit 'Post', class: 'btn btn-primary btn-lg', id:'postmessage' , onclick: 'rateLimiter();'%>
+    </div>
+  <% end %>
+ </div> 
+  <div class="panel panel-default" id="comments"> 
+  <button onclick="popOut();" id = "popout" ></button>
+     <div class="panel-body">
+       <ul id = "acomment" class="media-list">
+          <%= render @comments %>
+          </ul>
      </div>
+  </div> 
 </div>
 <style>
-#textarea{
-  height:50px !important;
-}
-#textbox{
-    margin:-3px 0 0 0 !important;
-    float:left !important;
- 
-  padding:0 !important;
-  width:70% !important;
-}
-#postmessage{
- margin: -2px 0 0 0  !important;
-   float:right !important;
-height:49px !important;
-  padding:0 !important;
-  width:20% !important;
-}
+  #textarea{ height:50px !important;  }
+  #textbox{ margin:-3px 0 0 0 !important;
+            float:left !important;
+            padding:0 !important;
+            width:70% !important; }
+  #postmessage{ margin: -2px 0 0 0  !important;
+                float:right !important;
+                height:49px !important;
+                padding:0 !important;
+                width:20% !important; }
+  #popout{
+      margin:10px 10px 10px 10px  !important;
+      width:50px!important;
+      height:50px!important;
+      float:right !important; 
+      background-color: #202020 !important; 
+      background:#202020 !important; 
+      border-radius:50%;
+
+  }
 </style>
-<script>var clicks = 0;
 
-function doSomething() {
-
-    var comment = $.trim($('#textarea').val());
-    if (comment.length == 0) {
-        alert('Message content is requried!');
-        return;
-    }
-
-    clicks += 1;
-    if (clicks > 1) {
-        alert('Please wait 30 seconds between messages!');
-        document.getElementById("postmessage").disabled = true;
-        setTimeout('document.getElementById("postmessage").disabled=false;', 30000);
-    } else {
-        alert('Your message was successfully posted!');
-    }
-}
-  </script>
