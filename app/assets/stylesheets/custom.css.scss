@@ -1,5 +1,7 @@
 .alert{
     margin-top:7px;
+	z-index:10 !important;
+	position:absolute !important;
 }
 .alert-error {
     padding: 15px;
@@ -12,12 +14,11 @@
     border-color: #faebcc;
     font-weight: bold;
 }
-
 body {
     background-color: #303030!important;
 }
 .page-header{
-margin:0 !important;
+	margin:0 !important;
 	  h1{
   	    text-shadow: -.5px -2px 2px #FFAE34, -1px -3px 3px #CD4606;
 		text-align:center !important;
@@ -34,7 +35,6 @@ margin:0 !important;
 	margin-left:auto !important;
 	margin-right:auto !important;
 }
-
 input {
     font-size: 15px !important;
     border: 2px solid #D0D0D0 !important;
@@ -43,12 +43,10 @@ input {
     color: #fff !important;
     margin-bottom:2.5px;
 }
-
 .navbar-header {
     background-color: #1F1F1F !important;
     margin-bottom: 0 !important;
 }
-
 .navbar-default{
     border-bottom: 3px solid rgba(255, 174, 52, 0.8) !important;
 
@@ -72,7 +70,6 @@ input {
     text-decoration: none;
     outline:none !important;
 }
-
 h1,h2,h3,h4, label, ul {
     color: rgba(255, 174, 52, 0.8)!important;
 }
@@ -88,17 +85,14 @@ h1,h2,h3,h4, label, ul {
     text-decoration: none !important;
     outline:none !important;
 }
-
 .icon-bar {
     background-color: #fff !important;
     opacity: 1;
 }
-
 a {
     color: white;
     text-decoration: none !important;
 }
-
 .mainbtn,#mainbtn {
     display: inline-block !important;
     font-weight: bold !important;
@@ -106,7 +100,6 @@ a {
     background: rgba(255, 174, 52, 0.9)!important;
     width:87% !important;
 }
-
 .jumbotron {    
 	color: #fff !important;
    
@@ -121,9 +114,7 @@ a {
     margin-top:5vmin !important;
     margin-bottom:5vmin !important;
     box-shadow: inset 4px 6px 10px -4px rgba(0,0,0,0.7), 2px 2px 2px -1px rgba(255,255,255,0.3)!important;
-
 }
-
 .panel {
     background-color: #303030 !important;
     height:100% !important;
@@ -211,9 +202,9 @@ img{
    margin-bottom:auto !important;
    float:left !important;
    max-width: 55px !important;
-  max-height: 55px !important;
-  margin-right: 7px !important;
-  margin-left: -10px !important;
+   max-height: 55px !important;
+   margin-right: 7px !important;
+   margin-left: -10px !important;
     }
 li{
   margin-right:auto !important;
@@ -224,11 +215,13 @@ li{
 
   li:nth-child(odd){
  	 background-color:#444444;
+ 	 padding-top:10px !important;
+ 	 padding-bottom:5px !important;
  	}
 
   li:nth-child(even){
- 	 margin-top:0px !important;
- 	 margin-bottom:-17px !important;
+ 	 margin-top:-5px !important;
+ 	 margin-bottom:-25px !important;
   }
 
 }
@@ -385,8 +378,7 @@ NAV BUTTON STYLING
     -o-box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
     box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
 }
-
-   #popout{
+#popout{
       margin:10px 0px 0px 3px  !important;
       width:40px!important;
       height:40px!important;
@@ -394,19 +386,18 @@ NAV BUTTON STYLING
       border-radius:50%;
       padding:0px !important;
   }
-
-    #chat {
-        overflow: hidden;
-        position:absolute !important;
-        top: 60px!important;
-        right: 0!important;
-        bottom: 0!important;
-        left: 0!important;
-        overflow-x:hidden !important;
-        display:inline-block !important;
+ #chat {
+     overflow: hidden;
+     position:absolute !important;
+     top: 60px!important;
+     right: 0!important;
+     bottom: 0!important;
+     left: 0!important;
+     overflow-x:hidden !important;
+     display:inline-block !important;
     }
 #acomment{
-	height:1000px !important;
+	 height:1000px !important;
 }
 .playerheader{
 	margin-top:3px !important;
