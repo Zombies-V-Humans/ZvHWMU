@@ -5,7 +5,6 @@ class Admin::UsersController < Admin::BaseController
   before_filter :find_user, :only => [:edit, :update, :show, :destroy]
 
   def index
-    
     @q = User.search(params[:q])
     search_relation = @q.result
     @users = search_relation.order(sort_column + " " + sort_direction).references(:user).page params[:page]
@@ -18,7 +17,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def update
-    if @user.update_attributes(params[:user].permit(:email))
+    if @user.update_attributes(params[:user].permit(:email, :name))
       redirect_to admin_users_path, :notice => "User successfully updated."
     else
       render :edit
@@ -39,7 +38,7 @@ class Admin::UsersController < Admin::BaseController
   private
 
   def sort_column
-    User.column_names.include?(params[:sort]) ? params[:sort] : "email"
+    User.column_names.include?(params[:sort]) ? params[:sort] : "name"
   end
 
   def sort_direction

@@ -132,7 +132,6 @@ GEM
     ffi (1.9.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
-    gmaps4rails (2.1.2)
     hashie (2.0.5)
     hike (1.2.3)
     http_parser.rb (0.6.0)
@@ -301,7 +300,6 @@ DEPENDENCIES
   factory_girl_rails
   faker (= 1.4.2)
   faye-rails (~> 2.0)
-  gmaps4rails
   jquery-rails
   jquery-turbolinks
   kaminari

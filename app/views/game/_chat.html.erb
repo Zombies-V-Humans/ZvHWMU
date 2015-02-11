@@ -19,24 +19,25 @@
 </div>
 
 <style>
-#textarea {
-    height: 50px !important;
+.panel-body{
+  padding:0px 10px 0px 10px !important;
 }
+.well{
+  padding:15px 10px 0px 10px;
+  margin-bottom: -5px !important;
+  border:none!important;}
+#textarea {
+    height: 50px !important;}
 
 #textbox {
-    margin: -3px 0 0 0 !important;
-    float: left !important;
-    padding: 0 !important;
-    width: 70% !important;
-}
+    width: 70% !important;}
 
 #postmessage {
-    margin: -2px 0 0 0  !important;
-    float: right !important;
-    height: 49px !important;
-    padding: 0 !important;
-    width: 20% !important;
-}
+  padding-top:12px;
+  margin-top:-64px !important;
+  float: right !important;
+  height: 49px !important;
+  width: 25% !important;}
 </style>
 
 <script>
@@ -49,7 +50,7 @@ function rateLimiter() {
         return;
     }
     clicks += 1;
-    if (clicks > 2) {
+    if (clicks > 1) {
         alert('Please wait 45 seconds between messages!');
         document.getElementById("postmessage").disabled = true;
         setTimeout('document.getElementById("postmessage").disabled=false;', 45000);
@@ -57,6 +58,4 @@ function rateLimiter() {
         alert('Your message was successfully posted!');
     }
 }
-
-
 </script>

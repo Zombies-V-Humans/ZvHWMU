@@ -1,75 +1,21 @@
-<div>
+<!--Hello! When you implement your map view here plz name the id of your outter div to "map"-->
 <div id="map" >
-    <div id="multi_overlays" ></div>
-
-</div>
+    
 </div>
 
 <style>
-    #map{
-    	position:absolute !important;
-    	top:0;
-    	bottom:0;
-    	right:0;
-    	left:0;
-    	padding-top:60px;
-    	margin-right:auto;
-    	margin-left:auto;
-    	margin-top: 10px !important;
-    	width: 100%   !important;
+#map{
+        position:absolute !important;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        padding-top:60px;
+        margin-right:auto;
+        margin-left:auto;
+        margin-top: 10px !important;
+        width: 100%   !important;
         overflow:auto !important;
-    	height:100%  !important;
-
-    }
-    #multi_overlays{
-              overflow:auto !important;
-        width: 100%; 
-        height: 100%;
-   	    margin-left:auto  !important;
-    }
-        #map-canvas img {
-                  overflow:auto !important;
-        max-width: none;
-    }
-    
+        height:100%  !important;
+  }
 </style>
-<script>
-
-    var handler = Gmaps.build('Google');
-
-
-    handler.buildMap({
-        internal: {
-            id: 'multi_overlays'
-        }
-    }, function() {
-
-
-        var circles = handler.addCircles(
-            [{
-                lat: 42.254133,
-                lng: -85.640692,
-                radius: 40
-            }], {
-                strokeColor: '#FF0000'
-            }
-
-        );
-
-        handler.bounds.extendWith(circles);
-         var circles = handler.addCircles(
-            [{
-                lat: 42.255133,
-                lng: -85.641692,
-                radius: 40
-            }], {
-                strokeColor: '#FF0000'
-            }
-            
-        );
-            
-        handler.bounds.extendWith(circles);
-        handler.fitMapToBounds();
-    });
-
-</script>
