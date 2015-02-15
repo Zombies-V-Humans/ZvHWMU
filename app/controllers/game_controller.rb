@@ -1,7 +1,7 @@
-class GameController < CommentsController
+class GameController < ApplicationController
    before_action :authenticate_user!
    helper_method :sort_column, :sort_direction, :search_params
- before_action :set_task, only: [:show, :edit, :update, :destroy]
+   before_action :set_task, only: [:show, :edit, :update, :destroy, :destroyAll]
 
   respond_to :html, :js
   before_filter :find_user, :only => [:edit, :show]
@@ -12,7 +12,7 @@ class GameController < CommentsController
 
  def profile
  	 @task = Task.new
- 	     @tasks = Task.all
+ 	 @tasks = Task.all
     @comment = Comment.new 
     @comments = Comment.order('created_at DESC')
     
@@ -21,7 +21,6 @@ class GameController < CommentsController
     @users = search_relation.order(sort_column + " " + sort_direction).references(:user).page params[:page]
  end
   
-
 def sort_column
     User.column_names.include?(params[:sort]) ? params[:sort] : "name"
   end

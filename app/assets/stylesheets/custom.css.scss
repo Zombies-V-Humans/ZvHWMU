@@ -403,3 +403,59 @@ NAV BUTTON STYLING
 	margin-top:3px !important;
 	float:left!important;
 }
+    table td input{color:white!important;}
+.edit {
+  float: right;
+  padding-right: 10px;
+}
+
+
+    #search{
+        padding:0 !important;
+        height:40px!important;
+        padding-top:8px;
+        background-color:rgba(255, 174, 52, 1) !important; 
+        width:100%;}
+  #tag{
+        padding:0px !important;
+        height:40px!important;
+   
+        background-color:rgba(255, 174, 52, 1) !important; 
+        margin-bottom:-25px !important;
+        width:100%;}
+
+     #searchField{
+
+        padding-top:8px;
+        width:100%!important;
+        height:40px!important;
+        background-color:rgba(255, 174, 52, 0.8) !important; 
+        padding-bottom:0px;}
+
+    #userfield{ 
+    padding:0;
+    p{
+        float:right;
+        background: none!important;
+        width:65%!important;
+        border:none !important;
+        font-size: 20px!important;
+        margin-top:-65px !important;
+        padding:0;
+     }
+    }
+
+    .infoTable{ 
+        width:100%;
+        overflow-y:scroll;
+        max-height:250px; }
+
+    #userfield img{
+    margin-top:-5px;
+        padding-top:5px !important;
+        float:left!important;
+         max-height:45px;
+         max-width:45px;
+    
+
+    }

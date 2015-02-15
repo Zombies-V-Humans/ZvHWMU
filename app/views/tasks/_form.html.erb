@@ -1,4 +1,4 @@
 <%= simple_form_for @task, remote: true do |f|   %>
   <%= f.text_field  :description, as: :text, :class => "form-control", :placeholder => "Enter a Zombie name"           %>
-  <%= f.button :submit %>
+  <%= f.button  "Tag!", :submit%>
 <% end %>
