@@ -10,7 +10,6 @@
 //= require turbolinks
 //= require faye
 //= require comments
-//= require underscore
 //= require_tree 
 
 $(document).ready(function(){

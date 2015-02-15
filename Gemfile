@@ -39,9 +39,12 @@ gem "jquery-rails"
 
 gem 'jquery-turbolinks'
 
+gem 'simple_form', '~> 3.1.0.rc1'
+
 gem 'thin'
 #Chat Server Gem
 gem 'faye-rails', '~> 2.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0.1'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 

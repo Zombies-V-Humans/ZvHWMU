@@ -1,5 +1,5 @@
 ZVH::Application.routes.draw do
-
+  resources :tasks
   resources :comments, only: [:new, :create]
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_scope :user do
@@ -9,7 +9,7 @@ ZVH::Application.routes.draw do
   namespace "admin" do
     resources :users
   end
-  
+
   get 'game/profile', :as => "profile"
   get "pages/index" , :as => "index"
   get "pages/rules", :as => "rules"

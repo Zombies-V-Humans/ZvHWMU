@@ -1,23 +1,12 @@
 class CommentsController < ApplicationController
 
-  def new
-    @comment = Comment.new
-    @comments = Comment.order('created_at DESC')
-  end
-
- def profile
-    @comment = Comment.new
-    @comments = Comment.order('created_at DESC')
- end
   
   def create
     respond_to do |format|
       if current_user
         @comment = current_user.comments.build(comment_params)
         if @comment.save
-         flash[:alert] = "Your comment was successfully posted!"
         else
-          flash[:alert]  = "Your comment cannot be saved."
         end
         format.html {redirect_to root_url}
         format.js

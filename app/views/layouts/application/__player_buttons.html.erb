@@ -1,41 +1,14 @@
 <script>
     $(document).ready(function() {
-        document.getElementById("info").style.visibility="hidden";
-        document.getElementById("map").style.visibility="hidden";
-        document.getElementById("chat").style.visibility="visible"; 
         setTimeout(function() {
             $('#error_explanation').remove();
             $('.alert').remove();
         }, 2500);
     })
-
- function toggleFullScreen() {
-  if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) {
-      document.documentElement.msRequestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    }
-  }
-}
     </script>
 
 <div class="playerheader">
+
     <button type="button" id="togglechat"  onclick="chat()">
         <p>Chat</p>
     </button>
@@ -46,10 +19,11 @@
         <p>Info</p>
     </button>
 </div>
+
  <button onclick="toggleFullScreen();" id = "popout" >Full</button>
 
 <style>
-  .navbar-brand {
+   .navbar-brand {
         visibility: hidden;
     }
     #postmessage{
@@ -62,7 +36,6 @@
     }
     #popout{
       opacity:0.7!important;
-        background: #303030!important;
+      background: #303030!important;
     }
  </style>
-
