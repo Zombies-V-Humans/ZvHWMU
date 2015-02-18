@@ -1,86 +1,63 @@
-<style>
-#userformField{
-	visibility: hidden;
-}
-#tasks{
-	width:100% !important;
-	margin-left: auto !important;
-	margin-right:auto !important;
-}
-#infoContainer{
-		width:100% !important;
-		margin-left: auto !important;
-		margin-right:auto !important;
-		height:300px;
-		overflow-y: scroll !important;
-	overflow-x:hidden !important;
-}											
-#tag{
-	  content: "Hide" !important;
-}
-.tasks{
-	margin-left: 15px !important;
-		margin-right:15px !important;
-	height:200px;
-		overflow-y: scroll !important;
-	overflow-x:hidden !important;
-}
-</style>
-<script>
-function respConfirm () {
-     var response = confirm('Please be sure this is the right player?');
-
-     if (response) alert("Zombie Tagged!");
-     else end;
-}
-</script>
-
-
-<div id="info" style="margin-top: 75px;">
-
-<%= search_form_for @q, :url => profile_path, :html => { :method => :get, :class => "well form-inline" } do |f| %>
-  <div class="form-group">
-      <th><%= f.text_field :name_cont, :type => "search" ,:class => "form-control", :placeholder => "Search by name", :id =>"searchField"%></th>
-      <th><%= f.submit "Search", :id => "search"%></th>
-  </div>
-    </tr>
-    <% end %>
-<div id ="infoContainer">
-   
-<table class="sortable table table-striped table-bordered table-condensed">
-  <thead>
-    <tr>
-   
-      <th></th>
-      <th></th>
-  </div>
-    </tr>
-  
-  </thead>
-  <tbody>tag
-    <% @users.each do |user| %>
-      <tr id = "name" class="user">
-        <td id = "userfield">
-	        <%= image_tag(user.avatar)%>  
-			<%= simple_form_for @task, remote: true do |f|   %>
-			  <%= f.text_field  :description,  as: :text ,:class => "form-control",:id => "userformField",:value => user.name %>
-			 <p> <%=user.name =%></p>
-		</td>
-        <td>
-        	<p><%= f.button :submit, :id => "tag", :onclick =>"respConfirm();" %></p>
-		</td>
-	  <% end %>
+<!--                     -->
+<!--   Info Page in UI   -->
+<!--                     -->
+<div id="info">
+  <table class="sortable table table-bordered table-condensed">
+    <tbody>
+      <%= search_form_for @q, :url => profile_path, :html =>
+        { :method => :get, :class => "well form-inline" } do |f| %>
+      <tr>
+        <div class="form-group">
+          <td>
+            <%= f.text_field :name_cont, :type =>
+              "search" ,:class =>
+              "form-control", :placeholder =>
+              "Search by name", :id =>
+              "searchField"%>
+          </td>
+          <td>
+            <%= f.submit "Search", :id => "search"%>
+          </td>
+        </div>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-  <%= paginate @users %>
+      <% end %>
+    </tbody>
+  </table>
+  <!--                     -->
+  <!-- Player Lookup Table -->
+  <!--                     -->
+  <div id ="infoContainer">
+    <table style="width:100%;" class="sortable table-striped table-bordered table-condensed">
+      <tbody>
+        <% @users.each do |user| %>
+        <tr id = "name" class="user">
+          <td>
+            <%= image_tag(user.avatar, :id => "userLookupImg") %>
+          </td>
+            <%= simple_form_for @task, remote: true do |f|   %>
+            <%= f.text_field  :description,  as: :text ,
+              :class => "form-control",
+              :id => "userformField",
+              :value => user.name,
+              :style => "display:none"%>
+          <td>
+            <p><%= f.button :submit, :id =>"tag", :value => user.name, :onclick =>"respConfirm($(this).val());" %></p>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @users %>
   </div>
+  <!--                     -->
+  <!-- List of Zombies     -->
+  <!--                     -->
 </div>
 
- </div>
-<br>
-<div class = "tasks">
+  <div class="tasks" id="tasks">
+    <%= render @tasks %>
+  </div>
 
-<%= render "tasks/index" %>
 </div>
+  <!--       The End       -->

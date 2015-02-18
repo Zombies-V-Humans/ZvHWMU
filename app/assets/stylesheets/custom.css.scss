@@ -1,12 +1,13 @@
-.alert{
-    margin-top:7px;
-	z-index:10 !important;
-	position:absolute !important;
+.alert {
+    margin-top: 7px;
+    z-index: 10 !important;
+    position: absolute !important;
 }
+
 .alert-error {
     padding: 15px;
     margin-top: 5px;
-    margin-bottom:-10px;
+    margin-bottom: -10px;
     border: 1px solid transparent;
     border-radius: 4px;
     color: #fa6d3b;
@@ -14,91 +15,105 @@
     border-color: #faebcc;
     font-weight: bold;
 }
+
 body {
     background-color: #303030!important;
 }
-.page-header{
-	margin:0 !important;
-	  h1{
-  	    text-shadow: -.5px -2px 2px #FFAE34, -1px -3px 3px #CD4606;
-		text-align:center !important;
-		margin-left:auto !important;
-		margin-right:auto !important;
-	   }
+
+.page-header {
+    margin: 0 !important;
+    h1{
+        text-shadow: -.5px -2px 2px #FFAE34, -1px -3px 3px #CD4606;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
+}
+
 .navbar {
-	z-index:2 !important;
+    z-index: 2 !important;
     border: none !important;
-	overflow-y:hidden!important;
-	overflow-x:hidden!important;
-	width:100% !important;
-	margin-left:auto !important;
-	margin-right:auto !important;
+    overflow-y: hidden!important;
+    overflow-x: hidden!important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
+
 input {
     font-size: 15px !important;
     border: 2px solid #D0D0D0 !important;
     box-shadow: inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.3)!important;
     background: rgba(255, 174, 52, 0.46)!important;
     color: #fff !important;
-    margin-bottom:2.5px;
+    margin-bottom: 2.5px;
 }
+
 .navbar-header {
     background-color: #1F1F1F !important;
     margin-bottom: 0 !important;
 }
-.navbar-default{
-    border-bottom: 3px solid rgba(255, 174, 52, 0.8) !important;
 
+.navbar-default {
+    border-bottom: 3px solid rgba(255, 174, 52, 0.8) !important;
 }
-#baseapp-navbar-collapse-1{
-    border:none !important;
+
+#baseapp-navbar-collapse-1 {
+    border: none !important;
 }
-#brand{
-    background-color:transparent !important;
+
+#brand {
+    background-color: transparent !important;
 }
+
 .navbar-brand {
-    position:absolute !important;
-    margin-top:8px;
-    margin-bottom:auto;
+    position: absolute !important;
+    margin-top: 8px;
+    margin-bottom: auto;
     font-family: "League-Gothic",Courier;
     text-shadow: 0px 0px 2px #FEFCC9, 2px -2px 3px #FEEC85, -5px -5px 5px #FFAE34, -3px -6px 6px #CD4606, 0px -8px 8px #973716;
     font-size: 42px !important;
     color: #f0f0f0!important;
     letter-spacing: -3px;
-    background-color:transparent !important;
+    background-color: transparent !important;
     text-decoration: none;
-    outline:none !important;
+    outline: none !important;
 }
+
 h1,h2,h3,h4, label, ul {
     color: rgba(255, 174, 52, 0.8)!important;
 }
-#hideme{
-    z-index:-10;
+
+#hideme {
+    z-index: -10;
     opacity: 0  !important;
-    color:#303030 !important;
+    color: #303030 !important;
 }
+
 .navbar-nav > li > a {
     text-align: center !important;
     font-size: 24px !important;
     color: #F0F0F0!important;
     text-decoration: none !important;
-    outline:none !important;
+    outline: none !important;
 }
+
 .icon-bar {
     background-color: #fff !important;
     opacity: 1;
 }
+
 a {
     color: white;
     text-decoration: none !important;
 }
+
 .mainbtn,#mainbtn {
     display: inline-block !important;
     font-weight: bold !important;
     font-size: 18px !important;
     background: rgba(255, 174, 52, 0.9)!important;
-    width:87% !important;
+    width: 87% !important;
 }
 .jumbotron {    
 	color: #fff !important;
@@ -409,28 +424,29 @@ NAV BUTTON STYLING
   padding-right: 10px;
 }
 
+#search {
+    padding: 0 !important;
+    height: 40px!important;
+    padding-top: 8px;
+    background-color: rgba(255, 174, 52, 1) !important;
+    width: 100%;
+}
 
-    #search{
-        padding:0 !important;
-        height:40px!important;
-        padding-top:8px;
-        background-color:rgba(255, 174, 52, 1) !important; 
-        width:100%;}
-  #tag{
-        padding:0px !important;
-        height:40px!important;
-   
-        background-color:rgba(255, 174, 52, 1) !important; 
-        margin-bottom:-25px !important;
-        width:100%;}
+#tag {
+    padding: 0px !important;
+    height: 40px!important;
+    background-color: rgba(255, 174, 52, 1) !important;
+    margin-bottom: -25px !important;
+    width: 100%;
+}
 
-     #searchField{
-
-        padding-top:8px;
-        width:100%!important;
-        height:40px!important;
-        background-color:rgba(255, 174, 52, 0.8) !important; 
-        padding-bottom:0px;}
+#searchField {
+    padding-top: 8px;
+    width: 100%!important;
+    height: 40px!important;
+    background-color: rgba(255, 174, 52, 0.8) !important;
+    padding-bottom: 0px;
+}
 
     #userfield{ 
     padding:0;
@@ -443,19 +459,54 @@ NAV BUTTON STYLING
         margin-top:-65px !important;
         padding:0;
      }
-    }
+}
+.infoTable {
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 250px;
+}
 
-    .infoTable{ 
-        width:100%;
-        overflow-y:scroll;
-        max-height:250px; }
+#userfield img {
+    margin-top: -5px;
+    padding-top: 5px !important;
+    float: left!important;
+    max-height: 45px;
+    max-width: 45px;
+}
 
-    #userfield img{
-    margin-top:-5px;
-        padding-top:5px !important;
-        float:left!important;
-         max-height:45px;
-         max-width:45px;
-    
+#info {
+    margin-top: 75px;
+}
 
-    }
+#infoContainer, .tasks {
+    width: 45% !important;
+    height: 80% !important;
+    margin: auto;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;  
+    position:absolute !important;
+    top:90px;
+    border-radius:10px;
+}
+
+#infoContainer{
+    border:1px solid grey;
+    left:0;
+    bottom:0px;
+    margin-left: 15px !important;
+    margin-right:none !important;
+}
+
+.tasks {
+    direction:rtl; 
+    border:1px solid grey;
+    right:0;
+    bottom:0px;
+    margin-left: none !important;
+    margin-right:15px !important;
+}
+
+#userLookupImg{
+    height:45px !important;
+    width:45px !important;
+}

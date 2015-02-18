@@ -14,28 +14,41 @@
   }
 }
 
-    $(document).ready(function() {
-document.getElementById("map").style.visibility="hidden";
-
+ $(document).ready(function() {
+ $.fn.invisible = function() {
+        return this.each(function() {
+            $(this).css("visibility", "hidden");
+        });
+    };
+    $.fn.visible = function() {
+        return this.each(function() {
+            $(this).css("visibility", "visible");
+        });
+    };
+    	$("#map").invisible();
     })
   
-function chat()
-{
-document.getElementById("map").style.visibility="hidden";
-document.getElementById("info").style.visibility="hidden";
-document.getElementById("chat").style.visibility="visible";
+function chat(){
+	$("#map").invisible();
+	$("#info").invisible();
+	$("#tasks").invisible();
+	$("#chat").visible();
 }
-function map()
-{
-document.getElementById("chat").style.visibility="hidden";
-document.getElementById("info").style.visibility="hidden";
-document.getElementById("map").style.visibility="visible";
+function map(){
+	$("#chat").invisible();
+	$("#info").invisible();
+	$("#tasks").invisible();
+	$("#map").visible();
+}
+function info(){
+	$("#map").invisible();
+	$("#chat").invisible();
+	$("#tasks").visible();
+	$("#info").visible();
+}
 
-}
-function info()
-{
-document.getElementById("chat").style.visibility="hidden";
-document.getElementById("map").style.visibility="hidden";
-document.getElementById("info").style.visibility="visible";
-
-}
+function respConfirm (player_name) {
+ var response = confirm("Are you sure you want to tag\n"+player_name+"?");
+  if (response) alert("Zombie Tagged!");
+  else end; }
+        
