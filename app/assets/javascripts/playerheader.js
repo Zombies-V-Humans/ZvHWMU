@@ -19,7 +19,7 @@ window.onresize = function(event) {
 };
  $(document).ready(function() {
 
-        alert($(document).innerHeight()); 
+       
  $.fn.invisible = function() {
         return this.each(function() {
             $(this).css("visibility", "hidden");
