@@ -13,8 +13,13 @@
     else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
   }
 }
+window.onresize = function(event) {
+ document.getElementById("full").style.height = screen.availHeight;
 
+};
  $(document).ready(function() {
+
+        alert($(document).innerHeight()); 
  $.fn.invisible = function() {
         return this.each(function() {
             $(this).css("visibility", "hidden");
@@ -46,6 +51,8 @@ function info(){
 	$("#tasks").visible();
 	$("#info").visible();
 }
+
+
 
 function respConfirm (player_name) {
  var response = confirm("Are you sure you want to tag\n"+player_name+"?");
