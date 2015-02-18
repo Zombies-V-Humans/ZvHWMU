@@ -79,12 +79,12 @@ function jqUpdateSize(){
     // Get the dimensions of the viewport
     var width = $(window).width();
     var height = $(window).height();
-    	contentheight = Math.round(height - height / 3.6);
+    	contentheight = Math.round(height - height / 3);
         
          
              $('#infoContainer' ).css('max-height', contentheight);  
              $('.tasks' ).css('max-height', contentheight);  
-             $('#acomment' ).css('max-height', height - height /4);  
+             $('#acomment' ).css('max-height', height - height /3.5);  
              $('body' ).css('max-height', height);  
 
 };
