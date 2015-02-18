@@ -13,10 +13,7 @@
     else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
   }
 }
-window.onresize = function(event) {
- document.getElementById("full").style.height = screen.availHeight;
 
-};
  $(document).ready(function() {
 
        
