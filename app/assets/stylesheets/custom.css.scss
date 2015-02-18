@@ -190,6 +190,7 @@ table{
 #comments{
     width:100% !important;
     padding:10px 0px 10px 0px;
+    height:100% !important;
     overflow-y:scroll !important;
 }
 
@@ -492,8 +493,6 @@ NAV BUTTON STYLING
     border-radius:15px;
     display:block !important;  
     posititon:relative;
-
-
 }
 
 #infoContainer{
@@ -512,9 +511,4 @@ NAV BUTTON STYLING
 #userLookupImg{
     height:45px !important;
     width:45px !important;
-}
-#outerInfo{
-    width:100% !important;
-    height:100% !important;
-    margin:0 !important;
 }

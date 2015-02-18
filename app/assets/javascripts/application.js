@@ -9,8 +9,6 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require faye
-//= require comments
-//= require playerheader
 //= require_tree 
 
 $(document).ready(function(){
