@@ -4,10 +4,10 @@
 <!--                     -->
 
 <div id="info">
-
+    <div id ="searchContainer">
   <table class="sortable table table-bordered table-condensed">
     <tbody>
-      <%= search_form_for @q, :url => profile_path, :html =>
+      <%= search_form_for @q,  :url => profile_path, :html =>
         { :method => :get, :class => "well form-inline" } do |f| %>
       <tr>
         <div class="form-group">
@@ -26,13 +26,13 @@
       <% end %>
     </tbody>
   </table>
-
+  </div>
   <!--                     -->
   <!-- Player Lookup Table -->
   <!--                     -->
 
   <div id ="infoContainer">
-    <table style="width:100%; overflow-y:scroll;" class="sortable table-striped table-bordered table-condensed">
+    <table style="width:100%;" class="sortable table-striped table-bordered table-condensed">
       <tbody>
         <% @users.each do |user| %>
         <tr id = "name" class="user">
@@ -61,6 +61,7 @@
   <div class="tasks" id="tasks">
     <%= render @tasks %>
   </div>
+
 </div>
 
   <!--       The End       -->

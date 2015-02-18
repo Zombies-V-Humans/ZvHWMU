@@ -9,7 +9,6 @@ ZVH::Application.routes.draw do
   namespace "admin" do
     resources :users
   end
-
   get 'game/profile', :as => "profile"
   get "pages/index" , :as => "index"
   get "pages/rules", :as => "rules"

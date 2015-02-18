@@ -67,10 +67,9 @@ input {
 #brand {
     background-color: transparent !important;
 }
-
 .navbar-brand {
     position: absolute !important;
-    margin-top: 8px;
+    margin-top: 11px;
     margin-bottom: auto;
     font-family: "League-Gothic",Courier;
     text-shadow: 0px 0px 2px #FEFCC9, 2px -2px 3px #FEEC85, -5px -5px 5px #FFAE34, -3px -6px 6px #CD4606, 0px -8px 8px #973716;
@@ -135,6 +134,7 @@ a {
 .panel {
     background-color: #303030 !important;
     height:100% !important;
+
 }
 
 .navbar {
@@ -191,7 +191,7 @@ table{
     width:100% !important;
     padding:10px 0px 10px 0px;
     height:100% !important;
-    overflow-y:scroll !important;
+    overflow:hidden !important;
 }
 
 #acomment {
@@ -389,7 +389,7 @@ NAV BUTTON STYLING
     margin-top:-9px !important;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
-    -o-border-radius: 50% !important;
+    -o-border-radius: 50% !important;   
     border-radius: 50% !important;
     -webkit-box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
     -moz-box-shadow: inset 0px 1px 0px , 0px 1px 0px #60c9f0 !important;
@@ -405,13 +405,12 @@ NAV BUTTON STYLING
       padding:0px !important;
   }
  #chat {
-     overflow: hidden;
      position:absolute !important;
      top: 60px!important;
      right: 0!important;
      bottom: 0!important;
      left: 0!important;
-     overflow-x:hidden !important;
+     overflow:hidden !important;
      display:inline-block !important;
     }
 #acomment{
@@ -466,7 +465,6 @@ NAV BUTTON STYLING
 .infoTable {
     width: 100%;
     overflow-y: scroll;
-    max-height: 250px;
 }
 
 #userfield img {
@@ -485,17 +483,17 @@ NAV BUTTON STYLING
 }
 
 #infoContainer, .tasks {
-    width: 49% !important;
-    height: 10% !important;
+    width: 49.5% !important;
     margin: auto;
     overflow-y: scroll !important;
     overflow-x: hidden !important;  
     border-radius:15px;
-    display:block !important;  
+    display:inline-block !important;  
     posititon:relative;
 }
 
 #infoContainer{
+
     border:1px solid grey;
     margin-right:none !important;
     float:left !important;

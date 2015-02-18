@@ -1,5 +1,4 @@
-class GameController < ApplicationController
-   before_action :authenticate_user!
+class PlayerSearchController < GameController
    helper_method :sort_column, :sort_direction, :search_params
    before_action :set_task, only: [:show, :edit, :update, :destroy, :destroyAll]
 
@@ -10,28 +9,7 @@ class GameController < ApplicationController
     @user = User.find(params[:id])
   end 
 
-  def task
-    @task = Task.new
-    @tasks = Task.all
-  end
-  
-  def comment
-    @comment = Comment.new 
-    @comments = Comment.order('created_at DESC')
-  end
-  
-  def playerSearch
-    @q = User.search(params[:q])
-    search_relation = @q.result
-    @users = search_relation.order(sort_column + " " + sort_direction).references(:user).page params[:page]
-end
 
-  def profile
-    task;
-    comment;
-    playerSearch;
- end
-  
 def sort_column
     User.column_names.include?(params[:sort]) ? params[:sort] : "name"
   end

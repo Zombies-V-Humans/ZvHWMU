@@ -74,3 +74,19 @@ function rateLimiter() {
         alert('Your message was successfully posted!');
     }
 }
+
+function jqUpdateSize(){
+    // Get the dimensions of the viewport
+    var width = $(window).width();
+    var height = $(window).height();
+    	contentheight = Math.round(height - height / 3.6);
+        
+         
+             $('#infoContainer' ).css('max-height', contentheight);  
+             $('.tasks' ).css('max-height', contentheight);  
+             $('#acomment' ).css('max-height', height - height /4);  
+             $('body' ).css('max-height', height);  
+
+};
+$(document).ready(jqUpdateSize);    // When the page first loads
+$(window).resize(jqUpdateSize);     // When the browser changes size
