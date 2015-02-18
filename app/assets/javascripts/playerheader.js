@@ -56,3 +56,21 @@ function respConfirm (player_name) {
   if (response) alert("Zombie Tagged!");
   else end; }
         
+
+var clicks = 0;
+
+function rateLimiter() {
+    var comment = $.trim($('#textarea').val());
+    if (comment.length == 0) {
+        alert('Message content is requried!');
+        return;
+    }
+    clicks += 1;
+    if (clicks > 1) {
+        alert('Please wait 45 seconds between messages!');
+        document.getElementById("postmessage").disabled = true;
+        setTimeout('document.getElementById("postmessage").disabled=false;', 45000);
+    } else {
+        alert('Your message was successfully posted!');
+    }
+}
