@@ -480,6 +480,7 @@ NAV BUTTON STYLING
     margin-top: 75px;
     display:block;
     posititon:relative;
+    overflow-y:hidden !important;
 }
 
 #infoContainer, .tasks {
@@ -488,7 +489,7 @@ NAV BUTTON STYLING
     margin: auto;
     overflow-y: scroll !important;
     overflow-x: hidden !important;  
-    border-radius:10px;
+    border-radius:15px;
     display:block !important;  
     posititon:relative;
 
@@ -511,4 +512,9 @@ NAV BUTTON STYLING
 #userLookupImg{
     height:45px !important;
     width:45px !important;
+}
+#outerInfo{
+    width:100% !important;
+    height:100% !important;
+    margin:0 !important;
 }

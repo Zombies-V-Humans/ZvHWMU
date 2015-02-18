@@ -2,7 +2,9 @@
 <!--                     -->
 <!--   Info Page in UI   -->
 <!--                     -->
+<div id = "outerInfo">
 <div id="info">
+
   <table class="sortable table table-bordered table-condensed">
     <tbody>
       <%= search_form_for @q, :url => profile_path, :html =>
@@ -28,6 +30,7 @@
   <!--                     -->
   <!-- Player Lookup Table -->
   <!--                     -->
+
   <div id ="infoContainer">
     <table style="width:100%;" class="sortable table-striped table-bordered table-condensed">
       <tbody>
@@ -58,5 +61,6 @@
   <div class="tasks" id="tasks">
     <%= render @tasks %>
   </div>
+</div>
 </div>
   <!--       The End       -->
