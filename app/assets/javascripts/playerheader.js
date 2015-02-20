@@ -27,26 +27,26 @@
             $(this).css("visibility", "visible");
         });
     };
-    	$("#map").invisible();
+        $("#map").invisible();
     })
   
 function chat(){
-	$("#map").invisible();
-	$("#info").invisible();
-	$("#tasks").invisible();
-	$("#chat").visible();
+    $("#map").invisible();
+    $("#info").invisible();
+    $("#tasks").invisible();
+    $("#chat").visible();
 }
 function map(){
-	$("#chat").invisible();
-	$("#info").invisible();
-	$("#tasks").invisible();
-	$("#map").visible();
+    $("#chat").invisible();
+    $("#info").invisible();
+    $("#tasks").invisible();
+    $("#map").visible();
 }
 function info(){
-	$("#map").invisible();
-	$("#chat").invisible();
-	$("#tasks").visible();
-	$("#info").visible();
+    $("#map").invisible();
+    $("#chat").invisible();
+    $("#tasks").visible();
+    $("#info").visible();
 }
 
 
@@ -77,15 +77,19 @@ function rateLimiter() {
 
 function jqUpdateSize(){
     // Get the dimensions of the viewport
+    var headerheight = $("nav").height();
+    var searchheight = $("#searchContainer").height();
+
     var width = $(window).width();
     var height = $(window).height();
-    	contentheight = Math.round(height - height / 3);
-        
-         
-             $('#infoContainer' ).css('max-height', contentheight);  
-             $('.tasks' ).css('max-height', contentheight);  
-             $('#acomment' ).css('max-height', height - height /3.5);  
+
+            // $('#info' ).css('max-height', bodyheight);  
+            $('.container-fluid' ).css('max-height', height);  
              $('body' ).css('max-height', height);  
+            $('#infoContainer' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
+            $('.tasks' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
+
+//alert(headerheight);
 
 };
 $(document).ready(jqUpdateSize);    // When the page first loads
