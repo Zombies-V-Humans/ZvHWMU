@@ -22,10 +22,6 @@ body {
     background-color: #303030!important;
 }
 
-nav{
-    
-}
-
 .navbar {
 
     padding-left:10px !important;
@@ -110,6 +106,7 @@ a {
     display: inline-block !important;
     font-weight: bold !important;
     font-size: 18px !important;
+     background-color: rgba(255, 174, 52, 0.9)!important;
     background: rgba(255, 174, 52, 0.9)!important;
     width: 87% !important;
 }
@@ -433,10 +430,15 @@ NAV BUTTON STYLING
 
 #tag {
     padding: 0px !important;
-    height: 40px!important;
-    background-color: rgba(255, 174, 52, 1) !important;
-    margin-bottom: -25px !important;
     width: 100%;
+    button { outline: 0 !important; }
+    background: none !important;
+    border: 0 !important;
+    box-shadow:none!important;
+    outline: 0 !important;
+    font-size:2vmax !important;
+
+
 }
 
 #searchField {
@@ -493,7 +495,6 @@ NAV BUTTON STYLING
 }
 
 #infoContainer{
-
     border:1px solid grey;
     left:-0 !important;
     float:left !important;
@@ -507,8 +508,9 @@ NAV BUTTON STYLING
 }
 
 #userLookupImg{
-    height:45px !important;
-    width:45px !important;
+
+    height:50px !important;
+    width:50px !important;
 }
 
 .container-fluid{
@@ -517,4 +519,25 @@ NAV BUTTON STYLING
 }
 #searchField{
     font-color:white;
+}
+tbody{
+    
+  li:nth-child(odd){
+   color:#444444;
+     padding-top:10px !important;
+     padding-bottom:5px !important;
+    }
+
+  li:nth-child(even){
+
+     margin-top:-5px !important;
+     margin-bottom:-25px !important;
+  }
+}
+list-group-item-info{
+    background-color:white;
+
+}
+#task{
+     font-size:2vmax !important;
 }

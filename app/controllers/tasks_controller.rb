@@ -1,10 +1,12 @@
 class TasksController < GameController
-  before_action :all_tasks, only: [:index, :create, :update, :destroy]
-  before_action :set_tasks, only: [:edit, :update, :destroy]
+  before_action :all_tasks, only: [:index, :create, :update, :destroy, :delete_all]
+  before_action :set_tasks, only: [:edit, :update, :destroy, :delete_all]
   respond_to :html, :js
 
   def new
     @task = Task.new
+
+
   end
 
   def create
@@ -17,8 +19,9 @@ class TasksController < GameController
 
   def destroy
     @task.destroy
-  end
 
+  end
+ 
   private
 
     def all_tasks

@@ -32,7 +32,7 @@
   <!--                     -->
 
   <div id ="infoContainer">
-    <table style="width:100%;" class="sortable table-striped table-bordered table-condensed">
+    <table style="width:100%;" class="sortable table-striped">
       <tbody>
         <% @users.each do |user| %>
         <tr id = "name" class="user">
@@ -43,10 +43,10 @@
             <%= f.text_field  :description,  as: :text ,
               :class => "form-control",
               :id => "userformField",
-              :value => user.name,
+              :value => "#{user.name} tagged by#{current_user.name} ",
               :style => "display:none"%>
           <td>
-            <p><%= f.button :submit, :id =>"tag", :value => user.name, :onclick =>"respConfirm($(this).val());" %></p>
+            <%= f.button :submit, :id =>"tag", :value => user.name, :onclick =>"respConfirm($(this).val());" %>
             <% end %>
           </td>
         </tr>
@@ -60,6 +60,7 @@
   <!--                     -->
   <div class="tasks" id="tasks">
     <%= render @tasks %>
+    
   </div>
 
 </div>
