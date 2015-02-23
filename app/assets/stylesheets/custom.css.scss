@@ -18,6 +18,7 @@
 }
 
 body {
+    overflow:hidden !important;
 
     background-color: #303030!important;
 }
@@ -539,4 +540,10 @@ list-group-item-info{
 }
 #task{
      font-size:2vmax !important;
+}
+a.mainbtn{
+    
+     background-color: rgba(255, 174, 52, 0.9)!important;
+    background: rgba(255, 174, 52, 0.9)!important;
+
 }
