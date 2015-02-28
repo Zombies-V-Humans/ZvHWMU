@@ -10,8 +10,8 @@ class ZombieGroupsController < ApplicationController
       marker.infowindow gmaps4rails_infowindow
       marker.picture({
         "url" =>"zombie.png",
-        "width"  => 32,
-        "height" => 32
+        "width"  => 51,
+        "height" => 51
        })
     end
   end
@@ -35,10 +35,17 @@ class ZombieGroupsController < ApplicationController
   # POST /zombie_groups
   def create
     @zombie_group = ZombieGroup.new(zombie_group_params)
+  if @zombie_group = ZombieGroup.authenticate(params[:address])
+
     @zombie_group.save
 
     redirect_to zombie_groups_url, notice: 'Zombie Horde has been successfully tagged!'
+else
+        flash.alert = "Address Required"
 
+    redirect_to zombie_groups_url
+
+end
   end
 
   # PATCH/PUT /zombie_groups/1

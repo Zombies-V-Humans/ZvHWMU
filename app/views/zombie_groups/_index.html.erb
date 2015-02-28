@@ -20,12 +20,13 @@
         <td><%= zombie_group.longitude %></td>
         <td><%= zombie_group.address %></td>
         <td><%= zombie_group.title %></td>
-        <% if user_signed_in? %>
-        <% if current_user.admin? %>
+        <% if user_signed_in? && current_user.admin? %>
+
         <td><%= link_to 'Show', zombie_group %></td>
         <td><%= link_to 'Destroy', zombie_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end -%>
-       <% end -%>
+         <% else %>
+         
+          <% end %>
       </tr>
 
     <% end %>

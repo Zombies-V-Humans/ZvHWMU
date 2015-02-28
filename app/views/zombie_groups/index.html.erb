@@ -20,8 +20,13 @@
         <td><%= zombie_group.address %></td>
         <td><%= zombie_group.title %></td>
         <td><%= link_to 'Show', zombie_group %></td>
-        <td><%= link_to 'Edit', edit_zombie_group_path(zombie_group) %></td>
+         <% if user_signed_in? && current_user.admin? %>
+
+        <td><%= link_to 'Show', zombie_group %></td>
         <td><%= link_to 'Destroy', zombie_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <% else %>
+         
+          <% end %>
       </tr>
     <% end %>
   
@@ -75,10 +80,100 @@ td{
 </div>
 
 <script type="text/javascript">
+var mapStyle = [
+    {
+        "elementType": "labels",
+        "stylers": [
+            {
+                "color": "red",
+                "visibility": "on",
+                "size": "15px"
+            }
+        ]
+    },
+        {
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                              "color": "#000000"
+
+            }
+        ]
+    },
+
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                              "color": "#ffffff"
+
+            },
+            {
+                "lightness": -8
+            }
+        ]
+    },
+    {
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+              "color": "#ffae34"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "color": "#505050"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+     {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#74001b"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#da3c3c"
+            }
+        ]
+    },
+   
+    {}
+
+];
 handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
+handler.buildMap({ provider: {      
+    mapTypeId: google.maps.MapTypeId.ROADMAP, 
+    styles: mapStyle
+  }, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      handler.getMap().setZoom(16);
 });
 </script>
