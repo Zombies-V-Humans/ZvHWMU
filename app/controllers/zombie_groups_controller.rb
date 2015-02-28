@@ -38,8 +38,6 @@ class ZombieGroupsController < ApplicationController
     @zombie_group.save
     redirect_to zombie_groups_url, notice: 'Zombie Horde has been successfully tagged!'
 
-
-end
   end
 
   # PATCH/PUT /zombie_groups/1
