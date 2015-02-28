@@ -65,3 +65,5 @@ gem "dynamic_form"
 gem 'sass-rails',              '5.0.0.beta1'
 #random name generator, only needed for seed user names
 gem 'faker',                   '1.4.2'
+gem 'geocoder'
+gem 'gmaps4rails', '~> 2.0.0'

@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203064742) do
-
-  create_table "tasks", force: true do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "description", null: false
-    t.datetime "deadline"
-  end
+ActiveRecord::Schema.define(version: 20150227083729) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -40,6 +33,13 @@ ActiveRecord::Schema.define(version: 20150203064742) do
     t.integer "user_id"
   end
 
+  create_table "tasks", force: true do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "description", null: false
+    t.datetime "deadline"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name",                   default: "",                                                                                                                          null: false
     t.string   "email",                  default: "",                                                                                                                          null: false
@@ -59,5 +59,14 @@ ActiveRecord::Schema.define(version: 20150203064742) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "zombie_groups", force: true do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

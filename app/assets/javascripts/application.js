@@ -9,6 +9,8 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require faye
+//= require underscore
+//= require gmaps/google
 //= require_tree 
 
 $(document).ready(function(){

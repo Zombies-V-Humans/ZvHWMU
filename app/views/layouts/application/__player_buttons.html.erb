@@ -1,21 +1,13 @@
-<script>
-    $(document).ready(function() {
-        setTimeout(function() {
-            $('#error_explanation').remove();
-            $('.alert').remove();
-        }, 2500);
-    })
-    </script>
 
 <div class="playerheader">
 
-    <button type="button" id="togglechat"  onclick="chat()">
+    <button type="button" id="togglechat"  onclick="location.href = '/comments/new';">
         <p>Chat</p>
     </button>
-    <button type="button" id="togglemap" onclick="map()" >
+    <button type="button" id="togglemap" onclick="location.href = '/zombie_groups';" >
         <p>Map</p>
     </button>
-    <button type="button" id="toggleinfo" onclick="info()">
+    <button type="button" id="toggleinfo" onclick="location.href = '/tasks';">
         <p>Tag</p>
     </button>
 </div>
@@ -39,3 +31,11 @@
       background: #303030!important;
     }
  </style>
+ <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#error_explanation').remove();
+            $('.alert').remove();
+        }, 2500);
+    })
+    </script>

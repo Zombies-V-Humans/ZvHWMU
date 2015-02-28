@@ -1,12 +1,10 @@
 class TasksController < GameController
-  before_action :all_tasks, only: [:index, :create, :update, :destroy, :delete_all]
-  before_action :set_tasks, only: [:edit, :update, :destroy, :delete_all]
+  before_action :all_tasks, only: [:index, :create, :update, :destroy]
+  before_action :set_tasks, only: [:edit, :update, :destroy]
   respond_to :html, :js
 
   def new
     @task = Task.new
-
-
   end
 
   def create
@@ -19,9 +17,35 @@ class TasksController < GameController
 
   def destroy
     @task.destroy
-
   end
- 
+
+  def find_user
+    @user = User.find(params[:id])
+  end 
+
+  def playerSearch
+    @q = User.search(params[:q])
+    search_relation = @q.result
+    @users = search_relation.order(sort_column + " " + sort_direction).references(:user).page params[:page]
+  end
+  
+  def sort_column
+    User.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
+  def search_params
+    { :search => params[:search] }
+  end
+
+  def index
+    new
+    playerSearch
+  end
+
   private
 
     def all_tasks
@@ -33,6 +57,8 @@ class TasksController < GameController
     end
 
     def task_params
-      params.require(:task).permit(:description)
+      params.require(:task).permit(:description, :deadline)
     end
+
+
 end

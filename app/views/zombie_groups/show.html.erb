@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @zombie_group.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @zombie_group.longitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @zombie_group.address %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @zombie_group.title %>
+</p>
+
+<%= link_to 'Edit', edit_zombie_group_path(@zombie_group) %> |
+<%= link_to 'Back', zombie_groups_path %>

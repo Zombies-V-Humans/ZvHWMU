@@ -1,0 +1,68 @@
+
+<!--                     -->
+<!--   Info Page in UI   -->
+<!--                     -->
+
+<div id="info">
+    <div id ="searchContainer">
+  <table class="sortable table table-bordered table-condensed">
+    <tbody>
+      <%= search_form_for @q,  :url => tasks_path, :html =>
+        { :method => :get, :class => "well form-inline" } do |f| %>
+      <tr>
+        <div class="form-group">
+          <td>
+            <%= f.text_field :name_cont, :type =>
+              "search" ,:class =>
+              "form-control", :placeholder =>
+              "Search by name", :id =>
+              "searchField"%>
+          </td>
+          <td>
+            <%= f.submit "Search", :id => "search"%>
+          </td>
+        </div>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <!--                     -->
+  <!-- Player Lookup Table -->
+  <!--                     -->
+
+  <div id ="infoContainer">
+    <table style="width:100%;" class="sortable table-striped">
+      <tbody>
+        <% @users.each do |user| %>
+        <tr id = "name" class="user">
+          <td>
+            <%= image_tag(user.avatar, :id => "userLookupImg") %>
+          </td>
+            <%= simple_form_for @task, remote: true do |f|   %>
+            <%= f.text_field  :description,  as: :text ,
+              :class => "form-control",
+              :id => "userformField",
+              :value => "#{user.name} tagged by#{current_user.name} ",
+              :style => "display:none"%>
+          <td>
+            <%= f.button :submit, :id =>"tag", :value => user.name, :onclick =>"respConfirm($(this).val());" %>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @users %>
+  </div>
+  <!--                     -->
+  <!-- List of Zombies     -->
+  <!--                     -->
+  <div class="tasks" id="tasks">
+    <%= render @tasks %>
+    
+  </div>
+
+</div>
+
+  <!--       The End       -->

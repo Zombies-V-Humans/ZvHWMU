@@ -10,10 +10,10 @@
                 </button>   
                
             <% if user_signed_in? %>
-              <a class="navbar-toggle" href="/game/profile" id="navbarpic" type="button">
+              <a class="navbar-toggle" onclick="location.href = '/zombie_groups';" id="navbarpic" type="button">
                  <%= image_tag(current_user.avatar)%>
               </a>
-                <% if current_page?('/game/profile') %>
+                <% if current_page?('/zombie_groups')|| current_page?('/comments/new')|| current_page?('/tasks') %>
                    <%= render "layouts/application/_player_buttons" %> 
                 <% end %>
                 <% else %>

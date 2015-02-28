@@ -1,4 +1,5 @@
-ZVH::Application.routes.draw do
+﻿ZVH::Application.routes.draw do
+  resources :zombie_groups
   resources :tasks
   resources :comments, only: [:new, :create]
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -12,6 +13,9 @@ ZVH::Application.routes.draw do
   get 'game/profile', :as => "profile"
   get "pages/index" , :as => "index"
   get "pages/rules", :as => "rules"
+   get "comments/_chat", :as => "chat"
+    get "zombie_groups/index", :as => "map"
+
   get "/admin" => "admin/base#index", :as => "admin"
   root :to => "pages#index" , :as => "root"
 end

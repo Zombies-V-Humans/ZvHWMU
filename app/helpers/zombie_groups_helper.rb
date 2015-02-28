@@ -1,0 +1,2 @@
+module ZombieGroupsHelper
+end
