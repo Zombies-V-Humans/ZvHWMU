@@ -35,15 +35,9 @@ class ZombieGroupsController < ApplicationController
   # POST /zombie_groups
   def create
     @zombie_group = ZombieGroup.new(zombie_group_params)
-  if @zombie_group = ZombieGroup.authenticate(params[:address])
-
     @zombie_group.save
-
     redirect_to zombie_groups_url, notice: 'Zombie Horde has been successfully tagged!'
-else
-        flash.alert = "Address Required"
 
-    redirect_to zombie_groups_url
 
 end
   end
