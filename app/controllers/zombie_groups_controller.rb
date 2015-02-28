@@ -29,14 +29,14 @@ class ZombieGroupsController < ApplicationController
   def edit
   end
     def gmaps4rails_infowindow
-      "<h1>ZOMBIE HORDE</h1>"
+      "<h2>ZOMBIE HORDE</h2>"
     end
 
   # POST /zombie_groups
   def create
     @zombie_group = ZombieGroup.new(zombie_group_params)
     @zombie_group.save
-    
+
     redirect_to zombie_groups_url, notice: 'Zombie Horde has been successfully tagged!'
 
   end
