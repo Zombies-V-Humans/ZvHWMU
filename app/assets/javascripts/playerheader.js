@@ -68,6 +68,8 @@ function jqUpdateSize(){
              $('body' ).css('max-height', height);  
             $('#infoContainer' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
             $('.tasks' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
+            $('#map' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
+
 
 //alert(headerheight);
 

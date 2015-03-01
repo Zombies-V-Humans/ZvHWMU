@@ -20,8 +20,7 @@
         <td><%= zombie_group.address %></td>
         <td><%= zombie_group.title %></td>
         <td><%= link_to 'Show', zombie_group %></td>
-         <% if user_signed_in? && current_user.admin? %>
-
+     <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Show', zombie_group %></td>
         <td><%= link_to 'Destroy', zombie_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
          <% else %>
@@ -46,7 +45,6 @@
         width: 100%   !important;
         height:100%  !important;
         visibility: visible !important;
-        z-index: 5px;
         left:0;
   }
 
@@ -61,12 +59,12 @@
         border-radius: 10px;
         padding: 10px;
         z-index: 2;
+        opacity: 0.7;
 }
 #addZombie{
   border: 1px solid black;
   padding: 10px;
   border-radius: 10px;
-
   float:right;
 }
 td{
@@ -174,6 +172,6 @@ handler.buildMap({ provider: {
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
-      handler.getMap().setZoom(16);
+      handler.getMap().setZoom(14);
 });
 </script>
