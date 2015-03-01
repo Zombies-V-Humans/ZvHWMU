@@ -15,14 +15,15 @@
   <tbody>
     <% @zombie_groups.each do |zombie_group| %>
       <tr>
-       <!-- <td><%= zombie_group.latitude %></td>
-        <td><%= zombie_group.longitude %></td>-->
-        <td><%= zombie_group.address %></td>
-        <td><%= zombie_group.title %></td>
+       <td><%= zombie_group.latitude %></td>
+        <td><%= zombie_group.longitude %></td>
+         <!--<td><%= zombie_group.address %></td>
+        <td><%= zombie_group.title %></td>-->
         <td><%= link_to 'Show', zombie_group %></td>
      <% if user_signed_in? && current_user.admin? %>
-        <td><%= link_to 'Show', zombie_group %></td>
+        <!-- <td><%= link_to 'Edit', zombie_group %></td>-->
         <td><%= link_to 'Destroy', zombie_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
          <% else %>
          
           <% end %>
@@ -30,14 +31,18 @@
     <% end %>
   
   </tbody>
-
-  <%= link_to 'Tag a Horde', new_zombie_group_path, :id =>"addZombie"%>
+<%= render "form" %>
+ 
 </table>
 
 </div>
+
 <br>
 
 <style>
+.form-inputs, .form-actions{
+  display: none;
+}
 #map{
 
         position:absolute !important;
@@ -49,17 +54,21 @@
   }
 
 #hordeList{
-        width:97%;
+        
         margin-left: auto;
         margin-right: 1%;
         bottom:0;
+        right:0;
         position: absolute;
+        float:right;
         margin-top:10px;
-        background-color: #FFFFB8;
+        background-color: #101010;
+                color: #ffffff;
+
         border-radius: 10px;
         padding: 10px;
         z-index: 2;
-        opacity: 0.7;
+        opacity: 0.8;
 }
 #addZombie{
   border: 1px solid black;
@@ -78,100 +87,29 @@ td{
 </div>
 
 <script type="text/javascript">
-var mapStyle = [
-    {
-        "elementType": "labels",
-        "stylers": [
-            {
-                "color": "red",
-                "visibility": "on",
-                "size": "15px"
-            }
-        ]
-    },
-        {
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                              "color": "#000000"
 
-            }
-        ]
-    },
 
-    {
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                              "color": "#ffffff"
-
-            },
-            {
-                "lightness": -8
-            }
-        ]
-    },
-    {
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-              "color": "#ffae34"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "stylers": [
-            {
-                "color": "#505050"
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-     {
-        "featureType": "road.arterial",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#74001b"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#da3c3c"
-            }
-        ]
-    },
-   
-    {}
-
-];
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {      
-    mapTypeId: google.maps.MapTypeId.ROADMAP, 
-    styles: mapStyle
+  mapTypeId: google.maps.MapTypeId.ROADMAP, 
+  styles: mapStyle     
   }, internal: {id: 'map'}}, function(){
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
-      handler.getMap().setZoom(14);
+      handler.getMap().setZoom(12);
+      google.maps.event.addListener(handler.getMap(), 'click', function(event){
+           updateFormLocation(event.latLng);
+alert("note to self: add a rate limiter");
+          $( "#submitHorde" ).click();
+              alert("Zombie Horde Succesffully Tagged!");
+        a();
+      } );
+   function updateFormLocation(latLng) {
+        $('#zombie_group_latitude').val(latLng.lat());
+        $('#zombie_group_longitude').val(latLng.lng());
+      }
+
 });
+
 </script>

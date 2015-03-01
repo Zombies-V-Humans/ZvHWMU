@@ -76,3 +76,89 @@ function jqUpdateSize(){
 };
 $(document).ready(jqUpdateSize);    // When the page first loads
 $(window).resize(jqUpdateSize);     // When the browser changes size
+var mapStyle = [
+    {
+        "elementType": "labels",
+        "stylers": [
+            {
+                "color": "red",
+                "visibility": "on",
+                "size": "15px"
+            }
+        ]
+    },
+        {
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                              "color": "#000000"
+
+            }
+        ]
+    },
+
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                              "color": "#ffffff"
+
+            },
+            {
+                "lightness": -8
+            }
+        ]
+    },
+    {
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+              "color": "#ffae34"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "color": "#505050"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+     {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#74001b"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#da3c3c"
+            }
+        ]
+    },
+   
+    {}
+
+];

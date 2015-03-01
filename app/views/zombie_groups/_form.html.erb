@@ -2,13 +2,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :latitude %>
-    <%= f.input :longitude %>
-    <%= f.input :address, :required => true %>
-    <%= f.input :title %>
+    <%= f.input :latitude, :id => "centre_latitude" %>
+    <%= f.input :longitude, :id => "centre_longitude"%>
+    <%= f.input :address %>
+   <%= f.input :title %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :id => "submitHorde"%>
   </div>
+
 <% end %>
