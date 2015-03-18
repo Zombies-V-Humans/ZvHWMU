@@ -556,7 +556,9 @@ font-size:1.4em !important;
 
   
 }
-
+#tagZombie{
+    
+}
 .tasks {
     direction:rtl; 
     border:1px solid grey;
@@ -575,6 +577,7 @@ min-width:40px;
     border-radius:4px;
     margin-left:5px;
     padding:1px;
+    display:inline;
 }
 #imageSection{
     padding:0;
@@ -650,7 +653,7 @@ nav{
     }
 }
 
-#infoContainer{ tr{input#tag{ margin:0; padding:0;text-align:center;font-size:1.5em !important; width:100%; }} tr:nth-child(odd){  img{border-right: 2px solid #444; border-bottom: 1px solid #444;}  input#tag{ color:black !important; } } }
+#infoContainer{ tr{float:left; display:inline;input#tag{ float:left; font-size:1.5em !important; width:100%; }} tr:nth-child(odd){  img{border-right: 2px solid #444; border-bottom: 1px solid #444;}  input#tag{ color:black !important; } } }
 
 .deviseButtons{
 

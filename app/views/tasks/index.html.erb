@@ -45,7 +45,7 @@
               :id => "userformField",
               :value => "#{user.name} tagged by#{current_user.name} ",
               :style => "display:none"%>
-          <td>
+          <td id = "tagZombie">
             <%= f.submit :id =>"tag", :value=>user.name %>
 
             <% end %>
