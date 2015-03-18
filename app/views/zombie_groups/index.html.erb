@@ -31,11 +31,11 @@
     <% end %>
   
   </tbody>
-<%= render "form" %>
  
 </table>
 
 </div>
+<%= render "form" %>
 
 <br>
 
@@ -56,15 +56,13 @@
 #hordeList{
         
         margin-left: auto;
-        margin-right: 1%;
+        margin-right: auto;
         bottom:0;
-        right:0;
         position: absolute;
-        float:right;
         margin-top:10px;
+        font-size:12px;
         background-color: #101010;
-                color: #ffffff;
-
+        color: #ffffff;
         border-radius: 10px;
         padding: 10px;
         z-index: 2;
@@ -97,7 +95,7 @@ handler.buildMap({ provider: {
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
-      handler.getMap().setZoom(12);
+      handler.getMap().setZoom(11);
       google.maps.event.addListener(handler.getMap(), 'click', function(event){
            updateFormLocation(event.latLng);
 alert("note to self: add a rate limiter");

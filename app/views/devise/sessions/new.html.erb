@@ -44,7 +44,9 @@
 <% end %>
 
 <div class="row top48">
-  <div class="col-sm-offset-2 col-sm-4">
-    <%= render "devise/shared/links" %>
-  </div>
+  <div class="deviseButtons">
+ <center>  <p><%= link_to "Forgot your password?", new_password_path(resource_name) %></p></center>
+ <center><p><%= link_to "Create an account?", new_registration_path(resource_name) %></p>
+</center>
+</div>
 </div>

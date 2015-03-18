@@ -39,14 +39,15 @@
           <td>
             <%= image_tag(user.avatar, :id => "userLookupImg") %>
           </td>
-            <%= simple_form_for @task, remote: true do |f|   %>
+            <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
             <%= f.text_field  :description,  as: :text ,
               :class => "form-control",
               :id => "userformField",
               :value => "#{user.name} tagged by#{current_user.name} ",
               :style => "display:none"%>
           <td>
-            <%= f.button :submit, :id =>"tag", :value => user.name, :onclick =>"respConfirm($(this).val());" %>
+            <%= f.submit :id =>"tag", :value=>user.name %>
+
             <% end %>
           </td>
         </tr>
@@ -66,3 +67,4 @@
 </div>
 
   <!--       The End       -->
+
