@@ -66,8 +66,8 @@ function jqUpdateSize(){
             // $('#info' ).css('max-height', bodyheight);  
             $('.container-fluid' ).css('max-height', height);  
              $('body' ).css('max-height', height);  
-            $('#infoContainer' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
-            $('.tasks' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
+            //$('.PlayerPane' ).css('height', height/2.1 -headerheight);  
+           // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
             $('#map' ).css('max-height', height - searchheight - headerheight - (1/2)*searchheight);  
 
 

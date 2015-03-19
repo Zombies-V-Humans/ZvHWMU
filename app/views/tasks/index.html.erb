@@ -1,71 +1,98 @@
 
+<div class="PlayerPane jumbotron">
+   <h3 class="jumbotron"style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
+   <center>
+      <a id ="PlayerListButton" href="#" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#smallModal">Click to view Zombies</a>
+   </center>
+</div>
+<div class="ZombiePane jumbotron">
+    <h3 class="jumbotron"style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
+   <center>
+      <a  id ="ZombieListButton" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to view Player</a>
+    </center>
+</div>
 <!--                     -->
 <!--   Info Page in UI   -->
 <!--                     -->
 
-<div id="info">
-    <div id ="searchContainer">
-  <table class="sortable table table-bordered table-condensed">
-    <tbody>
-      <%= search_form_for @q,  :url => tasks_path, :html =>
-        { :method => :get, :class => "well form-inline" } do |f| %>
-      <tr>
-        <div class="form-group">
-          <td>
-            <%= f.text_field :name_cont, :type =>
-              "search" ,:class =>
-              "form-control", :placeholder =>
-              "Search by name", :id =>
-              "searchField"%>
-          </td>
-          <td>
-            <%= f.submit "Search", :id => "search"%>
-          </td>
-        </div>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-  </div>
-  <!--                     -->
-  <!-- Player Lookup Table -->
-  <!--                     -->
-
-  <div id ="infoContainer">
-    <table style="width:100%;" class="sortable table-striped">
-      <tbody>
-        <% @users.each do |user| %>
-        <tr id = "name" class="user">
-         
-            <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
-            <%= f.text_field  :description,  as: :text ,
-              :class => "form-control",
-              :id => "userformField",
-              :value => "#{user.name} tagged by#{current_user.name} ",
-              :style => "display:none"%>
-               <td id ="userImgLookup">
-            <%= image_tag(user.avatar, :id => "userLookupImg") %>
-          </td>
-          <td id = "tagZombie">
-            <%= f.submit :id =>"tag", :value=>user.name %>
-
-            <% end %>
-          </td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <%= paginate @users %>
-  </div>
-  <!--                     -->
-  <!-- List of Zombies     -->
-  <!--                     -->
-  <div class="tasks" id="tasks">
-    <%= render @tasks %>
-    
-  </div>
-
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button"  style="opacity:1;  width:25px;height:25px;"class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title" id="myModalLabel">Player List</h3>
+         </div>
+         <div class="modal-body">
+            <h3 style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
+            <table class="sortable table table-bordered table-condensed">
+               <tbody>
+                  <%= search_form_for @q,  :url => tasks_path, :html =>
+                     { :method => :get, :class => "well form-inline" } do |f| %>
+                  <tr>
+                     <div class="form-group">
+                        <td>
+                           <%= f.text_field :name_cont, :type =>
+                              "search" ,:class =>
+                              "form-control", :placeholder =>
+                              "Search by name", :id => "searchField"%>
+                        </td>
+                        <td>
+                           <%= f.submit "Search", :id => "search" , :style =>" opacity:1;"%>
+                        </td>
+                     </div>
+                  </tr>
+                  <% end %>
+               </tbody>
+            </table>
+            <!--                     -->
+            <!-- Player Lookup Table -->
+            <!--                     -->
+            <center><%= paginate @users %></center>
+            <div class="container">
+               <div class="item">
+                  <% @users.each do |user| %>
+                  <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
+                  <%= f.text_field  :description,  as: :text ,
+                     :class => "",
+                     :id => "userformField",
+                     :value => "#{user.name} tagged by #{current_user.name} ",
+                     :style => "display:none"%>
+                  <%= image_submit_tag(user.avatar, :class=>"box",:style =>"opacity:1;height:50px; vertical-align:bottom;") %>
+                  <%= submit_tag 'submit',:value=>user.name,  :class=>"submitbox", :style =>" opacity:1; width:100%;vertical-align:bottom;"%>
+                  <% end %>
+                  <% end %>
+                  <center><%= paginate @users %></center>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+         </div>
+      </div>
+   </div>
 </div>
+<!--                     -->
+<!-- List of Zombies     -->
+<!--                     -->
 
-  <!--       The End       -->
+<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
+   <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" style="opacity:1; width:25px;height:25px;" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h2 class="modal-title" id="myModalLabel">Zombie List</h2>
+         </div>
+         <div class="modal-body">
+            <h3 style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
+            <%= render @tasks %>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+         </div>
+      </div>
+   </div>
+</div>
+<!--       The End       -->
 

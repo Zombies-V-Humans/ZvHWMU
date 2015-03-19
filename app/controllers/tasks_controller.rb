@@ -34,7 +34,7 @@ class TasksController < GameController
   end
 
   def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
 
   def search_params
@@ -44,12 +44,17 @@ class TasksController < GameController
   def index
     new
     playerSearch
+         @taskCount = 0;
+
+
   end
 
   private
 
     def all_tasks
       @tasks = Task.all
+
+
     end
 
     def set_tasks

@@ -136,7 +136,7 @@ button,select {
     color: #fff !important;
     text-shadow: #000 0px 1px 5px;
     border: 1px solid #000;
-    opacity: 0.8;
+    opacity: 1;
     -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
     -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
     box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
