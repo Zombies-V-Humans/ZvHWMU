@@ -78,8 +78,8 @@ function jqUpdateSize() {
     $('body').css('max-height', height);
     //$('.PlayerPane' ).css('height', height/2.1 -headerheight);  
     // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
-    $('#ZombieListButton, #PlayerListButton').css('height', height / 15 );
-    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 45);
+    $('#ZombieListButton, #PlayerListButton').css('height', height / 14 );
+    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 43);
 
     $('#mapContainer').css('max-height', height - searchheight - headerheight - (1 / 2) * searchheight);
 
