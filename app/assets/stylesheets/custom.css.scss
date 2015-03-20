@@ -706,6 +706,6 @@ a.mainbtn {
     float: right;
 }
 .modal .modal-body {
-    max-height: 400px;
+    max-height: 400px !important;
     overflow-y: auto;
 }

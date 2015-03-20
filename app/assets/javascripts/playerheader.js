@@ -78,7 +78,7 @@ function jqUpdateSize() {
     $('body').css('max-height', height);
     //$('.PlayerPane' ).css('height', height/2.1 -headerheight);  
     // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
-    $('.modal-dialog').css('max-height', height);
+    //$('.modal-dialog').css('max-height', height - headerheight);
 
     $('#mapContainer').css('max-height', height - searchheight - headerheight - (1 / 2) * searchheight);
 
