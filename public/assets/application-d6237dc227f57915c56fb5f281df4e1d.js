@@ -14560,7 +14560,8 @@ function jqUpdateSize() {
     $('body').css('max-height', height);
     //$('.PlayerPane' ).css('height', height/2.1 -headerheight);  
     // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
-    $('.modal-dialog').css('max-height', height);
+    $('#ZombieListButton, #PlayerListButton').css('height', height / 15 );
+    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 45);
 
     $('#mapContainer').css('max-height', height - searchheight - headerheight - (1 / 2) * searchheight);
 

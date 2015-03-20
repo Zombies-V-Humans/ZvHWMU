@@ -656,22 +656,26 @@ a.mainbtn {
     margin-bottom: 15px;
 }
 .PlayerPane, .ZombiePane {
-    padding: 10px;
+    padding: 1%;
     background-color: #202020 !important;
     margin: auto;
     margin-bottom: 5%;
     width: 50%;
+    height:40%;     
+    .btn .btn-lg{
+    }
     h3 {
         padding: 10px;
         color: #202020 !important;
         margin: auto;
+        font-size:1.3em;
         font-weight: bold;
         background-color: rgba(255,174,52,.8)!important;
     }
 }
 #h3header, #h3headerblue {
     color: rgba(255,174,52,.9)!important;
-    font-size: 2em;
+    font-size: 1.7em;
     padding: 10px;
     border-color: rgb(217,83,79);
 }
