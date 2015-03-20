@@ -711,9 +711,12 @@ a.mainbtn {
 }
 .modal{
     z-index:3000;
+
 }
 .modal-dialog, .modal {
     height:100% !important;
+        height:100% !important;
+
     width:100% !important;
     position:fixed !important;
     left:-4px !important;
