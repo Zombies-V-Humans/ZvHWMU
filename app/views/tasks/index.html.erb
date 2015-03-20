@@ -1,29 +1,34 @@
-
 <div class="PlayerPane jumbotron">
+<legend id = "h3headerblue">Tag a Player</legend>
+
    <h3 class="jumbotron"style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
    <center>
-      <a id ="PlayerListButton" href="#" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#smallModal">Click to view Zombies</a>
-   </center>
+      <a  id ="ZombieListButton" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Tag Player</a>
+
+</center>
 </div>
+
 <div class="ZombiePane jumbotron">
+    <legend id = "h3header">View Zombies</legend>
+
     <h3 class="jumbotron"style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
    <center>
-      <a  id ="ZombieListButton" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to view Player</a>
+      <a id ="PlayerListButton" href="#" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#smallModal">View Zombies</a>
     </center>
 </div>
 <!--                     -->
 <!--   Info Page in UI   -->
 <!--                     -->
-
 <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
    <div class="modal-dialog modal-sm">
       <div class="modal-content">
          <div class="modal-header">
             <button type="button"  style="opacity:1;  width:25px;height:25px;"class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3 class="modal-title" id="myModalLabel">Player List</h3>
-         </div>
-         <div class="modal-body">
-            <h3 style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
+            <h2 class="modal-title" id="myModalLabel">Player List</h2>
+              </div>
+                       <div class="modal-header">
+
+                 <h3 style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
             <table class="sortable table table-bordered table-condensed">
                <tbody>
                   <%= search_form_for @q,  :url => tasks_path, :html =>
@@ -44,11 +49,16 @@
                   <% end %>
                </tbody>
             </table>
+                        <center><%= paginate @users %></center>
+
+                     </div>
+
+         <div class="modal-body">
+       
             <!--                     -->
             <!-- Player Lookup Table -->
             <!--                     -->
-            <center><%= paginate @users %></center>
-            <div class="container">
+            <div class="playerContainer">
                <div class="item">
                   <% @users.each do |user| %>
                   <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
@@ -67,7 +77,6 @@
          </div>
          <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
          </div>
       </div>
    </div>
@@ -89,7 +98,6 @@
          </div>
          <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
          </div>
       </div>
    </div>

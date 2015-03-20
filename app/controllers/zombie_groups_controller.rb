@@ -9,13 +9,21 @@ class ZombieGroupsController < ApplicationController
       marker.lat zombie_group.latitude
       marker.lng zombie_group.longitude
       marker.infowindow gmaps4rails_infowindow
+
       marker.picture({
-        "url" =>"zombie.png",
-        "width"  => 51,
-        "height" => 51,
+        "url" =>"zombiemarker.png",
+        "width"  => 25,
+        "height" => 45,
        })
     end
+    @campus = Gmaps4rails.build_markers(@zombie_groups) do |zombie_group, marker|
+      marker.lat 42.282924
+      marker.lng -85.5995978
+            marker.infowindow "<h2>Campus</h2>"
+
+    end
         new
+
   end
 
   # GET /zombie_groups/1
@@ -31,8 +39,9 @@ class ZombieGroupsController < ApplicationController
   def edit
   end
     def gmaps4rails_infowindow
-      "<h2>ZOMBIE HORDE</h2> "
+      "<h2>Zombies</h2>"
     end
+    
 
   # POST /zombie_groups
   def create
@@ -56,8 +65,7 @@ class ZombieGroupsController < ApplicationController
     @zombie_group.destroy
     redirect_to zombie_groups_url, notice: 'Zombie Horde has been successfully destroyed.'
   end
-   
-
+ 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_zombie_group
