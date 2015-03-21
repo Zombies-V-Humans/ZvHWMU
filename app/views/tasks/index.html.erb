@@ -55,7 +55,7 @@
             <!-- Player Lookup Table -->
             <!--                     -->
           
-               <div class="item" style=" overflow-y:scroll; margin:auto;">
+               <div class="item" style=" overflow-y:scroll; height:50%; margin:auto;">
                   <% @users.each do |user| %>
                   <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
                   <%= f.text_field  :description,  as: :text ,

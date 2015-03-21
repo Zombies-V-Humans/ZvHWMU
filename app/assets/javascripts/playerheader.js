@@ -80,7 +80,7 @@ function jqUpdateSize() {
     // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
     $('#ZombieListButton, #PlayerListButton').css('height', height / 14 );
     $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 43);
-    $('.item').css('height', height / 1.8);
+    $('.item').css('height', height /2);
     $('.bigframe-body').css('height', height / 1.2);
 
      //   $('.item').css('max-height', height/3);
