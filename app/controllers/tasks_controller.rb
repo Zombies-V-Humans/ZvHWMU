@@ -22,8 +22,14 @@ class TasksController < GameController
   def find_user
     @user = User.find(params[:id])
   end 
+def playerList
+  respond_to do |format|               
+    format.js
+  end        
+end 
 
   def playerSearch
+
     @q = User.search(params[:q])
     search_relation = @q.result
     @users = search_relation.order(sort_column + " " + sort_direction).references(:user).page params[:page]
@@ -44,7 +50,6 @@ class TasksController < GameController
   def index
     new
     playerSearch
-         @taskCount = 0;
 
 
   end

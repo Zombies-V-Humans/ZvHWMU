@@ -16,6 +16,7 @@
    get "comments/_chat", :as => "chat"
     get "zombie_groups/index", :as => "map"
 
+
   get "/admin" => "admin/base#index", :as => "admin"
   root :to => "pages#index" , :as => "root"
 end

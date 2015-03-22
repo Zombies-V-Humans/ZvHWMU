@@ -14560,8 +14560,12 @@ function jqUpdateSize() {
     $('body').css('max-height', height);
     //$('.PlayerPane' ).css('height', height/2.1 -headerheight);  
     // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
-    $('#ZombieListButton, #PlayerListButton').css('height', height / 15 );
-    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 45);
+    $('#ZombieListButton, #PlayerListButton').css('height', height / 14 );
+    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 43);
+    $('.item').css('height', height /2);
+    $('.bigframe-body').css('height', height / 1.2);
+
+     //   $('.item').css('max-height', height/3);
 
     $('#mapContainer').css('max-height', height - searchheight - headerheight - (1 / 2) * searchheight);
 
@@ -14578,6 +14582,10 @@ var mapOptions = {
     disableDoubleClickZoom: true
 
 };
+(function() {
+
+
+}).call(this);
 // This is a manifest file that'll be compiled into including all the files listed below.
 // Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
 // be included in the compiled file accessible from http://example.com/assets/application.js

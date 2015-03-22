@@ -1,174 +1,95 @@
 <div class="PlayerPane jumbotron">
-<legend id = "h3headerblue">Tag a Player</legend>
-
-   <h3 class="jumbotron"style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
+   <legend id = "h3headerblue">Tag a Player</legend>
+   <h3 class="jumbotron"style="margin-top:0;">Total # of Players: <%= User.all.length %></h3>
    <center>
-      <a  id ="ZombieListButton" href="#" class="btn btn-lg btn-primary" onclick="openBigframe();">Tag Player</a>
-
-</center>
+      <a  id ="PlayerListButton" href="#" class="btn btn-lg btn-primary" onclick="openBigframe('player');">Tag Player</a>
+   </center>
 </div>
-
 <div class="ZombiePane jumbotron">
-    <legend id = "h3header">View Zombies</legend>
-
-    <h3 class="jumbotron"style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
+   <legend id = "h3header">View Zombies</legend>
+   <h3 class="jumbotron"style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
    <center>
-      <a id ="PlayerListButton" href="#" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#smallModal">View Zombies</a>
-    </center>
+      <a id ="ZombieListButton" href="#" class="btn btn-lg btn-danger" onclick="openBigframe('zombie');">View Zombies</a>
+   </center>
 </div>
 <!--                     -->
 <!--   Info Page in UI   -->
 <!--                     -->
+
 <div id="bigframe-backdrop" class="bigframe" style="background:#101010; opacity:0.9; width:100%; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; z-index:9999; display:none; "></div>
-
-<div id="bigframe-player" class="bigframe" style="background:#202020;  width:90%; height:95%; position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; z-index:9999; display:none; ">
-
-<button type="button" onclick="closeBigframe();" style="opacity:1; display:inline-block; width:30px;height:30px;"class="close" >&times;</button>
-       <div class="bigframe-body" >
-      <h2 class="modal-title" id="myModalLabel">Player List</h2>
-       <h3 style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
-            <table class="sortable table table-bordered table-condensed">
-               <tbody>
-                  <%= search_form_for @q,  :url => tasks_path, :html =>
-                     { :method => :get, :class => "well form-inline" } do |f| %>
-                  <tr>
-                     <div class="form-group">
-                        <td>
-                           <%= f.text_field :name_cont, :type =>
-                              "search" ,:class =>
-                              "form-control", :placeholder =>
-                              "Search by name", :id => "searchField"%>
-                        </td>
-                        <td>
-                           <%= f.submit "Search", :id => "search" , :style =>" opacity:1;"%>
-                        </td>
-                     </div>
-                  </tr>
-                  <% end %>
-               </tbody>
-            </table>
-
-   
-                   <%= paginate @users %>
-
-            <!--                     -->
-            <!-- Player Lookup Table -->
-            <!--                     -->
-          
-               <div class="item" style=" overflow-y:scroll; height:50%; margin:auto;">
-                  <% @users.each do |user| %>
-                  <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
-                  <%= f.text_field  :description,  as: :text ,
-                     :class => "",
-                     :id => "userformField",
-                     :value => "#{user.name} tagged by #{current_user.name} ",
-                     :style => "display:none"%>
-                  <%= image_submit_tag(user.avatar, :class=>"box",:style =>"opacity:1;height:50px; vertical-align:bottom;") %>
-                  <%= submit_tag 'submit',:value=>user.name,  :class=>"submitbox", :style =>" opacity:1; width:100%;vertical-align:bottom;"%>
-                  <% end %>
-                  <% end %>
+<div id="bigframe-player" class="bigframe" style="background:#202020; border-radius:7px; padding:10px;  width:90%; height:95%; position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; z-index:9999; display:none;">
+   <button type="button" id="player" onclick="closeBigframe('player');" style="opacity:0.9; display:inline-block; width:30px;height:30px;"class="close" >&times;</button>
+   <div class="bigframe-body">
+      <h2 class="modal-title" id="myModalLabel" style= "border-bottom: 2px solid rgb(51,122,183); padding-bottom:2px;">Player List</h2>
+      <h3 style="margin-top:2px;">Total # of Players: <%= User.all.length %></h3>
+      <h4 >Players matching your search: <%= @users.count %></h4>
+      <table class="sortable table table-bordered table-condensed">
+         <tbody>
+            <%= search_form_for @q,  :url => tasks_path, :html =>
+               { :method => :get, :class => "well form-inline" } do |f| %>
+            <tr>
+               <div class="form-group">
+                  <td>
+                     <%= f.text_field :name_cont, :type =>
+                        "search" ,:class =>
+                        "form-control", :placeholder =>
+                        "Search by name", :id => "searchField"%>
+                  </td>
+                  <td>
+                     <%= f.submit "Search", :id => "search" , :style =>" opacity:1;"%>
+                  </td>
                </div>
-               </div>
-    
-</div>
-
-<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-   <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-         <div class="modal-header">
-            <button type="button"  style="opacity:1;  width:25px;height:25px;"class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="myModalLabel">Player List</h2>
-              </div>
-                       <div class="modal-header">
-
-                 <h3 style="margin-top:0;">Total # of Players: <%=@users.count %></h3>
-            <table class="sortable table table-bordered table-condensed">
-               <tbody>
-                  <%= search_form_for @q,  :url => tasks_path, :html =>
-                     { :method => :get, :class => "well form-inline" } do |f| %>
-                  <tr>
-                     <div class="form-group">
-                        <td>
-                           <%= f.text_field :name_cont, :type =>
-                              "search" ,:class =>
-                              "form-control", :placeholder =>
-                              "Search by name", :id => "searchField"%>
-                        </td>
-                        <td>
-                           <%= f.submit "Search", :id => "search" , :style =>" opacity:1;"%>
-                        </td>
-                     </div>
-                  </tr>
-                  <% end %>
-               </tbody>
-            </table>
-                        <center><%= paginate @users %></center>
-
-                     </div>
-
-         <div class="modal-body">
-       
-            <!--                     -->
-            <!-- Player Lookup Table -->
-            <!--                     -->
-            <div class="playerContainer">
-               <div class="item">
-                  <% @users.each do |user| %>
-                  <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
-                  <%= f.text_field  :description,  as: :text ,
-                     :class => "",
-                     :id => "userformField",
-                     :value => "#{user.name} tagged by #{current_user.name} ",
-                     :style => "display:none"%>
-                  <%= image_submit_tag(user.avatar, :class=>"box",:style =>"opacity:1;height:50px; vertical-align:bottom;") %>
-                  <%= submit_tag 'submit',:value=>user.name,  :class=>"submitbox", :style =>" opacity:1; width:100%;vertical-align:bottom;"%>
-                  <% end %>
-                  <% end %>
-               </div>
-            </div>
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-         </div>
-      </div>
+            </tr>
+            <% end %>
+         </tbody>
+      </table>
+      <%= paginate @users %>
+      <%= render "playerList" %>
    </div>
 </div>
 <!--                     -->
 <!-- List of Zombies     -->
 <!--                     -->
-
-<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
-   <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-         <div class="modal-header">
-            <button type="button" class="close" style="opacity:1; width:25px;height:25px;" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="myModalLabel">Zombie List</h2>
-         </div>
-         <div class="modal-body">
-            <h3 style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
-            <%= render @tasks %>
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-         </div>
+<div id="bigframe-backdrop" class="bigframe" style="background:#101010; opacity:0.9; width:100%; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; z-index:9999; display:none; "></div>
+<div id="bigframe-zombie" class="bigframe" style="background:#202020;  padding:10px;  border-radius:7px; width:90%; height:95%; position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; z-index:9999; display:none; ">
+   <button type="button" id="player" onclick="closeBigframe('zombie');" style="opacity:1; display:inline-block; width:30px;height:30px;"class="close" >&times;</button>
+   <div class="bigframe-body" >
+      <h2 class="modal-title" id="myModalLabel" style= "border-bottom: 2px solid rgb(217,83,79); padding-bottom:2px;">Zombie List</h2>
+      <h3 style="margin-top:2px;">Total # of Zombies: <%=@tasks.count %></h3>
+      <div id="zombie-list" style="overflow-y:scroll;height:80%;">
+         <%= render @tasks %>
       </div>
    </div>
 </div>
 <!--       The End       -->
-
 <script>
-function openBigframe(){
-      
-    $('#bigframe-backdrop').show();
-    $('#bigframe-player').show("fast");
-
-}
-
-function closeBigframe(){
    
-   $('#bigframe-player').hide("fast");
-   $('#bigframe-backdrop').hide();
+   function openBigframe(id){
+      if(id=="player"){ cookieSetter(1); }
+       $('#bigframe-backdrop').show();
+       $('#bigframe-'+id).show("fast");
+   }
+   
+   function closeBigframe(id){
+      cookieSetter(0);
+      $('#bigframe-'+id).hide("fast");
+      $('#bigframe-backdrop').hide();
+   
+   }
 
-}
+   function cookieSetter(value){
+   
+      document.cookie = value;
+   }
+   
+   $(document).ready(function() {
+   
+      if (document.cookie==1){
+
+          openBigframe('player');
+      
+       }
+     })
 
 </script>
+
