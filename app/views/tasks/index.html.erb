@@ -56,8 +56,11 @@
    <div class="bigframe-body" >
       <h2 class="modal-title" id="myModalLabel" style= "border-bottom: 2px solid rgb(217,83,79); padding-bottom:2px;">Zombie List</h2>
       <h3 style="margin-top:2px;">Total # of Zombies: <%=@tasks.count %></h3>
-      <div id="zombie-list" style="overflow-y:scroll;height:80%;">
+      <div id="zombie-list-container" style="overflow-y:scroll;height:40%; position:relative;">
+      <ul id="zombie-list">
+        
          <%= render @tasks %>
+      </ul>
       </div>
    </div>
 </div>

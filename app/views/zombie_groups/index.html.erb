@@ -91,7 +91,6 @@ handler.buildMap({ provider: {
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
 
-
       google.maps.event.addListener(handler.getMap(), 'dblclick', function(event){
             updateFormLocation(event.latLng);
 

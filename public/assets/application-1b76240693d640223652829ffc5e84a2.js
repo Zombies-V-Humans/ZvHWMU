@@ -14505,21 +14505,6 @@ function toggleFullScreen() {
     }
 }
 
-$(document).ready(function() {
-
-
-    $.fn.invisible = function() {
-        return this.each(function() {
-            $(this).css("visibility", "hidden");
-        });
-    };
-    $.fn.visible = function() {
-        return this.each(function() {
-            $(this).css("visibility", "visible");
-        });
-    };
-
-})
 
 
 function respConfirm(player_name) {
@@ -14547,40 +14532,168 @@ function rateLimiter() {
     }
 }
 
-function setHeight(element, divisor){
-   
-    var headerheight = $("nav").height();
+function setHeight(element, attr, divisor) {
+
     var height = $(window).height();
 
-    $(element).css('height', height/divisor);
+    $(element).css(attr, height / divisor);
+
 }
 
 function jqUpdateSize() {
 
-    var modalwidth = $(".modal-content").width();
-    var width = $(window).width();
+    setHeight('body, .container-fluid', 'max-height', 1);
+    setHeight('#ZombieListButton, #PlayerListButton, h3.jumbotron', 'font-size', 43);
+    setHeight('#ZombieListButton, #PlayerListButton', 'height', 14);
+    setHeight('.item', 'height', 2.3);
+    setHeight('.submitbox, .box', 'height', 15);
+    setHeight('bigframe-body', 'height', 1.2);
+    setHeight('#zombie-list-container', 'height', 1.6);
 
-    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', $(window).height() / 43);
-    setHeight('body, .container-fluid', 1);
-    setHeight('#ZombieListButton, #PlayerListButton', 14 );
-    setHeight('.item', 2.3);
-    setHeight('.submitbox, .box', 15)
-    setHeight('bigframe-body', 1.2);
 
 };
+
 $(document).ready(jqUpdateSize); // When the page first loads
 $(window).resize(jqUpdateSize); // When the browser changes size
-var mapStyle = [{"featureType":"water","stylers":[{"color":"#19a0d8"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"weight":6}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#e85113"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efe9e4"},{"lightness":-40}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#efe9e4"},{"lightness":-20}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"lightness":-100}]},{"featureType":"road.highway","elementType":"labels.icon"},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape","stylers":[{"lightness":20},{"color":"#efe9e4"}]},{"featureType":"landscape.man_made","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"lightness":-100}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"hue":"#11ff00"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"hue":"#4cff00"},{"saturation":58}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#f0e4d3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#efe9e4"},{"lightness":-25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#efe9e4"},{"lightness":-10}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"simplified"}]}];
+
+
+var mapStyle = [{
+    "featureType": "water",
+    "stylers": [{
+        "color": "#19a0d8"
+    }]
+}, {
+    "featureType": "administrative",
+    "elementType": "labels.text.stroke",
+    "stylers": [{
+        "color": "#ffffff"
+    }, {
+        "weight": 6
+    }]
+}, {
+    "featureType": "administrative",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+        "color": "#e85113"
+    }]
+}, {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [{
+        "color": "#efe9e4"
+    }, {
+        "lightness": -40
+    }]
+}, {
+    "featureType": "road.arterial",
+    "elementType": "geometry.stroke",
+    "stylers": [{
+        "color": "#efe9e4"
+    }, {
+        "lightness": -20
+    }]
+}, {
+    "featureType": "road",
+    "elementType": "labels.text.stroke",
+    "stylers": [{
+        "lightness": 100
+    }]
+}, {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+        "lightness": -100
+    }]
+}, {
+    "featureType": "road.highway",
+    "elementType": "labels.icon"
+}, {
+    "featureType": "landscape",
+    "elementType": "labels",
+    "stylers": [{
+        "visibility": "off"
+    }]
+}, {
+    "featureType": "landscape",
+    "stylers": [{
+        "lightness": 20
+    }, {
+        "color": "#efe9e4"
+    }]
+}, {
+    "featureType": "landscape.man_made",
+    "stylers": [{
+        "visibility": "off"
+    }]
+}, {
+    "featureType": "water",
+    "elementType": "labels.text.stroke",
+    "stylers": [{
+        "lightness": 100
+    }]
+}, {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+        "lightness": -100
+    }]
+}, {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+        "hue": "#11ff00"
+    }]
+}, {
+    "featureType": "poi",
+    "elementType": "labels.text.stroke",
+    "stylers": [{
+        "lightness": 100
+    }]
+}, {
+    "featureType": "poi",
+    "elementType": "labels.icon",
+    "stylers": [{
+        "hue": "#4cff00"
+    }, {
+        "saturation": 58
+    }]
+}, {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [{
+        "visibility": "on"
+    }, {
+        "color": "#f0e4d3"
+    }]
+}, {
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [{
+        "color": "#efe9e4"
+    }, {
+        "lightness": -25
+    }]
+}, {
+    "featureType": "road.arterial",
+    "elementType": "geometry.fill",
+    "stylers": [{
+        "color": "#efe9e4"
+    }, {
+        "lightness": -10
+    }]
+}, {
+    "featureType": "poi",
+    "elementType": "labels",
+    "stylers": [{
+        "visibility": "simplified"
+    }]
+}];
 var mapOptions = {
     center: new google.maps.LatLng(42.282924, -85.5995978),
     zoom: 15,
     disableDoubleClickZoom: true
 
 };
-(function() {
-
-
-}).call(this);
 // This is a manifest file that'll be compiled into including all the files listed below.
 // Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
 // be included in the compiled file accessible from http://example.com/assets/application.js

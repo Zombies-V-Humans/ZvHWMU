@@ -558,8 +558,17 @@ a.mainbtn {
         border-radius: 4px;
     }
     .bigframe{
-    width:65% !important;
+
+        width:65% !important;
     }
+
+    #bigframe-backdrop{
+        width:100% !important;
+        margin:auto;
+        color: black !important;
+    
+    }
+    
     #chat {
         border: 3px solid rgba(255,174,52,1)!important;
         -webkit-border-radius: 10px;
@@ -715,4 +724,12 @@ line-height:.4em;
 .modal{
     z-index:3000;
 
+}
+#zombie-list{
+   padding:0;
+   #task{color:rgb(217,83,79);}
+
+}
+#zombie-container{
+    height:40%;
 }
