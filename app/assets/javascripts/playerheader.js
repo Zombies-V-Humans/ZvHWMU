@@ -65,33 +65,25 @@ function rateLimiter() {
     }
 }
 
-function jqUpdateSize() {
-    // Get the dimensions of the viewport
+function setHeight(element, divisor){
+   
     var headerheight = $("nav").height();
-    var searchheight = $("#searchContainer").height();
-    var modalwidth = $(".modal-content").width();
-    var width = $(window).width();
     var height = $(window).height();
 
-    // $('#info' ).css('max-height', bodyheight);  
-    $('.container-fluid').css('max-height', height);
-    $('body').css('max-height', height);
-    //$('.PlayerPane' ).css('height', height/2.1 -headerheight);  
-    // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
-    $('#ZombieListButton, #PlayerListButton').css('height', height / 14 );
-    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 43);
-    $('.item').css('height', height /2.3);
+    $(element).css('height', height/divisor);
+}
 
-    $('.submitbox, .box').css('height', height /15);
+function jqUpdateSize() {
 
-    $('.bigframe-body').css('height', height / 1.2);
+    var modalwidth = $(".modal-content").width();
+    var width = $(window).width();
 
-     //   $('.item').css('max-height', height/3);
-
-    $('#mapContainer').css('max-height', height - searchheight - headerheight - (1 / 2) * searchheight);
-
-
-    //alert(headerheight);
+    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', $(window).height() / 43);
+    setHeight('body, .container-fluid', 1);
+    setHeight('#ZombieListButton, #PlayerListButton', 14 );
+    setHeight('.item', 2.3);
+    setHeight('.submitbox, .box', 15)
+    setHeight('bigframe-body', 1.2);
 
 };
 $(document).ready(jqUpdateSize); // When the page first loads
