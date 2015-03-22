@@ -1,4 +1,5 @@
-<div class="item" style=" overflow-y:scroll; height:50%; margin:auto;">
+
+<div class="item" style=" overflow-y:scroll; height:40%; margin:auto; display:relative;">
                   <% @users.each do |user| %>
                   <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
                   <%= f.text_field  :description,  as: :text ,
@@ -6,7 +7,7 @@
                      :id => "userformField",
                      :value => "#{user.name} tagged by #{current_user.name} ",
                      :style => "display:none"%>
-                  <%= image_submit_tag(user.avatar, :class=>"box",:style =>"opacity:1;height:50px; vertical-align:bottom;") %>
+                  <%= image_submit_tag(user.avatar, :class=>"box",:style =>"opacity:1;max-height:50px; vertical-align:bottom;") %>
                   <%= submit_tag 'submit',:value=>user.name,  :class=>"submitbox", :style =>" opacity:1; width:100%;vertical-align:bottom;"%>
                   <% end %>
                   <% end %>

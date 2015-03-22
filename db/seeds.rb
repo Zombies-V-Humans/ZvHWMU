@@ -19,7 +19,3 @@ User.create!(:name => name,
              :updated_at => 5.hours.ago)
 	end
 
-
-
-
-    heroku rake db:drop && heroku rake db:create && heroku rake db:migrate && heroku rake db:schema:dump && heroku rake db:seed && rails s

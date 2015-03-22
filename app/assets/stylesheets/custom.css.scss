@@ -546,6 +546,7 @@ a.mainbtn {
  
     .submitbox {
         width: 40%;
+
     }
     body {
         width: 65%;
@@ -639,12 +640,7 @@ a.mainbtn {
     background-color: blue;
 }
 .submitbox {
-    position: relative;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    margin: 0;
-    padding: 0;
+line-height:.4em;
 }
 .container {
     padding-left: 0;
