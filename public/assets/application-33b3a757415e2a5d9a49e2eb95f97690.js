@@ -14547,32 +14547,26 @@ function rateLimiter() {
     }
 }
 
-function jqUpdateSize() {
-    // Get the dimensions of the viewport
+function setHeight(element, divisor){
+   
     var headerheight = $("nav").height();
-    var searchheight = $("#searchContainer").height();
-    var modalwidth = $(".modal-content").width();
-    var width = $(window).width();
     var height = $(window).height();
 
-    // $('#info' ).css('max-height', bodyheight);  
-    $('.container-fluid').css('max-height', height);
-    $('body').css('max-height', height);
-    //$('.PlayerPane' ).css('height', height/2.1 -headerheight);  
-    // $('.ZombiePane' ).css('height', height/2.1 -headerheight);  
-    $('#ZombieListButton, #PlayerListButton').css('height', height / 14 );
-    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', height / 43);
-    $('.item').css('height', height /2);
-    $('.bigframe-body').css('height', height / 1.2);
+    $(element).css('height', height/divisor);
+}
 
-     //   $('.item').css('max-height', height/3);
+function jqUpdateSize() {
 
-    $('#mapContainer').css('max-height', height - searchheight - headerheight - (1 / 2) * searchheight);
-
-
-    //alert(headerheight);
-
+    $('body, .container-fluid').css('max-height', $(window).height());
+    $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', $(window).height() / 43);
+    setHeight('#ZombieListButton, #PlayerListButton', 14 );
+    setHeight('.item', 2.3);
+    setHeight('.submitbox, .box', 15);    
+    setHeight('bigframe-body', 1.2);
+    
+    alert();
 };
+
 $(document).ready(jqUpdateSize); // When the page first loads
 $(window).resize(jqUpdateSize); // When the browser changes size
 var mapStyle = [{"featureType":"water","stylers":[{"color":"#19a0d8"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"weight":6}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#e85113"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efe9e4"},{"lightness":-40}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#efe9e4"},{"lightness":-20}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"lightness":-100}]},{"featureType":"road.highway","elementType":"labels.icon"},{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape","stylers":[{"lightness":20},{"color":"#efe9e4"}]},{"featureType":"landscape.man_made","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"lightness":-100}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"hue":"#11ff00"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"lightness":100}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"hue":"#4cff00"},{"saturation":58}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#f0e4d3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#efe9e4"},{"lightness":-25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#efe9e4"},{"lightness":-10}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"simplified"}]}];
@@ -14582,6 +14576,10 @@ var mapOptions = {
     disableDoubleClickZoom: true
 
 };
+(function() {
+
+
+}).call(this);
 // This is a manifest file that'll be compiled into including all the files listed below.
 // Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
 // be included in the compiled file accessible from http://example.com/assets/application.js
