@@ -65,24 +65,24 @@ function rateLimiter() {
     }
 }
 
-function setHeight(element, divisor){
+function setHeight(element, attr, divisor){
    
     var headerheight = $("nav").height();
     var height = $(window).height();
 
-    $(element).css('height', height/divisor);
+    $(element).css(attr, height/divisor);
 }
 
 function jqUpdateSize() {
 
     $('body, .container-fluid').css('max-height', $(window).height());
     $('#ZombieListButton, #PlayerListButton, h3.jumbotron').css('font-size', $(window).height() / 43);
-    setHeight('#ZombieListButton, #PlayerListButton', 14 );
-    setHeight('.item', 2.3);
-    setHeight('.submitbox, .box', 15);    
-    setHeight('bigframe-body', 1.2);
+
+    setHeight('#ZombieListButton, #PlayerListButton', 'height', 14 );
+    setHeight('.item', 'height', 2.3);
+    setHeight('.submitbox, .box', 'height', 15);    
+    setHeight('bigframe-body', 'height', 1.2);
     
-    alert();
 };
 
 $(document).ready(jqUpdateSize); // When the page first loads
