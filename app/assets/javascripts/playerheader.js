@@ -65,6 +65,8 @@ function jqUpdateSize() {
     setHeight('bigframe-body', 'height', 1.2);
     setHeight('#zombie-list-container', 'height', 1.6);
 
+    $('#player').css(attr, height / divisor);
+
 
 };
 
@@ -97,14 +99,7 @@ function jqUpdateSize() {
      })
 
 function ajaxReload(){
-
-$.ajax({
-    url: "",
-    context: document.body,
-    success: function(s,x){
-        $(this).html(s);
-    }
-});
+location.reload();
 }
 
 $(document).ready(jqUpdateSize); // When the page first loads
