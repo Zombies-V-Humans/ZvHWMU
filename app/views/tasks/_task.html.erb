@@ -1,5 +1,7 @@
 <li id = "task" class="list-group-item  ">
-  <%= task.description %>
+  [<%= task.description %>]
+  Zombified By  
+  [<%= task.tagger %>]
  <% if user_signed_in? %>
   <% if current_user.admin? %>
     <span class="edit">

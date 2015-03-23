@@ -42,10 +42,8 @@ class TasksController < GameController
     Task.delete_all 
 
   end
-
   def show 
     reset
-    redirect_to 'index'
   end
 
   def playerSearch

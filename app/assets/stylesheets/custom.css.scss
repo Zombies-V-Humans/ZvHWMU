@@ -644,9 +644,9 @@ a.mainbtn {
     padding-left: 60px;
 }
 .box {
-    height: 50px;
+    height: 60px;
     float: left;
-    margin-left: -60px;
+    margin-left: -55px;
     background-color: blue;
 
 }
@@ -732,4 +732,10 @@ line-height:.4em;
 }
 #zombie-container{
     height:40%;
+}
+#user-name{
+    width:100%;
+    height:100%;
+    font-size:3em;
+    color: rgba(255,174,52,.8)!important;
 }
