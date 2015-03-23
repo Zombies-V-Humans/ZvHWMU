@@ -44,6 +44,7 @@ class TasksController < GameController
   end
   def show 
     reset
+    redirect_to 'index'
   end
 
   def playerSearch

@@ -641,13 +641,9 @@ a.mainbtn {
     border: 1px solid #dddddd;
 }
 .item {
-    padding-left: 60px;
 }
 .box {
-    height: 60px;
-    float: left;
-    margin-left: -55px;
-    background-color: blue;
+    height: 50px;
 
 }
 .submitbox {
@@ -733,9 +729,19 @@ line-height:.4em;
 #zombie-container{
     height:40%;
 }
-#user-name{
+.user-names{
+padding-left:10px;
     width:100%;
     height:100%;
-    font-size:3em;
+
     color: rgba(255,174,52,.8)!important;
+}
+#playerSubmitRow{
+
+background-color:#fff;
+    margin-top:5px;
+    padding:10px;
+    margin-bottom:5px;
+    border:1px solid white;
+    border-radius:5px;
 }
