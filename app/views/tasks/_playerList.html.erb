@@ -1,14 +1,51 @@
-
 <div class="item" style=" overflow-y:scroll; height:40%; margin:auto;">
-                  <% @users.each do |user| %>
-                  <%= simple_form_for @task, data: { confirm: "Are you sure you want to Tag #{user.name}?" }, remote: true do |f|   %>
-                  <%= f.text_field  :description,  as: :text ,
-                     :class => "",
-                     :id => "userformField",
-                     :value => "#{user.name} tagged by #{current_user.name} ",
-                     :style => "display:none"%>
-                  <%= image_submit_tag(user.avatar, :class=>"box",:style =>"opacity:1;max-height:50px; vertical-align:bottom;") %>
-                  <%= submit_tag 'submit',:value=>user.name,  :class=>"submitbox", :style =>" opacity:1; width:100%;vertical-align:bottom;"%>
-                  <% end %>
-                  <% end %>
-               </div>
+                 <table>
+                    <tbody>
+                        <% @users.each do |user| %>
+                           <tr onclick="submit('<%= user.name %>','<%= current_user.name %>')";>
+                              <td><%= image_tag(user.avatar, :class=>"box",:style =>"opacity:1;max-height:50px; vertical-align:bottom;") %></td>
+                              <td ><%= user.name %></td>
+                           </tr>
+                        <% end %>
+                                         
+                     </tbody>
+                 </table>
+
+</div>
+<div id="smallframe-backdrop" class="smallframe" style="background:#101010; opacity:0.9; width:100%; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; z-index:9999; display:none; "></div>
+<div id="smallframe" class="smallframe" style="background:#202020; border-radius:7px; padding:10px;  width:55%; height:40%; position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; z-index:9999; display:none;">   <button type="button" id="player" onclick="closeSmallframe();" style="opacity:0.9; display:inline-block; width:30px;height:30px;"class="close" >&times;</button>
+
+<div class="smallframe-body">
+   <h2 class="modal-title" id="myModalLabel" style= "border-bottom: 2px solid rgb(51,122,183); padding-bottom:2px;">Confirm</h2>
+      <h4 >Are you sure you tagged: </h3><h3 style = "color: #d9534f!important;" id = "nameHolder"></h4>
+       <%= simple_form_for @task, remote: true do |f|   %>
+       <%= f.text_field  :description,  as: :text , :id => "userformField", :style => "visibility:hidden"%>
+       <%= f.text_field  :tagger,  as: :text , :id => "taggerformField", :style => "visibility:hidden"%>
+
+       <%= f.submit :class=>"submitbox", :value=>"I'm Sure!",:onclick=>"closeSmallframe();",:style =>" opacity:1; width:100%;vertical-align:bottom;"%> 
+       <% end %>  
+   </div>
+</div>
+
+         <script>
+
+   function openSmallframe(){
+       $('#smallframe-backdrop').show();
+       $('#smallframe').show("fast");
+   }
+   
+   function closeSmallframe(){
+      $('#smallframe').hide("fast");
+      $('#smallframe-backdrop').hide();
+   
+   }
+function submit(tagged, tagger){
+
+       $('#userformField').val(tagged);
+       $('#taggerformField').val(tagged);
+       $('#nameHolder').html(tagged +" Zombified By "+tagger);
+       openSmallframe();
+
+}
+
+  </script>

@@ -1,7 +1,14 @@
   <% if current_user && current_user.admin? %>
+       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Zombies</button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Messages</button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Map Markers</button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset('resetPath');">Reset Everything</button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
 
-<button onclick="reset();"></button>
-<% end%>
+  <% end%>
 
 <div class="PlayerPane jumbotron">
    <legend id = "h3headerblue">Tag a Player</legend>
@@ -74,38 +81,9 @@
 <!--       The End       -->
 <script>
    
-   function openBigframe(id){
-      if(id=="player"){ cookieSetter(1); }
-       $('#bigframe-backdrop').show();
-       $('#bigframe-'+id).show("fast");
-   }
-   
-   function closeBigframe(id){
-      cookieSetter(0);
-      $('#bigframe-'+id).hide("fast");
-      $('#bigframe-backdrop').hide();
-   
-   }
-
-   function cookieSetter(value){
-   
-      document.cookie = value;
-   }
-   
-   $(document).ready(function() {
-   
-      if (document.cookie==1){
-
-          openBigframe('player');
-      
-       }
-     })
-function reset(){
-
-   <%= Task.delete_all %>
-   <%= ZombieGroup.delete_all %>
-   <%= Comment.delete_all %>
+function reset(path){
+   document.getElementById(path).click();
+ajaxReload();
 }
-
 </script>
 

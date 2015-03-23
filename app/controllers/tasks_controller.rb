@@ -22,14 +22,33 @@ class TasksController < GameController
   def find_user
     @user = User.find(params[:id])
   end 
-def playerList
-  respond_to do |format|               
-    format.js
-  end        
-end 
+
+  def reset
+    clear_all_zombies
+    clear_all_messages
+    clear_all_tasks
+  end
+
+  def clear_all_zombies 
+     ZombieGroup.delete_all 
+
+  end
+
+  def clear_all_messages
+     Comment.delete_all 
+  end
+
+  def clear_all_tasks
+    Task.delete_all 
+
+  end
+
+  def show 
+    reset
+    redirect_to 'index'
+  end
 
   def playerSearch
-
     @q = User.search(params[:q])
     search_relation = @q.result
     @users = search_relation.order(sort_column + " " + sort_direction).references(:user).page params[:page]
@@ -51,7 +70,6 @@ end
     new
     playerSearch
 
-
   end
 
   private
@@ -67,7 +85,7 @@ end
     end
 
     def task_params
-      params.require(:task).permit(:description, :deadline)
+      params.require(:task).permit(:description, :tagger)
     end
 
 

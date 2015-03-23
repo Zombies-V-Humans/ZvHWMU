@@ -23,13 +23,7 @@ function toggleFullScreen() {
     }
 }
 
-
-
-function respConfirm(player_name) {
-    var response = confirm("Are you sure you want to tag\n" + player_name + "?");
-    if (response) alert("Zombie Tagged!");
-    else return;
-}
+    
 
 
 var clicks = 0;
@@ -41,9 +35,10 @@ function rateLimiter() {
         return;
     }
     clicks += 1;
-    if (clicks > 1) {
+    if (clicks > 2) {
         alert('Please wait 45 seconds between messages!');
         document.getElementById("postmessage").disabled = true;
+          document.getElementById("textarea").disabled = true;
         setTimeout('document.getElementById("postmessage").disabled=false;', 45000);
     } else {
         alert('Your message was successfully posted!');
@@ -70,6 +65,45 @@ function jqUpdateSize() {
 
 
 };
+
+   function openBigframe(id){
+      if(id=="player"){ cookieSetter(1); }
+       $('#bigframe-backdrop').show();
+       $('#bigframe-'+id).show("fast");
+   }
+   
+   function closeBigframe(id){
+      cookieSetter(0);
+      $('#bigframe-'+id).hide("fast");
+      $('#bigframe-backdrop').hide();
+      ajaxReload();  
+   }
+
+
+   function cookieSetter(value){
+   
+      document.cookie = value;
+   }
+   
+   $(document).ready(function() {
+   
+      if (document.cookie==1){
+
+          openBigframe('player');
+      
+       }
+     })
+
+function ajaxReload(){
+
+$.ajax({
+    url: "",
+    context: document.body,
+    success: function(s,x){
+        $(this).html(s);
+    }
+});
+}
 
 $(document).ready(jqUpdateSize); // When the page first loads
 $(window).resize(jqUpdateSize); // When the browser changes size
