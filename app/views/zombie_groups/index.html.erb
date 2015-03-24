@@ -15,11 +15,9 @@
       <tr>
        <td><%= zombie_group.latitude %></td>
         <td><%= zombie_group.longitude %></td>
-         <!--<td><%= zombie_group.address %></td>
         <td><%= zombie_group.title %></td>-->
         <td><%= link_to 'Show', zombie_group %></td>
      <% if user_signed_in? && current_user.admin? %>
-        <!-- <td><%= link_to 'Edit', zombie_group %></td>-->
         <td><%= link_to 'Destroy', zombie_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
          <% else %>
@@ -36,7 +34,7 @@
 <!--                     -->
 <!-- List of Zombies     -->
 <!--                     -->
-
+<center>
 <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModal" aria-hidden="true">
    <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -49,12 +47,13 @@
 
          </div>
          <div class="modal-footer">
-            <button type="button" class="btn btn-default" onclick="$('#submitHorde').click();"data-dismiss="modal">Tag Zombie Horde</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a type="button" class="btn btn-primary" onclick="$('#submitHorde').click();"data-dismiss="modal">Tag Zombie Horde</a>
+            <a type="button" class="btn btn-danger" data-dismiss="modal">Close</a>
          </div>
       </div>
    </div>
 </div>
+</center>
 <!--       The End       -->
 
 
@@ -84,17 +83,10 @@ handler.buildMap({ provider: {
   mapTypeId: google.maps.MapTypeId.ROADMAP, 
   styles: mapStyle, options:mapOptions     
   }, internal: {id: 'map'}}, function(){
-            handler.addMarker(<%=raw @campus.to_json %>);
-
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
-
       handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-
-
       google.maps.event.addListener(handler.getMap(), 'dblclick', function(event){
             updateFormLocation(event.latLng);
-
         openModal();
 
       } );
