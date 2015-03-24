@@ -322,21 +322,21 @@ body{
      border:none !important;
 }
 p{
-        color: rgba(255,174,52,1)!important;
+        color: rgba(0,0,0,1)!important;
+    background: rgba(255,255,255,0.4);
 
     border-radius:7px;
 font-size:1.6em !important;
-    background: rgba(0,0,0,0.5);
     padding:15px;
     line-height:1.5em;
 }
 h2{
-
+    background: rgba(0,0,0,0.5);
         color: rgba(255,174,52,1)!important;
+
 width:auto;
     border-radius:7px;
 font-size:1.9em !important;
-    background: rgba(0,0,0,0.5);
     padding:8px;
     margin-bottom:-2px;
 border-radius-bottom: 0;
