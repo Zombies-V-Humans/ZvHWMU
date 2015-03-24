@@ -4,31 +4,16 @@ h6{
     font-size:48px;
     color:#060606;
 }
-#rules.yellow.clearfix {
-    margin-top: 13px;
-    width:100%;
-
-}
-
-.contents {
-    height: auto;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5% 0 15% 0;
-
-   
-}
 
 .yellow {
-    background: #FEEC85;
+background-color: rgba(254, 236, 133,0.3) !important;
+
 }
 
 #rules {
     width: 100%;
     border-radius: 16px;
 
-height:inherit !important;
 
 }
 
@@ -128,8 +113,8 @@ height:inherit !important;
 }
 
 #rules .no-play-row .no-play-item .no-play-img {
-    width: 75%;
-    height: 79%;
+    width: 65%;
+    height: 69%;
     border-radius: 18px;
     margin-top: 15px;
 }
@@ -304,71 +289,34 @@ height:inherit !important;
     font-size: 70px;
     padding-bottom: 50px;
 }
-
-h2 {
-    color: #030303 !important;
-    font-family: "League-Gothic", Courier;
-    font-size: 34px;
-    text-transform: uppercase;
-    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -15px -15px 20px #ffae34;
-    font-weight: bold;
-    margin-bottom: 25px;
-    margin-top: 40px;
-}
-
-p {
-    text-align: center;
-    color: black;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #292929;
-    line-height: 30px;
-}
-
-li {
-    color: #2E2E2E;
-}
-
-small {
-    font-size: 14px;
-    color: red;
-}
-
-.safety-disclaimer {
-    border: 3px dashed #FEEC85;
-    background-color: #FEFCC9;
-    border-radius: 10px;
-    padding: 2% 1% 2% 1%;
-}
-
-section.body-section {
-    overflow-y: hidden;
-    margin-top: 55px;
-}
-
-
-@media all and (min-width: 959px) {
-
-  #rules p{
-    font-size: 25px;
-    line-height: 40px;
-    padding:5% 5% 5% 5%;
-}
 #rules{
-  margin-left:auto;
-  margin-right:auto;
-  width:60%;
-    position:relative;
-}
- #debug.center.jumbotronDebug{
-  margin-left:auto;
-  margin-right:auto;
-  width:58%;
-}
-}
-body{
-    border: none !important;
 
+}
+#overlay{
+        background-image: url(/assets/rulesBackdrop.jpg);
+
+    padding:30px;
+    background-size:cover;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -o-filter: blur(4px);
+    filter: blur(4px);
+    position:fixed;
+    height:100%;
+    width:100%;
+        margin:auto;
+
+
+}
+.contents{
+    padding:15px;
+    margin:auto;
+        max-height:100%;
+    max-width:100%;
+}
+p, li,h2{
+
+color:black !important;
 
 }
