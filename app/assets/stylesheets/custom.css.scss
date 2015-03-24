@@ -539,10 +539,10 @@ a.mainbtn {
 }
 @media only screen and (min-width:900px) {
 
-#rules,#overlay, .contents{
-
+#rules,.overlay, .contents{
+max-height:95%;
     width:64% !important;
-    padding-bottom:60px !important;
+    padding-bottom:20px !important;
 
 }
     .modal-dialog {
