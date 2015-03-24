@@ -113,8 +113,8 @@ background-color: rgba(254, 236, 133,0.3) !important;
 }
 
 #rules .no-play-row .no-play-item .no-play-img {
-    width: 65%;
-    height: 69%;
+    width: 55%;
+    height: 59%;
     border-radius: 18px;
     margin-top: 15px;
 }
@@ -262,18 +262,6 @@ background-color: rgba(254, 236, 133,0.3) !important;
     margin-right: 0;
 }
 
-@media screen and (min-width:13.75em) and (max-width:60em) {
-    #rules .team-rules-row .team-column {
-        float: left;
-        display: block;
-        margin-right: 7.42297%;
-        width: 100%;
-    }
-
-    #rules .team-rules-row .team-column:last-child {
-        margin-right: 0;
-    };
-}
 
 #rules .dbag-row {
     display: block;
@@ -285,16 +273,19 @@ background-color: rgba(254, 236, 133,0.3) !important;
     clear: both;
 }
 
-#title {
+h6 {
     font-size: 70px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
+    font-family: "League-Gothic",Courier;
+    text-shadow: 0px 0px 2px #FEFCC9,2px -4px 3px #FEEC85,-5px -6px 5px #FFAE34,-3px 6px 6px #CD4606,0px -8px 8px #973716, 0px 0px 2px #000,0px -8px 8px #000, 0px 8px 8px #000;
+
+color:#f0f0f0;
 }
 #rules{
 
 }
 #overlay{
-        background-image: url(/assets/rulesBackdrop.jpg);
-
+    background-image: url(/assets/rulesBackdrop.jpg);
     padding:30px;
     background-size:cover;
     -webkit-filter: blur(4px);
@@ -305,24 +296,50 @@ background-color: rgba(254, 236, 133,0.3) !important;
     position:fixed;
     height:100%;
     width:98.5%;
-        margin:auto;
-
-
+    margin:auto;
 }
+
 .contents{
     padding:25px;
     margin:auto;
-        max-height:100%;
+    max-height:100%;
     max-width:100%;
 }
+
 p, li,h2{
 
-color:black !important;
+    color:black !important;
 
 }
+
 .navbar-header{
-        border: 3px solid rgba(255,174,52,1)!important;
+
+    border: 3px solid rgba(255,174,52,1)!important;
+
 }
+
 body{
-  border:none !important;
+     border:none !important;
+}
+p{
+        color: rgba(255,174,52,1)!important;
+
+    border-radius:7px;
+font-size:1.6em !important;
+    background: rgba(0,0,0,0.5);
+    padding:15px;
+    line-height:1.5em;
+}
+h2{
+
+        color: rgba(255,174,52,1)!important;
+width:auto;
+    border-radius:7px;
+font-size:1.9em !important;
+    background: rgba(0,0,0,0.5);
+    padding:8px;
+    margin-bottom:-2px;
+border-radius-bottom: 0;
+  line-height:1.5em;
+    border-bottom:white;
 }
