@@ -11,7 +11,7 @@ background-color: rgba(254, 236, 133,0.3) !important;
 }
 
 #rules {
-    width: 100%;
+    width: 98.5%;
     border-radius: 16px;
 
 
@@ -304,13 +304,13 @@ background-color: rgba(254, 236, 133,0.3) !important;
     filter: blur(4px);
     position:fixed;
     height:100%;
-    width:100%;
+    width:98.5%;
         margin:auto;
 
 
 }
 .contents{
-    padding:20px;
+    padding:25px;
     margin:auto;
         max-height:100%;
     max-width:100%;
@@ -319,4 +319,10 @@ p, li,h2{
 
 color:black !important;
 
+}
+.navbar-header{
+        border: 3px solid rgba(255,174,52,1)!important;
+}
+body{
+  border:none !important;
 }
