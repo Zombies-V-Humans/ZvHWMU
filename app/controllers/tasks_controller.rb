@@ -1,4 +1,4 @@
-class TasksController < GameController
+class TasksController < ApplicationController
   before_action :all_tasks, only: [:index, :create, :update, :destroy]
   before_action :set_tasks, only: [:edit, :update, :destroy]
   respond_to :html, :js
