@@ -7763,7 +7763,7 @@ a.mainbtn {
 
 @media only screen and (min-width: 900px) {
   /* line 542, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/custom.css.scss */
-  #rules, .overlay, .contents {
+  #rules, #overlay, .contents {
     max-height: 95%;
     width: 64% !important;
     padding-bottom: 20px !important;
@@ -8045,6 +8045,62 @@ a.mainbtn {
   background-color: rgba(255, 255, 255, 0.1);
   z-index: -1;
   visibility: hidden;
+}
+
+/* line 774, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/custom.css.scss */
+.modal-dialog {
+  max-width: 80% !important;
+  max-height: 50% !important;
+  margin: auto;
+}
+/* line 1, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+.your-a-zombie {
+  background-color: rgba(215, 40, 40, 0.9);
+  width: 100%;
+  margin-top: -15px;
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+/* line 9, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+h3.player-status {
+  border: none !important;
+  border-radius: 10px !important;
+  margin-bottom: -5px !important;
+  margin-top: 5px !important;
+  float: left !important;
+  text-align: center !important;
+  background-color: #202020 !important;
+  padding: 5px !important;
+  color: rgba(255, 174, 52, 0.8) !important;
+  background: none !important;
+  display: inline-block !important;
+}
+
+/* line 23, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+h3.human {
+  display: inline-block !important;
+  color: #337ab7 !important;
+}
+
+/* line 28, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+h3.zombie {
+  display: inline-block !important;
+  color: #d9534f !important;
+}
+
+/* line 33, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+.status {
+  width: auto !important;
+  display: inline-block !important;
+  margin: auto !important;
+  margin-bottom: 0px !important;
+  margin-top: 7px !important;
+}
+
+/* line 40, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+.top-pane {
+  margin-top: 0px !important;
 }
 /* line 1, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/scaffolds.css.scss */
 body {
