@@ -8063,25 +8063,48 @@ a.mainbtn {
 }
 
 /* line 9, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
-.player-status {
-  border-radius: 10px;
-  margin-bottom: -5px;
-  margin-top: 5px;
-  float: left;
-  display: inline-block;
-  text-align: center;
-  background-color: #202020;
-  padding: 5px;
-}
-
-/* line 19, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
-.human {
-  color: #337ab7 !important;
+h3.player-status {
+  border: none !important;
+  border-radius: 10px !important;
+  margin-bottom: -5px !important;
+  margin-top: 5px !important;
+  float: left !important;
+  text-align: center !important;
+  background-color: #202020 !important;
+  padding: 5px !important;
+  color: rgba(255, 174, 52, 0.8) !important;
+  background: none !important;
 }
 
 /* line 23, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
-.zombie {
+h3.human {
+  color: #337ab7 !important;
+}
+
+/* line 25, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+h3.zombie {
   color: #d9534f !important;
+}
+
+/* line 27, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+h3.human, h3.zombie, h3.player-status {
+  margin-top: -5px !important;
+  display: inline-block !important;
+  padding-top: 0px !important;
+}
+
+/* line 33, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+.status {
+  width: auto !important;
+  display: inline-block !important;
+  margin: auto !important;
+  margin-bottom: 0px !important;
+  margin-top: 7px !important;
+}
+
+/* line 41, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+.top-pane {
+  margin-top: 0px !important;
 }
 /* line 1, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/scaffolds.css.scss */
 body {
