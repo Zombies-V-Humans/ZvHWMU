@@ -1,8 +1,11 @@
 
-.alert {
-    margin-top: 7px;
+.alert, .notice  {
+    margin-top: 7px !important;
     z-index: 10 !important;
     position: absolute !important;
+    width:50% !important;
+    left:25%;
+    right:25%;
 }
 .alert-error {
     padding: 15px;
