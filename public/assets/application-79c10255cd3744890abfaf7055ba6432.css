@@ -8074,19 +8074,23 @@ h3.player-status {
   padding: 5px !important;
   color: rgba(255, 174, 52, 0.8) !important;
   background: none !important;
-  display: inline-block !important;
 }
 
 /* line 23, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
 h3.human {
-  display: inline-block !important;
   color: #337ab7 !important;
 }
 
-/* line 28, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+/* line 25, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
 h3.zombie {
-  display: inline-block !important;
   color: #d9534f !important;
+}
+
+/* line 27, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+h3.human, h3.zombie, h3.player-status {
+  margin-top: -5px !important;
+  display: inline-block !important;
+  padding-top: 2.5px !important;
 }
 
 /* line 33, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
@@ -8098,7 +8102,7 @@ h3.zombie {
   margin-top: 7px !important;
 }
 
-/* line 40, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
+/* line 41, /home/wal33d/Desktop/ZVHAPP/app/assets/stylesheets/game.css.scss */
 .top-pane {
   margin-top: 0px !important;
 }
