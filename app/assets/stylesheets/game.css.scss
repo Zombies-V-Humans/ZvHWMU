@@ -7,7 +7,6 @@ text-align:center;
 }
 
 h3.player-status{
-margin-top:0px !important;
 	border:none !important;
 	border-radius:10px !important;
 	margin-bottom:-5px !important;
@@ -18,29 +17,28 @@ margin-top:0px !important;
 	padding:5px !important;
 	color : rgba(255, 174, 52, 0.8) !important;
 	background:none!important;
+}
+h3.human, h3.zombie, h3.player-status{
+	margin-top:0px !important;
 	display:inline-block !important;
 }
 
 h3.human{
-margin-top:0px !important;
-	display:inline-block !important;
 	color:#337ab7 !important;
 }
 
 h3.zombie{
-margin-top:0px !important;
-	display:inline-block !important;
 	color:#d9534f !important;
 }
 
 .status{
-
-width:auto !important;
+	width:auto !important;
 	display:inline-block !important;
 	margin:auto !important;
 	margin-bottom:0px !important;
 	margin-top:7px !important;
 }
+
 .top-pane{
 	margin-top: 0px !important;
 }
