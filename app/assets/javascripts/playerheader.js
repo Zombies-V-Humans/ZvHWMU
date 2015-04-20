@@ -69,8 +69,6 @@ function jqUpdateSize() {
     setHeight('bigframe-body', 'height', 1.2);
     setHeight('#zombie-list-container', 'height', 1.6);
 
-    $('#player').css(attr, height / divisor);
-
 
 };
 

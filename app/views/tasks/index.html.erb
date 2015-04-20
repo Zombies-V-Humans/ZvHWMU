@@ -1,5 +1,6 @@
+  <center><div class="PlayerPane jumbotron status" style="width:100% !important;">
   <% if current_user && current_user.admin? %>
-       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Zombies</button>
+       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Map</button>
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
        <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Messages</button>
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
@@ -9,6 +10,9 @@
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
 
   <% end%>
+  </div>
+  </center>
+
 <center>
 <div class="PlayerPane jumbotron status">
  <% status = false %>

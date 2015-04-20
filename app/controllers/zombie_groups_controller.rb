@@ -9,7 +9,8 @@ class ZombieGroupsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@zombie_groups) do |zombie_group, marker|
       marker.lat zombie_group.latitude
       marker.lng zombie_group.longitude
-      marker.infowindow gmaps4rails_infowindow
+      marker.infowindow  "<h2>"+zombie_group.title+"</h2>"
+
 
       marker.picture({
         "url" =>"zombiemarker.png",
@@ -39,10 +40,7 @@ class ZombieGroupsController < ApplicationController
   # GET /zombie_groups/1/edit
   def edit
   end
-    def gmaps4rails_infowindow
-      "<h2>Zombies</h2>"
-    end
-    
+  
 
   # POST /zombie_groups
   def create

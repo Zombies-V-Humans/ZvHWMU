@@ -1,3 +1,21 @@
+<navbar> 
+ <% status = false %>
+ <% if current_user %>
+ <% tasks = Task.all %>
+    <% tasks.each do |t| %>
+      <%if t.description.include?(current_user.name) %>
+        <% status = true %>
+      <% end %>
+    <% end %>
+<% end%>
+
+<% if status %>
+  <div class="your-a-zombie">
+     <h1 >You've been Tagged! Go Eat some Brains!</h1>
+          <%= image_tag("tagged.png") %>
+  </div>
+<% else %>
+
 <div id="chat"  >
  <div class="well">
   <%= form_for @comment, remote: true do |f| %>
@@ -9,6 +27,7 @@
     </div>
   <% end %>
  </div> 
+
   <div class="panel panel-default" id="comments"> 
      <div class="panel-body">
        <ul id = "acomment" class="media-list">
@@ -43,3 +62,4 @@
 
   }
 </style>
+<% end %>
