@@ -16,4 +16,5 @@
 $(document).ready(function(){
 	setTimeout(function(){
 		$('#error_explanation' ).remove();
-		$('.alert' ).remove();  }, 3500); })
+		$('.alert' ).remove();  }, 1500); })
+

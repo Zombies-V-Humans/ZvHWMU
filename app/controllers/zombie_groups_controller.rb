@@ -1,5 +1,6 @@
 class ZombieGroupsController < ApplicationController
-  before_action :set_zombie_group, only: [:show, :edit, :update, :destroy]
+      before_action :authenticate_user! 
+      before_action :set_zombie_group, only: [:show, :edit, :update, :destroy]
 
   # GET /zombie_groups
   def index

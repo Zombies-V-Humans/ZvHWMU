@@ -23,7 +23,12 @@ function toggleFullScreen() {
     }
 }
 
-    
+$(document).ready(function(){
+    setTimeout(function(){
+        $('#error_explanation' ).remove();
+        $('.alert' ).remove();  }, 1500); })
+
+
 
 
 var clicks = 0;
@@ -57,7 +62,7 @@ function jqUpdateSize() {
 
     setHeight('body, .container-fluid', 'max-height', 1);
     setHeight('#ZombieListButton, #PlayerListButton, h3.jumbotron, #user-name', 'font-size', 43);
-        setHeight('.user-names', 'font-size', 33);
+        setHeight('.user-names', 'font-size', 45);
     setHeight('#ZombieListButton, #PlayerListButton', 'height', 14);
     setHeight('.item', 'height', 2.3);
     setHeight('.submitbox, .box', 'height', 15);

@@ -9,7 +9,9 @@
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
 
   <% end%>
-<% status = false %>
+<center>
+<div class="PlayerPane jumbotron status">
+ <% status = false %>
   <% if current_user %>
     <% @tasks.each do |t| %>
       <% if t.description.include?(current_user.name) %>
@@ -24,7 +26,8 @@
        <h3 class="player-status">Status: </h3>    
        <h3 class="player-status human">Human</h3>
   <% end %>
-
+</div>
+</center>
 <div class="PlayerPane jumbotron">
    <legend id = "h3headerblue">Tag a Player</legend>
    <h3 class="jumbotron"style="margin-top:0;">Total # of Players: <%= User.all.length %></h3>
