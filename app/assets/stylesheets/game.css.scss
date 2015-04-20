@@ -7,6 +7,7 @@ text-align:center;
 }
 
 h3.player-status{
+margin-top:0px !important;
 	border:none !important;
 	border-radius:10px !important;
 	margin-bottom:-5px !important;
@@ -21,16 +22,19 @@ h3.player-status{
 }
 
 h3.human{
+margin-top:0px !important;
 	display:inline-block !important;
 	color:#337ab7 !important;
 }
 
 h3.zombie{
+margin-top:0px !important;
 	display:inline-block !important;
 	color:#d9534f !important;
 }
 
 .status{
+
 width:auto !important;
 	display:inline-block !important;
 	margin:auto !important;
