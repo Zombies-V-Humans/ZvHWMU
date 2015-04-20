@@ -4,6 +4,11 @@
 	margin-top:-15px;
 	margin-bottom:-10px;
 	text-align:center;
+
+	img{
+	width:100%;
+	height:100%;
+	}
 }
 
 h3.player-status{
@@ -39,3 +44,9 @@ h3.human, h3.zombie, h3.player-status{
 }
 
 .top-pane{ margin-top: 0px !important; }
+
+.buttons-4{
+font-size:2.4vmin !important;
+	width:47% !important;
+	height:43% !important;
+}

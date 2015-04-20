@@ -1,16 +1,17 @@
-  <center><div class="PlayerPane jumbotron status" style="width:100% !important;">
+  <center>
   <% if current_user && current_user.admin? %>
-       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Map</button>
+  <div class="PlayerPane jumbotron status" style="width:100% !important;">
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Zombies</button>
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
-       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Messages</button>
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Messages</button>
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
-       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset();">Reset Map Markers</button>
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Map </button>
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
-       <button class="reset reset-everything btn btn-lg btn-danger" onclick="reset('resetPath');">Reset Everything</button>
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset('resetPath');">Reset Everything</button>
        <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+  </div>
 
   <% end%>
-  </div>
   </center>
 
 <center>

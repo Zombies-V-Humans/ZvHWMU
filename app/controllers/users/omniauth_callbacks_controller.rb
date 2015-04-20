@@ -17,9 +17,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
   def after_sign_in_path_for(resource)
-    :tasks
+   "/tasks"
   end
   def after_sign_up_path_for(resource)
-    :tasks
+     "/tasks"
   end
 end
