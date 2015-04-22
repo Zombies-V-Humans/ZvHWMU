@@ -28,3 +28,8 @@ For testing and development:
 - rails s "Boot rails server" http://localhost:3000/
 
  Admin user is login: Admin@zvh.edu password: password 
+
+![Alt text](Demos/ZVH Presentation1.png "1")
+
+![Alt text](https://github.com/Wal33D/ToDo_List/blob/master/desktop.png "Desktop View") 
+
