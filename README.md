@@ -31,5 +31,14 @@ For testing and development:
 
 ![Alt text](Demos/ZVH Presentation1.png "1")
 
-![Alt text](https://github.com/Wal33D/ToDo_List/blob/master/desktop.png "Desktop View") 
+![Alt text](Demos/ZVH Presentation2.png "2")
 
+![Alt text](Demos/ZVH Presentation3.png "3")
+
+![Alt text](Demos/ZVH Presentation4.png "4")
+
+![Alt text](Demos/ZVH Presentation5.png "5")
+
+![Alt text](Demos/ZVH Presentation6.png "6")
+
+![Alt text](Demos/ZVH Presentation7.png "7")
