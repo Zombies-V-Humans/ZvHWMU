@@ -20,11 +20,11 @@ For testing and development:
 - [Thin](https://github.com/macournoyer/thin)
 
 ### Setting up
-- bundle install
-- rake db:setup
-- rake db:migrate
-- rake db:seed
-- rails server
+- bundle install "Install all nescassary rails components"
+- rake db:setup: "creates dev sqLite & prod PostgreSQL Database"
+- rake db:schema:load "Load Original Schema"
+- rake db:migrate "Load All Schema Migrations"
+- rake db:seed "Add default admin account and a few test users "
+- rails s "Boot rails server" http://localhost:3000/
 
-
-for Testing purposes our Admin user is login: Admin@zvh.edu password: password 
+ Admin user is login: Admin@zvh.edu password: password 
