@@ -28,9 +28,6 @@ $(document).ready(function(){
         $('#error_explanation' ).remove();
         $('.alert' ).remove();  }, 1500); })
 
-
-
-
 var clicks = 0;
 
 function rateLimiter() {
