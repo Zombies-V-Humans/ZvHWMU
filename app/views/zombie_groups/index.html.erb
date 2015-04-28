@@ -1,24 +1,3 @@
-<div id ="hordeList">
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @zombie_groups.each do |zombie_group| %>
-      <tr>
-        <td><%= zombie_group.title %></td>
-        <td><%= link_to 'Show', zombie_group %></td>
-        <% if user_signed_in? && current_user.admin? %>
-        <td><%= link_to 'Destroy', zombie_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div> 
 <!-- only the newest 4 zombie markers will be displayed -->
 <% markers = ZombieGroup.all %>
 <% if markers.count > 3 %>
