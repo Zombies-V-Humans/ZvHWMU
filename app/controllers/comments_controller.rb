@@ -1,5 +1,5 @@
-class CommentsController < GameController
-    before_action :authenticate_user! 
+class CommentsController < ApplicationController
+  before_action :authenticate_user! 
 
   def new
     @comment = Comment.new

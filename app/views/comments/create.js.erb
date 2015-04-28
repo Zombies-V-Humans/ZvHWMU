@@ -1,13 +1,9 @@
 publisher = client.publish('/comments', {
-	
   message: '<%= j render @comment %>'
 });
-
-
 publisher.callback(function() {
 $('#textarea').val('');
 });
-
 publisher.errback(function() {
   alert('There was an error while posting your comment.');
 });

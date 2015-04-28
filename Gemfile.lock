@@ -138,6 +138,7 @@ GEM
     gmaps4rails (2.0.5)
     hashie (2.0.5)
     hike (1.2.3)
+    htmlbeautifier (1.1.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     jquery-rails (3.1.0)
@@ -316,6 +317,7 @@ DEPENDENCIES
   faye-rails (~> 2.0)
   geocoder
   gmaps4rails (~> 2.0.0)
+  htmlbeautifier
   jquery-rails
   jquery-turbolinks
   kaminari

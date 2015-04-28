@@ -1,13 +1,12 @@
-<navbar> 
  <% status = false %>
  <% if current_user %>
- <% tasks = Task.all %>
+  <% tasks = Task.all %>
     <% tasks.each do |t| %>
       <%if t.description.include?(current_user.name) %>
         <% status = true %>
       <% end %>
     <% end %>
-<% end%>
+  <% end%>
 
 <% if status %>
   <div class="your-a-zombie">
@@ -16,7 +15,7 @@
   </div>
 <% else %>
 
-<div id="chat"  >
+<div id="chat">
  <div class="well">
   <%= form_for @comment, remote: true do |f| %>
     <div id = "textbox" class="form-group">
@@ -38,28 +37,19 @@
 </div>
 
 <style>
-.panel-body{
-  padding:0px 10px 0px 10px !important;
-}
-.well{
-  padding:15px 10px 0px 10px;
-  margin-bottom: -5px !important;
-  border:none!important;}
-#textarea {
-    height: 50px !important;}
-
-#textbox {
-    width: 70% !important;}
-
-#postmessage {
-  padding-top:12px;
-  margin-top:-64px !important;
-  float: right !important;
-  height: 49px !important;
-  width: 25% !important;}
-  #comments{
-         overflow-y:scroll !important;
-
-  }
+  .panel-body{ padding:0px 10px 0px 10px !important; }
+  #comments{ overflow-y:scroll !important; }
+  #textarea { height: 50px !important; }
+  #textbox { width: 70% !important; }
+  .well{
+    padding:15px 10px 0px 10px;
+    margin-bottom: -5px !important;
+    border:none!important;}
+  #postmessage {
+    padding-top:12px;
+    margin-top:-64px !important;
+    float: right !important;
+    height: 49px !important;
+    width: 25% !important;}
 </style>
 <% end %>

@@ -1,35 +1,23 @@
-
 <div id ="hordeList">
 <table>
   <thead>
     <tr>
-      <!-- <th>Latitude</th>
-      <th>Longitude</th>-->
       <th>Address</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @zombie_groups.each do |zombie_group| %>
       <tr>
-       <td><%= zombie_group.latitude %></td>
-        <td><%= zombie_group.longitude %></td>
-        <td><%= zombie_group.title %></td>-->
+        <td><%= zombie_group.title %></td>
         <td><%= link_to 'Show', zombie_group %></td>
-     <% if user_signed_in? && current_user.admin? %>
+        <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Destroy', zombie_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-         <% else %>
-         
-          <% end %>
+        <% end %>
       </tr>
     <% end %>
-  
   </tbody>
- 
 </table>
-
 </div> 
 <!-- only the newest 4 zombie markers will be displayed -->
 <% markers = ZombieGroup.all %>
@@ -59,81 +47,58 @@
    </div>
 </div>
 </center>
-<!--       The End       -->
-
-
-
-
-<style>
-
-.numeric, #zombie_group_address, label, #submitHorde ,#hordeList{
-  display:none;
-}
-
-td{
-        padding:  5px;
-        font-size: 16px !important;
-}
-
-</style>
-
  <% status = false %>
  <% if current_user %>
- <% tasks = Task.all %>
-    <% tasks.each do |t| %>
-      <%if t.description.include?(current_user.name) %>
-        <% status = true %>
+  <% tasks = Task.all %>
+      <% tasks.each do |t| %>
+        <%if t.description.include?(current_user.name) %>
+          <% status = true %>
+        <% end %>
       <% end %>
-    <% end %>
-<% end%>
-
-<% if status %>
-  <div class="your-a-zombie">
-     <h1 >You've been Tagged! Go Eat some Brains!</h1>
-          <%= image_tag("tagged.png") %>
-  </div>
-  
-<% else %>
-  <div id ="mapContainer" style='width: 800px;'>
-    <div id="map" style='width: 800px; height: 400px; '></div>
-  </div>
-<% end %>
-
+  <% end %>
+  <% if status %>
+    <div class="your-a-zombie">
+       <h1 >You've been Tagged! Go Eat some Brains!</h1>
+            <%= image_tag("tagged.png") %>
+    </div>
+  <% else %>
+    <div id ="mapContainer" style='width: 800px;'>
+      <div id="map" style='width: 800px; height: 400px; '></div>
+    </div>
+  <% end %>
+<!--                     -->
+<!--       The End       -->
+<!--                     -->
 <script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({
+    provider: {
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: mapStyle,
+      options: mapOptions
+    },
+    internal: {
+      id: 'map'
+    }
+  }, function() {
+    markers = handler.addMarkers( <%= raw @hash.to_json %> );
+    handler.bounds.extendWith(markers);
+    google.maps.event.addListener(handler.getMap(), 'dblclick', function(event) {
+      updateFormLocation(event.latLng);
+      openModal();
 
+    });
 
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {      
-  mapTypeId: google.maps.MapTypeId.ROADMAP, 
-  styles: mapStyle, options:mapOptions     
-  }, internal: {id: 'map'}}, function(){
-      markers = handler.addMarkers(<%=raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      google.maps.event.addListener(handler.getMap(), 'dblclick', function(event){
-            updateFormLocation(event.latLng);
-        openModal();
+    function submitMarker() {
+      $("#submitHorde").click();
+      alert("Zombie Horde Succesffully Tagged!");
+    }
 
-      } );
+    function openModal() { $('#smallModal').modal('show'); }
 
-function submitMarker(){
-         
-          $( "#submitHorde" ).click();
-            
-          alert("Zombie Horde Succesffully Tagged!");
-}
-
-function openModal(){
-//Fill Forms Fields
-//Open Our Modal Form
-  $('#smallModal').modal('show');
-
-}
-
-   function updateFormLocation(latLng) {
-        $('#zombie_group_latitude').val(latLng.lat());
-        $('#zombie_group_longitude').val(latLng.lng());
-      }
-
-});
-
+    function updateFormLocation(latLng) {
+      $('#zombie_group_latitude').val(latLng.lat());
+      $('#zombie_group_longitude').val(latLng.lng());
+    }
+  });
 </script>

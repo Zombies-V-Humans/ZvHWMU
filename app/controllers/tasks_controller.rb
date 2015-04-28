@@ -24,25 +24,6 @@ class TasksController < ApplicationController
     @user = User.find(params[:id])
   end 
 
-  def reset
-    clear_all_zombies
-    clear_all_messages
-    clear_all_tasks
-  end
-
-  def clear_all_zombies 
-     ZombieGroup.delete_all 
-
-  end
-
-  def clear_all_messages
-     Comment.delete_all 
-  end
-
-  def clear_all_tasks
-    Task.delete_all 
-
-  end
   def show 
     reset
     redirect_to 'index'
@@ -72,12 +53,28 @@ class TasksController < ApplicationController
 
   end
 
-  private
+private
+    def reset
+      clear_all_zombies
+      clear_all_messages
+      clear_all_tasks
+    end
 
+    def clear_all_zombies 
+       ZombieGroup.delete_all 
+
+    end
+
+    def clear_all_messages
+       Comment.delete_all 
+    end
+
+    def clear_all_tasks
+      Task.delete_all 
+    end
+    
     def all_tasks
       @tasks = Task.all
-
-
     end
 
     def set_tasks
@@ -87,6 +84,4 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:description, :tagger)
     end
-
-
 end

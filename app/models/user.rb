@@ -1,10 +1,9 @@
 class User < ActiveRecord::Base
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable
-  
   has_many :comments, dependent: :delete_all
+  has_many :tasks
   has_and_belongs_to_many :roles
   
   def role?(role)
