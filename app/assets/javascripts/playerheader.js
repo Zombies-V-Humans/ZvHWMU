@@ -50,6 +50,28 @@ function rateLimiter() {
     }
 }
 
+   function openSmallframe(){
+       $('#smallframe-backdrop').show();
+       $('#smallframe').show("fast");
+   }
+   
+   function closeSmallframe(){
+
+      $('#smallframe').hide("fast");
+      $('#smallframe-backdrop').hide();
+   
+   }
+
+   function submit(tagged, tagger){
+
+       $('#userformField').val(tagged);
+       $('#taggerformField').val(tagger);
+       $('#nameHolder').html(tagged);
+
+       openSmallframe();
+
+}
+
 function setHeight(element, attr, divisor) {
 
     var height = $(window).height();
