@@ -860,3 +860,19 @@ font-size:2.4vmin !important;
      padding:  5px;
      font-size: 16px !important;
   }
+
+.pagination{
+    background-color: rgb(32, 32, 32)!important;
+    width:100% !important;
+    display:inline-block !important;
+
+  
+}
+nav.pagination span a{
+    background-color: rgb(52, 52, 52)!important;
+    color:rgba(255, 158, 0, 0.9) !important;
+}
+pagination span{
+    margin:auto !important;
+    width:100% !important;
+}
