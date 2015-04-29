@@ -145,8 +145,6 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
-    jquery_mobile_rails (1.4.5)
-      railties (>= 3.1.0)
     json (1.8.2)
     jwt (0.1.11)
       multi_json (>= 1.5)
@@ -317,7 +315,6 @@ DEPENDENCIES
   htmlbeautifier
   jquery-rails
   jquery-turbolinks
-  jquery_mobile_rails
   kaminari
   omniauth-facebook
   pg
