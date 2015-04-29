@@ -744,6 +744,7 @@ line-height:.4em;
 .modal .modal-body, modal-sm{
     max-height: 400px !important;
     overflow-x:hidden;
+    position:fixed!important;
 }
 .modal{
     z-index:3000;
