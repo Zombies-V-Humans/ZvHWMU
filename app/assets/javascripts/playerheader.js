@@ -83,6 +83,8 @@ function jqUpdateSize() {
     setHeight('.submitbox, .box', 'height', 16);
     setHeight('bigframe-body', 'height', 1.22);
     setHeight('#zombie-list-container', 'height', 1.6);
+        setHeight('.your-a-zombie img', 'height', 1.3);
+
 };
 
    function openBigframe(id){
