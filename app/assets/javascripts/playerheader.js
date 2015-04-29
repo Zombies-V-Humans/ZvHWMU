@@ -24,6 +24,7 @@ function toggleFullScreen() {
 }
 
 $(document).ready(function(){
+
     setTimeout(function(){
         $('#error_explanation' ).remove();
         $('.alert' ).remove();  }, 1500); })
@@ -53,14 +54,12 @@ function rateLimiter() {
    }
    
    function closeSmallframe(){
-
       $('#smallframe').hide("fast");
       $('#smallframe-backdrop').hide();
    
    }
 
    function submit(tagged, tagger){
-
        $('#userformField').val(tagged);
        $('#taggerformField').val(tagger);
        $('#nameHolder').html(tagged);
@@ -70,25 +69,20 @@ function rateLimiter() {
 }
 
 function setHeight(element, attr, divisor) {
-
     var height = $(window).height();
-
     $(element).css(attr, height / divisor);
 
 }
 
 function jqUpdateSize() {
-
     setHeight('body, .container-fluid', 'max-height', 1.1);
-    setHeight('#ZombieListButton, #PlayerListButton, h3.jumbotron, #user-name', 'font-size', 43);
+    setHeight('#ZombieListButton, #PlayerListButton, h3.jumbotron, #user-name', 'font-size', 42);
     setHeight('.user-names', 'font-size', 43);
-    setHeight('#ZombieListButton, #PlayerListButton', 'height', 18);
+    setHeight('#ZombieListButton, #PlayerListButton', 'height', 16);
     setHeight('.item', 'height', 2.4);
     setHeight('.submitbox, .box', 'height', 16);
     setHeight('bigframe-body', 'height', 1.22);
     setHeight('#zombie-list-container', 'height', 1.6);
-
-
 };
 
    function openBigframe(id){
@@ -104,24 +98,15 @@ function jqUpdateSize() {
       ajaxReload();  
    }
 
-
-   function cookieSetter(value){
-   
-      document.cookie = value;
-   }
+   function cookieSetter(value){ document.cookie = value; }
    
    $(document).ready(function() {
-   
       if (document.cookie==1){
-
           openBigframe('player');
-      
        }
      })
 
-function ajaxReload(){
-location.reload();
-}
+function ajaxReload(){ location.reload(); }
 
 $(document).ready(jqUpdateSize); // When the page first loads
 $(window).resize(jqUpdateSize); // When the browser changes size
