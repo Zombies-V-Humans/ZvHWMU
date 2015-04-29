@@ -506,9 +506,10 @@ table td input {
   padding-top: 8px;
   background-color: rgba(255, 144, 0, 0.9) !important;
   width: 100%;
+  font-size: 1.3em !important;
 }
 
-/* line 400, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 402, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #tag {
   padding: 0px !important;
   width: 100%;
@@ -518,12 +519,12 @@ table td input {
   outline: 0 !important;
   font-size: 2vmax !important;
 }
-/* line 408, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 410, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #tag button {
   outline: 0 !important;
 }
 
-/* line 412, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 414, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #searchField {
   padding-top: 5px;
   width: 100% !important;
@@ -531,42 +532,42 @@ table td input {
   background-color: rgba(255, 158, 0, 0.9) !important;
   padding-bottom: 0px;
   color: #202020 !important;
-  font-size: 1.8em !important;
+  font-size: 1.5em !important;
   border: none !important;
 }
 
-/* line 422, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 424, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 ::-webkit-input-placeholder {
   color: #fff !important;
 }
 
-/* line 425, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 427, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 :-moz-placeholder {
   color: #fff !important;
 }
 
-/* line 428, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 430, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 ::-moz-placeholder {
   color: #fff !important;
 }
 
-/* line 431, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 433, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 :-ms-input-placeholder {
   color: #fff !important;
 }
 
-/* line 435, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 437, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .form-horizontal input {
   font-size: 1.4em !important;
   font-color: black !important;
   color: black !important;
 }
 
-/* line 441, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 443, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #userfield {
   padding: 0;
 }
-/* line 443, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 445, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #userfield p {
   float: right;
   background: none !important;
@@ -577,13 +578,13 @@ table td input {
   padding: 0;
 }
 
-/* line 453, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 455, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .infoTable {
   width: 100%;
   overflow-y: scroll;
 }
 
-/* line 457, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 459, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #userfield img {
   margin-top: -5px;
   padding-top: 5px !important;
@@ -592,14 +593,14 @@ table td input {
   max-width: 45px;
 }
 
-/* line 464, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 466, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #info {
   display: block;
   posititon: relative;
   overflow-y: hidden !important;
 }
 
-/* line 469, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 471, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #infoContainer, .tasks {
   width: 49.5% !important;
   margin: 0;
@@ -611,14 +612,14 @@ table td input {
   margin-top: -10px;
 }
 
-/* line 479, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 481, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #infoContainer {
   border: 1px solid grey;
   left: -0 !important;
   float: left !important;
 }
 
-/* line 484, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 486, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .tasks {
   direction: rtl;
   border: 1px solid grey;
@@ -626,12 +627,12 @@ table td input {
   margin-left: none !important;
 }
 
-/* line 492, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 494, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #tagZombie {
   float: left;
 }
 
-/* line 495, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 497, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #userLookupImg {
   border-right: 2px solid #fff;
   border-bottom: 1px solid #fff;
@@ -644,79 +645,79 @@ table td input {
   padding: 1px;
 }
 
-/* line 506, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 508, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #imageSection {
   padding: 0;
   margin: 0;
 }
 
-/* line 510, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 512, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .container-fluid {
   padding-right: 5px !important;
   padding-left: 5px !important;
 }
 
-/* line 514, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 516, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #searchField {
   font-color: white;
 }
 
-/* line 518, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 520, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 tbody li:nth-child(odd) {
   color: #444444;
   padding-top: 10px !important;
   padding-bottom: 5px !important;
 }
-/* line 523, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 525, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 tbody li:nth-child(even) {
   margin-top: -5px !important;
   margin-bottom: -25px !important;
 }
 
-/* line 528, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 530, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 list-group-item-info {
   background-color: white;
 }
 
-/* line 531, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 533, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #task {
   font-size: 1.4em !important;
   line-height: 1.2em;
 }
 
-/* line 535, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 537, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 a.mainbtn {
   background-color: #ffae34 !important;
   background: #ffae34 !important;
 }
 
-/* line 539, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 541, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .media-heading a {
   font-color: white;
   color: white;
 }
 
 @media only screen and (min-width: 900px) {
-  /* line 545, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 547, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   #rules, #overlay, .contents {
     max-height: 95%;
     width: 64% !important;
     padding-bottom: 20px !important;
   }
 
-  /* line 551, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 553, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   .modal-dialog {
     width: 60%;
     margin: auto;
     overflow-y: hidden;
   }
 
-  /* line 557, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 559, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   .submitbox {
     width: 40%;
   }
 
-  /* line 561, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 563, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   body {
     width: 65%;
     margin: auto;
@@ -727,19 +728,21 @@ a.mainbtn {
     border-radius: 4px;
   }
 
-  /* line 571, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 573, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   .bigframe {
+    overflow: hidden !important;
     width: 65% !important;
   }
 
-  /* line 576, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 578, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   #bigframe-backdrop {
     width: 100% !important;
     margin: auto;
     color: black !important;
+    overflow: hidden !important;
   }
 
-  /* line 583, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 586, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   #chat {
     border: 3px solid #ffae34 !important;
     -webkit-border-radius: 10px;
@@ -749,43 +752,43 @@ a.mainbtn {
     margin: auto;
   }
 
-  /* line 591, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+  /* line 594, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
   nav {
     z-index: 1 !important;
   }
 }
-/* line 597, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 600, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #infoContainer tr:nth-child(odd) input#tag {
   color: black !important;
 }
 
-/* line 602, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 605, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .deviseButtons {
   padding: 10px;
   margin-bottom: 10px;
 }
-/* line 605, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 608, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .deviseButtons p {
   display: inline;
 }
 
-/* line 609, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 612, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .modal, #submitBox {
   overflow-y: hidden !important;
 }
 
-/* line 612, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 615, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .modal-content {
   overflow-y: hidden !important;
   background-color: #202020;
 }
 
-/* line 616, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 619, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .user {
   border-radius: 10px;
 }
 
-/* line 619, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 622, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .pagination {
   display: inline-block;
   padding-left: 0;
@@ -793,7 +796,7 @@ a.mainbtn {
   border-radius: 4px;
 }
 
-/* line 625, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 628, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .previous_page {
   position: relative;
   float: left;
@@ -805,7 +808,7 @@ a.mainbtn {
   margin-left: -1px;
 }
 
-/* line 635, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 638, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .current {
   position: relative;
   float: left;
@@ -816,7 +819,7 @@ a.mainbtn {
   border: 1px solid #dddddd;
 }
 
-/* line 644, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 647, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .pagination > span a, span.gap {
   position: relative;
   float: left;
@@ -828,31 +831,31 @@ a.mainbtn {
   border: 1px solid #dddddd;
 }
 
-/* line 654, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 657, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .item, #zombie-list-container {
   padding: 7px;
   box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.7), 2px 2px 2px -1px rgba(255, 255, 255, 0.3) !important;
   border-radius: 5px;
 }
 
-/* line 659, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 662, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .box {
   max-height: 60px;
   padding: 5px;
   border-radius: 5px;
 }
 
-/* line 664, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 667, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .submitbox {
   line-height: .4em;
 }
 
-/* line 667, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 670, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .container {
   padding-left: 0;
 }
 
-/* line 670, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 673, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #PlayerListButton, #ZombieListButton {
   margin: auto;
   padding: 10px;
@@ -861,7 +864,7 @@ a.mainbtn {
   color: white;
 }
 
-/* line 677, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 680, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .PlayerPane, .ZombiePane {
   padding: 1%;
   background-color: #202020 !important;
@@ -870,7 +873,7 @@ a.mainbtn {
   width: 50%;
   height: 40%;
 }
-/* line 686, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 689, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .PlayerPane h3, .ZombiePane h3 {
   padding: 10px;
   color: #202020 !important;
@@ -880,7 +883,7 @@ a.mainbtn {
   background-color: rgba(255, 174, 52, 0.8) !important;
 }
 
-/* line 695, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 698, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #h3header, #h3headerblue {
   color: rgba(255, 174, 52, 0.9) !important;
   font-size: 1.7em;
@@ -888,12 +891,12 @@ a.mainbtn {
   border-color: #d9534f;
 }
 
-/* line 701, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 704, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #h3headerblue {
   border-color: #337ab7 !important;
 }
 
-/* line 704, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 707, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #map {
   position: absolute !important;
   width: 100% !important;
@@ -902,7 +905,7 @@ a.mainbtn {
   left: 0;
 }
 
-/* line 711, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 714, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #hordeList {
   margin-left: auto;
   margin-right: auto;
@@ -918,7 +921,7 @@ a.mainbtn {
   opacity: 0.8;
 }
 
-/* line 725, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 728, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #addZombie {
   border: 1px solid black;
   padding: 10px;
@@ -926,32 +929,32 @@ a.mainbtn {
   float: right;
 }
 
-/* line 731, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 734, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .modal .modal-body {
   max-height: 400px !important;
   overflow-x: hidden;
 }
 
-/* line 735, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 738, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .modal {
   z-index: 3000;
 }
 
-/* line 739, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 742, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #zombie-list {
   padding: 0;
 }
-/* line 741, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 744, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #zombie-list #task {
   color: #d9534f;
 }
 
-/* line 744, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 747, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #zombie-container {
   height: 40%;
 }
 
-/* line 747, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 750, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .user-names {
   padding-left: 10px;
   width: 100%;
@@ -959,7 +962,7 @@ a.mainbtn {
   color: rgba(255, 174, 52, 0.8) !important;
 }
 
-/* line 753, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 756, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 #playerSubmitRow {
   background-color: #222;
   margin-top: 5px;
@@ -969,27 +972,27 @@ a.mainbtn {
   margin: 10px !important;
 }
 
-/* line 763, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 766, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 ::-webkit-scrollbar {
   width: 20px;
   visibility: hidden;
 }
 
-/* line 768, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 771, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.1);
   z-index: -1;
   visibility: hidden;
 }
 
-/* line 777, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 780, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .modal-dialog {
   max-width: 80% !important;
   max-height: 50% !important;
   margin: auto;
 }
 
-/* line 783, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 786, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .your-a-zombie {
   background-color: rgba(215, 40, 40, 0.9);
   width: 100%;
@@ -997,13 +1000,13 @@ a.mainbtn {
   margin-bottom: -10px;
   text-align: center;
 }
-/* line 790, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 793, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .your-a-zombie img {
   width: 100%;
   height: 100%;
 }
 
-/* line 796, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 799, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 h3.player-status {
   border: none !important;
   border-radius: 10px !important;
@@ -1017,24 +1020,24 @@ h3.player-status {
   background: none !important;
 }
 
-/* line 810, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 813, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 h3.human {
   color: #337ab7 !important;
 }
 
-/* line 812, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 815, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 h3.zombie {
   color: #d9534f !important;
 }
 
-/* line 814, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 817, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 h3.human, h3.zombie, h3.player-status {
   margin-top: -5px !important;
   display: inline-block !important;
   padding-top: 2.5px !important;
 }
 
-/* line 820, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 823, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .status {
   width: auto !important;
   display: inline-block !important;
@@ -1043,19 +1046,19 @@ h3.human, h3.zombie, h3.player-status {
   margin-top: 7px !important;
 }
 
-/* line 828, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 831, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .top-pane {
   margin-top: 0px !important;
 }
 
-/* line 830, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 833, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .buttons-4 {
   font-size: 2.4vmin !important;
   width: 47% !important;
   height: 43% !important;
 }
 
-/* line 836, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 839, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .modal-dialog, .modal {
   height: 100% !important;
   width: 100% !important;
@@ -1067,7 +1070,7 @@ h3.human, h3.zombie, h3.player-status {
   padding: 0 !important;
 }
 
-/* line 847, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 850, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .modal-content {
   height: 100% !important;
   width: 100% !important;
@@ -1079,31 +1082,31 @@ h3.human, h3.zombie, h3.player-status {
   padding: 0 !important;
 }
 
-/* line 857, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 860, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .numeric, #zombie_group_address, label, #submitHorde, #hordeList {
   display: none;
 }
 
-/* line 859, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 862, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 td {
   padding: 5px;
   font-size: 16px !important;
 }
 
-/* line 864, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 867, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 .pagination {
   background-color: #202020 !important;
   width: 100% !important;
   display: inline-block !important;
 }
 
-/* line 871, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 874, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 nav.pagination span a {
   background-color: #343434 !important;
   color: rgba(255, 158, 0, 0.9) !important;
 }
 
-/* line 875, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
+/* line 878, /home/wal33d/Desktop/Official ZvH App/app/assets/stylesheets/custom.css.scss */
 pagination span {
   margin: auto !important;
   width: 100% !important;
