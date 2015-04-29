@@ -54,7 +54,7 @@ input#search {
     padding-right: 10px !important;
     border: none !important;
     background: none !important;
-    font-size: 1.3em !important;
+    font-size: 1em !important;
     background: rgba(255,158,0,1) !important;
     ::-webkit-input-placeholder {
         color: #fff !important;
@@ -412,13 +412,13 @@ table td input {
     }
 }
 #searchField {
-    padding-top: 5px;
+    padding-top: 1px;
     width: 100%!important;
     height: 40px!important;
     background-color: rgba(255,158,0,.9) !important;
     padding-bottom: 0px;
     color: #202020 !important;
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
     border: none !important;
 }
 ::-webkit-input-placeholder {
