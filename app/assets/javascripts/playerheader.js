@@ -79,7 +79,7 @@ function jqUpdateSize() {
     setHeight('#ZombieListButton, #PlayerListButton, h3.jumbotron, #user-name', 'font-size', 44.5);
     setHeight('.user-names', 'font-size', 43);
     setHeight('#ZombieListButton, #PlayerListButton', 'height', 17.5);
-    setHeight('.item', 'height', 2.4);
+    setHeight('.item', 'height', 2.2);
     setHeight('.submitbox, .box', 'height', 16);
     setHeight('bigframe-body', 'height', 1.22);
     setHeight('#zombie-list-container', 'height', 1.6);
