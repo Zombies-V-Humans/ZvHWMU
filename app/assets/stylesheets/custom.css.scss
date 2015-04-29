@@ -505,6 +505,9 @@ table td input {
     margin-left: 5px;
     padding: 1px;
 }
+.first, .prev{
+    display:none !important;
+}
 #imageSection {
     padding: 0;
     margin: 0;
