@@ -1,17 +1,20 @@
     <nav class="navbar navbar-default" id="TheHeader">
+     
         <div class="container-fluid">
             <div class="navbar-header">
-                <button class="navbar-toggle" data-target="#baseapp-navbar-collapse-1" data-toggle="collapse" id="navbarbutton" type="button" style="padding-top:15px !important; padding-bottom:15px!important;">
-                   <span class="sr-only">Toggle navigation</span> 
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                </button>   
-           
+             <% if user_signed_in? %>
+         <a class="navbar-toggle" id="navbarpic" type="button" data-target="#baseapp-navbar-collapse-1" data-toggle="collapse" id="navbarbutton">
+         <%= image_tag(current_user.avatar)%>
+        </a>
+      <%else%>
+        <button class="navbar-toggle" data-target="#baseapp-navbar-collapse-1" data-toggle="collapse" id="navbarbutton" type="button" style="padding-top:15px !important; padding-bottom:15px!important;">
+        <span class="sr-only">Toggle navigation</span> 
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>   
+          <% end %>
             <% if user_signed_in? %>
-              <a class="navbar-toggle" onclick="location.href = '/zombie_groups';" id="navbarpic" type="button">
-                 <%= image_tag(current_user.avatar)%>
-              </a>
                 <% if current_page?('/zombie_groups')|| current_page?('/comments/new')|| current_page?('/tasks') %>
                    <%= render "layouts/application/_player_buttons" %> 
                 <% end %>
@@ -21,12 +24,16 @@
                       <%= link_to "Sign in", new_user_session_path, :id => "signInHome", :class => "navbar-toggle" %>
                    <% end %>
                 <% end -%>
+
                 <%= link_to "WMU ZVH", root_path, :class => "navbar-brand", :id => "brand" %>
             </div>
 
             <div class="collapse navbar-collapse" id=
             "baseapp-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                <li class="navbutton">
+                      <%= link_to "Home", '/tasks'%>
+                    </li>
                     <li class="navbutton">
                       <%= link_to "The Rules", '/pages/rules'%>
                     </li>

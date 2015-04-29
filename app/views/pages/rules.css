@@ -278,12 +278,10 @@ h6 {
     padding-bottom: 10px;
     font-family: "League-Gothic",Courier;
     text-shadow: 0px 0px 2px #FEFCC9,2px -4px 3px #FEEC85,-5px -6px 5px #FFAE34,-3px 6px 6px #CD4606,0px -8px 8px #973716, 0px 0px 2px #000,0px -8px 8px #000, 0px 8px 8px #000;
-
+    
 color:#f0f0f0;
 }
-#rules{
 
-}
 #overlay{
     background-image: url(/assets/rulesBackdrop.jpg);
     padding:30px;
@@ -312,34 +310,32 @@ p, li,h2{
 
 }
 
-.navbar-header{
-
-    border: 3px solid rgba(255,174,52,1)!important;
-
-}
-
-body{
-     border:none !important;
-}
+.navbar-header{ border: 3px solid rgba(255,174,52,1)!important; }
+body{ border:none !important; }
 p{
-        color: rgba(0,0,0,1)!important;
+    color: rgba(0,0,0,1)!important;
     background: rgba(255,255,255,0.4);
-
     border-radius:7px;
-font-size:1.6em !important;
+    font-size:1.6em !important;
     padding:15px;
     line-height:1.5em;
 }
 h2{
     background: rgba(0,0,0,0.5);
-        color: rgba(255,174,52,1)!important;
-
-width:auto;
+    color: rgba(255,174,52,1)!important;
+    width:auto;
     border-radius:7px;
-font-size:1.9em !important;
+    font-size:1.9em !important;
     padding:8px;
     margin-bottom:-2px;
-border-radius-bottom: 0;
-  line-height:1.5em;
+    border-radius-bottom: 0;
+    line-height:1.5em;
     border-bottom:white;
+}
+span{
+    text-align:center!important;
+    padding:5px;
+    border:1px solid white;
+    background-color: rgba(0,0,0,0.6);
+    color: rgba(255,174,52,1)!important;
 }
