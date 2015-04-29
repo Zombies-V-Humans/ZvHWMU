@@ -11,7 +11,7 @@
   <%= f.submit "Search", :class => "btn btn-default" %>
 <% end %>
 
-<table class="sortable table table-striped table-bordered table-condensed">
+<table class="sortable table table-bordered table-condensed">
   <thead>
     <tr>
       <th><%= sortable "id", "ID" %></th>
@@ -19,8 +19,8 @@
       <th><%= sortable "email" %></th>
       <th><%= sortable "created_at", "Signed up" %></th>
       <th><%= sortable "sign_in_count", "Times signed in" %></th>
-      <th><%= sortable "last_sign_in_at", "Last signed in" %></th>
-      <!--<th><%= sortable "last_sign_in_ip", "Last sign in IP" %></th>-->
+      <!--<th><%= sortable "last_sign_in_at", "Last signed in" %></th>
+          <th><%= sortable "last_sign_in_ip", "Last sign in IP" %></th>-->
       <th>Edit</th>
       <th>Destroy</th>
     </tr>
