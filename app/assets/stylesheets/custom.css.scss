@@ -396,6 +396,8 @@ table td input {
     padding-top: 8px;
     background-color: rgba(255,144,0,0.9) !important;
     width: 100%;
+        font-size: 1.5em !important;
+
 }
 #tag {
     padding: 0px !important;
@@ -416,7 +418,7 @@ table td input {
     background-color: rgba(255,158,0,.9) !important;
     padding-bottom: 0px;
     color: #202020 !important;
-    font-size: 1.6em !important;
+    font-size: 1.5em !important;
     border: none !important;
 }
 ::-webkit-input-placeholder {
