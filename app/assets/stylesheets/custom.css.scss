@@ -741,7 +741,7 @@ line-height:.4em;
     border-radius: 10px;
     float: right;
 }
-.modal .modal-body {
+.modal .modal-body, modal-sm{
     max-height: 400px !important;
     overflow-x:hidden;
 }
