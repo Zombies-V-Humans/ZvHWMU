@@ -741,10 +741,9 @@ line-height:.4em;
     border-radius: 10px;
     float: right;
 }
-.modal .modal-body, modal-sm{
+.modal .modal-body {
     max-height: 400px !important;
     overflow-x:hidden;
-    position:fixed!important;
 }
 .modal{
     z-index:3000;
