@@ -57,8 +57,7 @@
    <button type="button" id="player" onclick="closeBigframe('player');" style="opacity:0.9; display:inline-block; width:30px;height:30px;"class="close" >&times;</button>
    <div class="bigframe-body">
       <h2 class="modal-title" id="myModalLabel" style= "border-bottom: 2px solid rgb(51,122,183); padding-bottom:2px;">Player List</h2>
-      <h3 style="margin-top:2px;">Total # of Players: <%= User.all.length %></h3>
-      <h4 >Players matching your search: <%= @users.count %></h4>
+      <h4 style="margin-top:2px;">Total # of Players: <%= User.all.length %></h4>
       <table class="sortable table table-bordered table-condensed">
          <tbody>
             <%= search_form_for @q,  :url => tasks_path, :html =>
