@@ -1,8 +1,20 @@
 <div class="page-header">
-  <h1>Administrator Dashboard</h1>
+  <h2 style = "text-align:center; margin-bottom:0px!important;">Administrator Dashboard</h2>
 </div>
-
-<%= search_form_for @q, :url => admin_users_path, :html => { :method => :get, :class => "well form-inline" } do |f| %>
+  
+  <% if current_user && current_user.admin? %><center>
+  <div class="PlayerPane jumbotron  admin-options" style="width:100% !important; padding-top:15px!important; ">
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Zombies</button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Messages</button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Map </button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset('resetPath');">Reset Everything</button>
+       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
+  </div></center>
+  <% end%>
+<%= search_form_for @q, :url => admin_users_path, :html => { :method => :get, :class => "well form-inline", :style=>"margin-top:-10px!important;"} do |f| %>
   <div class="form-group">
     <%= f.text_field :name_cont, :type => "search", :class => "form-control", :placeholder => "Search by name" %>
     <br>
@@ -11,7 +23,7 @@
   <%= f.submit "Search", :class => "btn btn-default" %>
 <% end %>
 
-<table class="sortable table table-bordered table-condensed">
+<table class="sortable table table-bordered table-condensed table-responsive admin-table">
   <thead>
     <tr>
       <th><%= sortable "id", "ID" %></th>
@@ -19,8 +31,8 @@
       <th><%= sortable "email" %></th>
       <th><%= sortable "created_at", "Signed up" %></th>
       <th><%= sortable "sign_in_count", "Times signed in" %></th>
-      <!--<th><%= sortable "last_sign_in_at", "Last signed in" %></th>
-          <th><%= sortable "last_sign_in_ip", "Last sign in IP" %></th>-->
+      <th><%= sortable "last_sign_in_at", "Last signed in" %></th>
+      <!--<th><%= sortable "last_sign_in_ip", "Last sign in IP" %></th>-->
       <th>Edit</th>
       <th>Destroy</th>
     </tr>

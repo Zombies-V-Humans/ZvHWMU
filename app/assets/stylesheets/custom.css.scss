@@ -84,7 +84,7 @@ input#search {
 }
 .navbar-brand {
     position: absolute !important;
-    margin-top: 11px;
+    margin-top: 8px;
     margin-bottom: auto;
     font-family: "League-Gothic",Courier;
     text-shadow: 0px 0px 2px #FEFCC9,2px -2px 3px #FEEC85,-5px -5px 5px #FFAE34,-3px -6px 6px #CD4606,0px -8px 8px #973716;
@@ -312,16 +312,18 @@ span.help-block {
 .navbutton {
     background-color: #202020 !important;
     font-family: 'Open Sans',sans-serif !important;
-    font-size: 12px !important;
+    font-size: 10px !important;
     text-decoration: none !important;
+    text-align:left!important;
     color: #fff !important;
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
     position: relative !important;
-    padding: 10px 20px !important;
+    padding: 7px 13px !important;
     padding-right: 50px !important;
-    border-radius: 5px;
-    border: 2px solid rgba(255,158,0,0.8) !important;
+    border: 1px solid rgba(255,255,255,0.5) !important;
+    border-left:none!important;
+    border-right:none!important;
 }
 .navbutton:active {
     top: 3px;
@@ -544,6 +546,20 @@ a.mainbtn {
     font-color: white;
     color: white;
 }
+.admin-options{
+margin-top:-10px!important;
+    display:inline-block !important;
+    position:relative !important; 
+    width:inherit!important;   
+}
+.admin {
+.current{
+    background:none!important;
+}
+    .container{
+    margin-top:-30px!important;
+    }
+}
 @media only screen and (min-width:900px) {
 
 .alert, .notice  {
@@ -559,6 +575,12 @@ max-height:95%;
     width:64% !important;
     padding-bottom:20px !important;
 
+}
+#user_search{}
+.admin-table{
+}
+.admin{
+    width:90% !important;
 }
     .modal-dialog {
         width: 60%;
@@ -888,4 +910,8 @@ nav.pagination span a{
 pagination span{
     margin:auto !important;
     width:100% !important;
+}
+.admin-table{
+    width:100% !important;
+    display:inline-block!important;
 }

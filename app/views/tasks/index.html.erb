@@ -1,18 +1,4 @@
-  
-  <center style="position:fixed!important;">
-  <% if current_user && current_user.admin? %>
-  <div class="PlayerPane jumbotron status" style="width:100% !important;">
-       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Zombies</button>
-       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
-       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Messages</button>
-       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
-       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset();">Reset Map </button>
-       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
-       <button class="reset reset-everything btn btn-lg btn-danger buttons-4" onclick="reset('resetPath');">Reset Everything</button>
-       <%= link_to 'reset',reset_path, :id =>"resetPath" ,:class=>"hidden" %>
-  </div>
-  <% end%>
-</center>
+
 
 <center>
 <div class="PlayerPane jumbotron status">
