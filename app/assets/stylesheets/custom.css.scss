@@ -569,7 +569,7 @@ max-height:95%;
 
     }
     .bigframe{
-
+        overflow:hidden !important;
         width:65% !important;
     }
 
@@ -577,6 +577,7 @@ max-height:95%;
         width:100% !important;
         margin:auto;
         color: black !important;
+        overflow:hidden !important;
     
     }
     

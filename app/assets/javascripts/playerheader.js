@@ -79,7 +79,7 @@ function setHeight(element, attr, divisor) {
 
 function jqUpdateSize() {
 
-    setHeight('body, .container-fluid', 'max-height', 1);
+    setHeight('body, .container-fluid', 'max-height', 1.1);
     setHeight('#ZombieListButton, #PlayerListButton, h3.jumbotron, #user-name', 'font-size', 46);
     setHeight('.user-names', 'font-size', 45);
     setHeight('#ZombieListButton, #PlayerListButton', 'height', 18);
