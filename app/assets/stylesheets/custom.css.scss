@@ -563,6 +563,12 @@ margin-top:-10px!important;
     margin-top:-30px!important;
     }
 }
+.admin-table{
+tr:nth-child(odd) a {color: black;}
+th a, th, tr:nth-child(even) td {
+    color:white!important;
+}
+}
 @media only screen and (min-width:900px) {
 
 .alert, .notice  {
@@ -580,8 +586,7 @@ max-height:95%;
 
 }
 #user_search{}
-.admin-table{
-}
+
 .admin{
     width:90% !important;
 }
@@ -917,4 +922,10 @@ pagination span{
 .admin-table{
     width:100% !important;
     display:inline-block!important;
+}
+.reset-everything{
+    margin-bottom:3px!important;
+}
+#q_name_cont{
+    margin-top:10px!important;
 }
