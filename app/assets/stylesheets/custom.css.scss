@@ -84,7 +84,7 @@ input#search {
 }
 .navbar-brand {
     position: absolute !important;
-    margin-top: 8px;
+    margin-top: 6px;
     margin-bottom: auto;
     font-family: "League-Gothic",Courier;
     text-shadow: 0px 0px 2px #FEFCC9,2px -2px 3px #FEEC85,-5px -5px 5px #FFAE34,-3px -6px 6px #CD4606,0px -8px 8px #973716;
@@ -553,6 +553,9 @@ margin-top:-10px!important;
     width:inherit!important;   
 }
 .admin {
+.navbar-brand{
+    margin-top:3.3px!important;
+}
 .current{
     background:none!important;
 }
