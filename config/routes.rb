@@ -13,6 +13,7 @@
   get 'game/profile', :as => "profile"
   get "pages/index" , :as => "index"
   get "pages/rules", :as => "rules"
+  get "pages/video", :as => "video"
   get "comments/_chat", :as => "chat"
   get "zombie_groups/index", :as => "map"
   get "tasks/reset", :as => "reset"

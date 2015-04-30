@@ -1,5 +1,4 @@
     <nav class="navbar navbar-default" id="TheHeader">
-     
         <div class="container-fluid">
             <div class="navbar-header">
              <% if user_signed_in? %>
@@ -34,7 +33,10 @@
                 <li class="navbutton">
                       <%= link_to "Home", '/tasks'%>
                     </li>
-                    <li class="navbutton">
+                    <li class="navbutton video" >
+                      <%= link_to "New! Promotional Video!", '/pages/video', :style=>"color:rgb(255, 158, 0)!important;"%>
+                    </li>
+                     <li class="navbutton">
                       <%= link_to "The Rules", '/pages/rules'%>
                     </li>
                   <% if user_signed_in? %>

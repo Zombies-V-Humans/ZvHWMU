@@ -84,6 +84,8 @@ function jqUpdateSize() {
     setHeight('bigframe-body', 'height', 1.22);
     setHeight('#zombie-list-container', 'height', 1.6);
     setHeight('.your-a-zombie img', 'height', 1.5);
+    setHeight('.promovideo', 'height', 1.5);
+
 
 };
 
