@@ -555,6 +555,9 @@ margin-top:-10px!important;
 .admin {
 .navbar-brand{
     margin-top:2px!important;
+    body{
+    border:none!important;
+    }
 }
 .current{
     background:none!important;
@@ -586,9 +589,12 @@ max-height:95%;
 
 }
 #user_search{}
-
+ .admin-container{
+         border:none!important;
+    }
 .admin{
     width:90% !important;
+      
 }
     .modal-dialog {
         width: 60%;
