@@ -1,0 +1,16 @@
+
+ <% status = false %>
+  <% if current_user %>
+    <% @tasks.each do |t| %>
+      <% if t.description.include?(current_user.name) %>
+      <% status = true %>
+    <% end %>
+  <% end%>
+<% end%>
+  <% if status %>
+      <h3 class="player-status">Status: </h3>    
+      <h3 class="player-status zombie">Zombie</h3>
+ <% else %>
+       <h3 class="player-status">Status: </h3>    
+       <h3 class="player-status human">Human</h3>
+  <% end %>

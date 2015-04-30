@@ -1,7 +1,7 @@
 
 
 <center>
-<div class="PlayerPane jumbotron status">
+<div id = "statusInd" class="PlayerPane jumbotron status">
  <% status = false %>
   <% if current_user %>
     <% @tasks.each do |t| %>
@@ -19,17 +19,19 @@
   <% end %>
 </div>
 </center>
-<div class="PlayerPane jumbotron top-pane">
+<div id ="playerPane" class="PlayerPane jumbotron top-pane">
    <legend id = "h3headerblue">Tag a Player</legend>
-   <h3 class="jumbotron"style="margin-top:0;">Total # of Players: <%= User.all.length %> <hr style="border-color:#337ab7 !important; margin-bottom:4px; margin-top:4px;">Total # of Humans <%= User.all.length - @tasks.count %></h3>
+   <div id = "playerPane">
+    <h3 class="jumbotron"style="margin-top:0;">Total # of Players: <%= User.all.length %> <hr style="border-color:#337ab7 !important; margin-bottom:4px; margin-top:4px;">Total # of Humans <%= User.all.length - @tasks.count %></h3>
+  </div>
    <center> 
       <a  id ="PlayerListButton" href="#" class="btn btn-lg btn-primary" onclick="openBigframe('player');">Tag Player</a>
    </center>
 </div>
 
-<div class="ZombiePane jumbotron">
+<div id = "zombiePane" class="ZombiePane jumbotron">
    <legend id = "h3header">View Zombies</legend>
-   <h3 class="jumbotron"style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
+   <h3 id="z-counter" class="jumbotron"style="margin-top:0;">Total # of Zombies: <%=@tasks.count %></h3>
    <center>
       <a id ="ZombieListButton" href="#" class="btn btn-lg btn-danger" onclick="openBigframe('zombie');">View Zombies</a>
    </center>

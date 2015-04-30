@@ -14565,6 +14565,9 @@ function jqUpdateSize() {
     setHeight('.submitbox, .box', 'height', 16);
     setHeight('bigframe-body', 'height', 1.22);
     setHeight('#zombie-list-container', 'height', 1.6);
+    setHeight('.your-a-zombie img', 'height', 1.5);
+    setHeight('.promovideo', 'height', 1.5);
+
 };
 
    function openBigframe(id){
@@ -14577,7 +14580,7 @@ function jqUpdateSize() {
       cookieSetter(0);
       $('#bigframe-'+id).hide("fast");
       $('#bigframe-backdrop').hide();
-      ajaxReload();  
+     // ajaxReload();  
    }
 
    function cookieSetter(value){ document.cookie = value; }

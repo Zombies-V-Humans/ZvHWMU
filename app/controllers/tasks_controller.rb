@@ -11,11 +11,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.create(task_params)
   end
-
-  def update
-    @task.update_attributes(task_params)
-  end
-
+  
   def destroy
     @task.destroy
   end

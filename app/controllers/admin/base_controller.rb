@@ -6,7 +6,25 @@ class Admin::BaseController < ApplicationController
   def index
   redirect_to admin_users_path
   end
+  def reset
+      clear_all_zombies
+      clear_all_messages
+      clear_all_tasks
+    end
 
+    def clear_all_zombies 
+       ZombieGroup.delete_all 
+
+    end
+
+    def clear_all_messages
+       Comment.delete_all 
+    end
+
+    def clear_all_tasks
+      Task.delete_all 
+    end
+    
   protected
 
   def require_admin
